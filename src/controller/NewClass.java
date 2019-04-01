@@ -7,7 +7,7 @@ package controller;
 
 /**
  *
- * @author Rasmus
+ * @author Martin, Rasmus og Alex
  */
 public class NewClass {
     

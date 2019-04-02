@@ -10,45 +10,50 @@
 
 <AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaBåtforsikringController">
    <children>
-      <Label layoutX="243.0" layoutY="50.0" text="Registrer ny båtforsikring" />
-      <Label layoutX="41.0" layoutY="104.0" text="Årlig forsikringspremie:" />
-      <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" />
+      <ImageView fitHeight="624.0" fitWidth="936.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bilder/Untitled.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="50.0" layoutY="42.0" text="Registrer ny båtforsikring" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="104.0" text="Årlig forsikringspremie:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
       <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="244.0" layoutY="98.0" />
       <TextField layoutX="244.0" layoutY="147.0" />
       <TextField layoutX="244.0" layoutY="245.0" />
       <TextField layoutX="244.0" layoutY="196.0" />
-      <Label layoutX="41.0" layoutY="251.0" text="Eier:" />
-      <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" />
-      <Label layoutX="41.0" layoutY="398.0" prefHeight="27.0" prefWidth="161.0" text="Lengde (fot):" />
-      <Label layoutX="41.0" layoutY="447.0" text="Årsmodell:" />
+      <Label layoutX="41.0" layoutY="251.0" text="Eier:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="398.0" prefHeight="27.0" prefWidth="161.0" text="Lengde (fot):" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="447.0" text="Årsmodell:" textFill="WHITE" />
       <TextField layoutX="244.0" layoutY="392.0" />
       <TextField layoutX="244.0" layoutY="441.0" />
       <TextField layoutX="244.0" layoutY="343.0" />
       <TextField layoutX="244.0" layoutY="294.0" />
-      <Label layoutX="41.0" layoutY="349.0" text="Båttype og modell:" />
-      <Label layoutX="41.0" layoutY="300.0" text="Registreringsnummer:" />
+      <Label layoutX="41.0" layoutY="349.0" text="Båttype og modell:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="300.0" text="Registreringsnummer:" textFill="WHITE" />
       <TextField layoutX="244.0" layoutY="491.0" />
-      <Label layoutX="36.0" layoutY="497.0" text="Motortype + motorstyrke:" />
+      <Label layoutX="36.0" layoutY="497.0" text="Motortype + motorstyrke:" textFill="WHITE" />
       <Button layoutX="244.0" layoutY="546.0" mnemonicParsing="false" text="Opprett forsikring" />
       <Label layoutX="652.0" layoutY="91.0" text="Dette dekker forsikringen vår:" textFill="WHITE" />
       <Label layoutX="652.0" layoutY="124.0" text="* Brann" textFill="WHITE" />
-      <Label layoutX="652.0" layoutY="147.0" text="* Tyveri" />
-      <Label layoutX="652.0" layoutY="194.0" text="* Totalskade" />
-      <Label layoutX="652.0" layoutY="171.0" text="* Fører- og passasjerskade" />
-      <Label layoutX="652.0" layoutY="263.0" text="* Brann" />
-      <Label layoutX="652.0" layoutY="286.0" text="* Tyveri" />
-      <Label layoutX="652.0" layoutY="239.0" text="* " />
-      <Label layoutX="652.0" layoutY="216.0" text="* Ansvar" />
+      <Label layoutX="652.0" layoutY="147.0" text="* Tyveri" textFill="WHITE" />
+      <Label layoutX="652.0" layoutY="194.0" text="* Totalskade" textFill="WHITE" />
+      <Label layoutX="652.0" layoutY="171.0" text="* Fører- og passasjerskade" textFill="WHITE" />
+      <Label layoutX="652.0" layoutY="263.0" text="* Brann" textFill="WHITE" />
+      <Label layoutX="652.0" layoutY="286.0" text="* Tyveri" textFill="WHITE" />
+      <Label layoutX="652.0" layoutY="239.0" text="* " textFill="WHITE" />
+      <Label layoutX="652.0" layoutY="216.0" text="* Ansvar" textFill="WHITE" />
       <Button layoutX="164.0" layoutY="546.0" mnemonicParsing="false" text="Avbryt" />
-      <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="476.0" layoutY="99.0" prefHeight="39.0" prefWidth="161.0" text="*" />
-      <Label id="feilmeldingØnsketOppstart" layoutX="476.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" />
-      <Label id="feilmeldingForsikringsbeløp" layoutX="476.0" layoutY="196.0" prefHeight="39.0" prefWidth="161.0" text="*" />
-      <Label id="feilmeldingEier" layoutX="476.0" layoutY="245.0" prefHeight="39.0" prefWidth="161.0" text="*" />
-      <Label id="feilmeldingRegistreringsnummer" layoutX="476.0" layoutY="294.0" prefHeight="39.0" prefWidth="161.0" text="*" />
-      <Label id="feilmeldingBåttypeModell" layoutX="476.0" layoutY="343.0" prefHeight="39.0" prefWidth="161.0" text="*" />
-      <Label id="feilmeldingLengde" layoutX="476.0" layoutY="392.0" prefHeight="39.0" prefWidth="161.0" text="*" />
-      <Label id="feilmeldingÅrsmodell" layoutX="476.0" layoutY="441.0" prefHeight="39.0" prefWidth="161.0" text="*" />
-      <Label id="feilmeldingMotortypeStyrke" layoutX="476.0" layoutY="491.0" prefHeight="39.0" prefWidth="161.0" text="*" />
-      <Label layoutX="652.0" layoutY="111.0" text="Dette dekekr forsikringen vår:" />
+      <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="476.0" layoutY="99.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingØnsketOppstart" layoutX="476.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingForsikringsbeløp" layoutX="476.0" layoutY="196.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingEier" layoutX="476.0" layoutY="245.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingRegistreringsnummer" layoutX="476.0" layoutY="294.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingBåttypeModell" layoutX="476.0" layoutY="343.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingLengde" layoutX="476.0" layoutY="392.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingÅrsmodell" layoutX="476.0" layoutY="441.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingMotortypeStyrke" layoutX="476.0" layoutY="491.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label layoutX="652.0" layoutY="111.0" text="Dette dekekr forsikringen vår:" textFill="WHITE" />
    </children>
 </AnchorPane>

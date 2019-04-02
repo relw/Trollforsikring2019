@@ -28,5 +28,15 @@
       <Label layoutX="41.0" layoutY="300.0" text="Registreringsnummer:" />
       <TextField layoutX="244.0" layoutY="491.0" />
       <Label layoutX="36.0" layoutY="497.0" text="Motortype + motorstyrke:" />
+      <Button layoutX="244.0" layoutY="546.0" mnemonicParsing="false" text="Opprett forsikring" />
+      <Label layoutX="652.0" layoutY="91.0" text="Dette dekker forsikringen vår:" />
+      <Label layoutX="652.0" layoutY="124.0" text="* Brann" />
+      <Label layoutX="652.0" layoutY="147.0" text="* Tyveri" />
+      <Label layoutX="652.0" layoutY="194.0" text="* Totalskade" />
+      <Label layoutX="652.0" layoutY="171.0" text="* Fører- og passasjerskade" />
+      <Label layoutX="652.0" layoutY="263.0" text="* Brann" />
+      <Label layoutX="652.0" layoutY="286.0" text="* Tyveri" />
+      <Label layoutX="652.0" layoutY="239.0" text="* " />
+      <Label layoutX="652.0" layoutY="216.0" text="* Ansvar" />
    </children>
 </AnchorPane>

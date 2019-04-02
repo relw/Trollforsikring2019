@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -38,5 +39,6 @@
       <Label layoutX="652.0" layoutY="286.0" text="* Tyveri" />
       <Label layoutX="652.0" layoutY="239.0" text="* " />
       <Label layoutX="652.0" layoutY="216.0" text="* Ansvar" />
+      <Button layoutX="164.0" layoutY="546.0" mnemonicParsing="false" text="Avbryt" />
    </children>
 </AnchorPane>

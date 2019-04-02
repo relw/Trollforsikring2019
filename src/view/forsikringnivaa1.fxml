@@ -9,9 +9,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.Forsikringnivaa1Controller">
    <children>
-      <Button layoutX="254.0" layoutY="198.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="204.0" text="Ny Båtforsikring" />
-      <Button layoutX="14.0" layoutY="198.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="232.0" text="Ny Fritidsboligforsikring" />
-      <Button layoutX="468.0" layoutY="198.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="247.0" text="Ny Hus- og Innboforsikring" />
-      <Button layoutX="721.0" layoutY="198.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="204.0" text="Ny Reiseforsikring" />
+      <Button layoutX="254.0" layoutY="198.0" mnemonicParsing="false" onAction="#nyBåtforsikringSkjema" prefHeight="144.0" prefWidth="204.0" text="Ny Båtforsikring" />
+      <Button layoutX="14.0" layoutY="198.0" mnemonicParsing="false" onAction="#NyFritidsboligforsikringSkjema" prefHeight="144.0" prefWidth="232.0" text="Ny Fritidsboligforsikring" />
+      <Button layoutX="468.0" layoutY="198.0" mnemonicParsing="false" onAction="#nyHusogInnboforsikringSkjema" prefHeight="144.0" prefWidth="247.0" text="Ny Hus- og Innboforsikring" />
+      <Button layoutX="721.0" layoutY="198.0" mnemonicParsing="false" onAction="#nyReiseforsikringSkjema" prefHeight="144.0" prefWidth="204.0" text="Ny Reiseforsikring" />
    </children>
 </AnchorPane>

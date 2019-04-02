@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.SkjemaBåtforsikringController">
    <children>
-      <Label layoutX="172.0" layoutY="49.0" text="Registrer ny båtforsikring" />
+      <Label layoutX="243.0" layoutY="50.0" text="Registrer ny båtforsikring" />
       <Label layoutX="41.0" layoutY="104.0" text="Årlig forsikringspremie:" />
       <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" />
       <TextField layoutX="244.0" layoutY="98.0" />

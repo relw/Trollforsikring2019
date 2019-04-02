@@ -6,6 +6,33 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaFritidsboligForsikringController">
-    
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaBåtforsikringController">
+   <children>
+      <Label layoutX="243.0" layoutY="50.0" text="Registrer ny fritidsbolig forsikring" />
+      <Label layoutX="41.0" layoutY="104.0" text="Årlig forsikringspremie:" />
+      <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" />
+      <TextField layoutX="244.0" layoutY="98.0" />
+      <TextField layoutX="244.0" layoutY="147.0" />
+      <TextField layoutX="244.0" layoutY="245.0" />
+      <TextField layoutX="244.0" layoutY="196.0" />
+      <Label layoutX="41.0" layoutY="251.0" text="Adresse fritidsbolig:" />
+      <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" />
+      <Label layoutX="41.0" layoutY="398.0" prefHeight="27.0" prefWidth="161.0" text="Byggemateriale:" />
+      <Label layoutX="41.0" layoutY="447.0" text="Standard:" />
+      <TextField layoutX="244.0" layoutY="392.0" />
+      <TextField layoutX="244.0" layoutY="441.0" />
+      <TextField layoutX="244.0" layoutY="343.0" />
+      <TextField layoutX="244.0" layoutY="294.0" />
+      <Label layoutX="41.0" layoutY="349.0" text="Boligtype:" />
+      <Label layoutX="41.0" layoutY="300.0" text="Byggeår:" />
+      <TextField layoutX="244.0" layoutY="491.0" />
+      <Label layoutX="41.0" layoutY="497.0" text="Antall kvm: " />
+      <Button layoutX="244.0" layoutY="546.0" mnemonicParsing="false" text="Opprett forsikring" />
+      <Label layoutX="652.0" layoutY="239.0" text="* " />
+      <Button layoutX="164.0" layoutY="546.0" mnemonicParsing="false" text="Avbryt" />
+      <Label layoutX="486.0" layoutY="149.0" text="Forsikringsbeløp innbo:" />
+      <TextField layoutX="698.0" layoutY="143.0" />
+      <TextField layoutX="698.0" layoutY="93.0" />
+      <Label layoutX="486.0" layoutY="99.0" text="Forsikringsbeløp bygning:" />
+   </children>
 </AnchorPane>

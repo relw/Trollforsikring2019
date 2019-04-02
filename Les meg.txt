@@ -1,3 +1,5 @@
 Kilder: 
 
- - freeiconspng.com/images/mountain-png
+   Bilder: 
+ - freeiconspng.com/images/mountain-png // Fjell på forsiden
+ - legendsofredwall.com // Tåke på forsiden

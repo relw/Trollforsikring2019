@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trollforsikring2019.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="936" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trollforsikring2019.FXMLDocumentController">
     <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+      <ImageView fitHeight="85.0" fitWidth="200.0" layoutX="368.0" layoutY="138.0">
+         <image>
+            <Image url="@troll2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="311.0" fitWidth="948.0" layoutX="-13.0" rotate="180.0">
+         <image>
+            <Image url="@Spooky-Smoke-copy.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="257.0" fitWidth="936.0" layoutY="370.0">
+         <image>
+            <Image url="@mountain-png-23.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="361.0" layoutY="269.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" style="-fx-background-color: C73030; -fx-effect: dropshadow;" text="Forsikring" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="361.0" layoutY="324.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" style="-fx-background-color: C73030; -fx-effect: dropshadow;" text="Kunderegistrering" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="361.0" layoutY="378.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" style="-fx-background-color: C73030; -fx-effect: dropshadow;" text="Skademelding" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

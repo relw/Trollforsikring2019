@@ -19,7 +19,7 @@ public class TrollForsikring2019 extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/forsikringnivaa1.fxml"));
         
         Scene scene = new Scene(root);
         

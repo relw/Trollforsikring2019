@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trollforsikring2019.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="trollforsikring2019.FXMLDocumentController">
     <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+        <Button fx:id="button" layoutX="59.0" layoutY="436.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="228.0" text="Kunderegistrering">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="340.0" layoutY="153.0" text="LOGO">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
+      <Button fx:id="button1" layoutX="354.0" layoutY="436.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="228.0" text="Skademelding">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="button2" layoutX="635.0" layoutY="436.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="228.0" text="Forsikring">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

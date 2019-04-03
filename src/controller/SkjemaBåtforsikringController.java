@@ -102,10 +102,10 @@ public class SkjemaBåtforsikringController implements Initializable {
           
       //SJEKKER DATO FOR ØNSKET OPPSTART (INNPUT NR 2)
       try{
-          feilhåndteringBåtforsikringSkjema.sjekkInputTall(ØnsketOppstart);
+          feilhåndteringBåtforsikringSkjema.sjekkInputDato(ØnsketOppstart);
           feilmeldingØnsketOppstart.setText("OK");
       }
-      catch(feilhåndteringBåtforsikringSkjema.feilTallInnput ex){
+      catch(feilhåndteringBåtforsikringSkjema.feilDatoInnput ex){
             feilmeldingØnsketOppstart.setText(ex.getMessage());
       }
     }

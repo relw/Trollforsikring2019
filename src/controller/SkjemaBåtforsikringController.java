@@ -82,8 +82,8 @@ public class SkjemaBåtforsikringController implements Initializable {
     private void registrerBåtForsikring(ActionEvent event){
        String Forsikringspremie=innForsikringspremie.getText();
        String ØnsketOppstart=innØnsketOppstart.getText();
-       String Eier= innEier.getText();
        String ForsikringsBeløp=innForsikringsbeløp.getText();
+       String Eier= innEier.getText();
        String Lengde=innLengde.getText();
        String Årsmodell=innÅrsmodell.getText();
        String BåttypeogModell=innBåttypeogModell.getText();
@@ -108,8 +108,14 @@ public class SkjemaBåtforsikringController implements Initializable {
       catch(feilhåndteringBåtforsikringSkjema.feilDatoInnput ex){
             feilmeldingØnsketOppstart.setText(ex.getMessage());
       }
-      //SJEKKER OM FORSIKRINGSBELØP ER I KORREKT FORMAT(INPUT 3)
-     
+      //SJEKKER OM FORSIKRINGSBELØP ER I KORREKT FORMAT(INNPUT 3)
+     try{
+         feilhåndteringBåtforsikringSkjema.sjekkForsikringsbeløp(ForsikringsBeløp);
+         feilmeldingForsikringsbeløp.setText("OK");
+     }
+     catch(feilhåndteringBåtforsikringSkjema.feilTallInnput ex){
+            feilmeldingForsikringsbeløp.setText(ex.getMessage());
+      }
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

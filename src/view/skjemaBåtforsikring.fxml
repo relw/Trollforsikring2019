@@ -20,20 +20,20 @@
       <Label layoutX="41.0" layoutY="104.0" text="Årlig forsikringspremie:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
       <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="244.0" layoutY="98.0" />
-      <TextField id="innØnsketOppstart" layoutX="244.0" layoutY="147.0" />
-      <TextField id="innEier" layoutX="244.0" layoutY="245.0" />
-      <TextField id="innForsikringsbeløp" layoutX="244.0" layoutY="196.0" />
+      <TextField fx:id="innØnsketOppstart" id="innØnsketOppstart" layoutX="244.0" layoutY="147.0" />
+      <TextField fx:id="innEier" id="innEier" layoutX="244.0" layoutY="245.0" />
+      <TextField fx:id="innForsikringsbeløp" id="innForsikringsbeløp" layoutX="244.0" layoutY="196.0" />
       <Label layoutX="41.0" layoutY="251.0" text="Eier:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="398.0" prefHeight="27.0" prefWidth="161.0" text="Lengde (fot):" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="447.0" text="Årsmodell:" textFill="WHITE" />
-      <TextField id="innLengde" layoutX="244.0" layoutY="392.0" />
-      <TextField id="innÅrsmodell" layoutX="244.0" layoutY="441.0" />
-      <TextField id="innBåttypeogModell" layoutX="244.0" layoutY="343.0" />
-      <TextField id="innRegistreringsnummer" layoutX="244.0" layoutY="294.0" />
+      <TextField fx:id="innLengde" id="innLengde" layoutX="244.0" layoutY="392.0" />
+      <TextField fx:id="innÅrsmodell" id="innÅrsmodell" layoutX="244.0" layoutY="441.0" />
+      <TextField fx:id="innBåttypeogModell" id="innBåttypeogModell" layoutX="244.0" layoutY="343.0" />
+      <TextField fx:id="innRegistreringsnummer" id="innRegistreringsnummer" layoutX="244.0" layoutY="294.0" />
       <Label layoutX="41.0" layoutY="349.0" text="Båttype og modell:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="300.0" text="Registreringsnummer:" textFill="WHITE" />
-      <TextField id="innMotortypeogMotorstyrke" layoutX="244.0" layoutY="491.0" />
+      <TextField fx:id="innMotortypeogMotorstyrke" id="innMotortypeogMotorstyrke" layoutX="244.0" layoutY="491.0" />
       <Label layoutX="36.0" layoutY="497.0" text="Motortype + motorstyrke:" textFill="WHITE" />
       <Button layoutX="244.0" layoutY="546.0" mnemonicParsing="false" onAction="#registrerBåtForsikring" text="Opprett forsikring" textFill="WHITE" />
       <Label layoutX="652.0" layoutY="91.0" text="Dette dekker forsikringen vår:" />
@@ -47,13 +47,13 @@
       <Label layoutX="652.0" layoutY="216.0" text="* Ansvar" />
       <Button layoutX="164.0" layoutY="546.0" mnemonicParsing="false" text="Avbryt" textFill="WHITE" />
       <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="476.0" layoutY="99.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingØnsketOppstart" layoutX="476.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingForsikringsbeløp" layoutX="476.0" layoutY="196.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingEier" layoutX="476.0" layoutY="245.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingRegistreringsnummer" layoutX="476.0" layoutY="294.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingBåttypeModell" layoutX="476.0" layoutY="343.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingLengde" layoutX="476.0" layoutY="392.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingÅrsmodell" layoutX="476.0" layoutY="441.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingMotortypeStyrke" layoutX="476.0" layoutY="491.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label fx:id="feilmeldingØnsketOppstart" id="feilmeldingØnsketOppstart" layoutX="476.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label fx:id="feilmeldingForsikringsbeløp" id="feilmeldingForsikringsbeløp" layoutX="476.0" layoutY="196.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label fx:id="feilmeldingEier" id="feilmeldingEier" layoutX="476.0" layoutY="245.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label fx:id="feilmeldingRegistreringsnummer" id="feilmeldingRegistreringsnummer" layoutX="476.0" layoutY="294.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label fx:id="feilmeldingBåttypeModell" id="feilmeldingBåttypeModell" layoutX="476.0" layoutY="343.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label fx:id="feilmeldingLengde" id="feilmeldingLengde" layoutX="476.0" layoutY="392.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label fx:id="feilmeldingÅrsmodell" id="feilmeldingÅrsmodell" layoutX="476.0" layoutY="441.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label fx:id="feilmeldingMotortypeStyrke" id="feilmeldingMotortypeStyrke" layoutX="476.0" layoutY="491.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
    </children>
 </AnchorPane>

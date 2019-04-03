@@ -101,6 +101,13 @@ public class SkjemaBåtforsikringController implements Initializable {
         }
           
       //SJEKKER DATO FOR ØNSKET OPPSTART (INNPUT NR 2)
+      try{
+          feilhåndteringBåtforsikringSkjema.sjekkInputTall(ØnsketOppstart);
+          feilmeldingØnsketOppstart.setText("OK");
+      }
+      catch(feilhåndteringBåtforsikringSkjema.feilTallInnput ex){
+            feilmeldingØnsketOppstart.setText(ex.getMessage());
+      }
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

@@ -54,6 +54,5 @@
       <Label id="feilmeldingLengde" layoutX="476.0" layoutY="392.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingÅrsmodell" layoutX="476.0" layoutY="441.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingMotortypeStyrke" layoutX="476.0" layoutY="491.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label layoutX="652.0" layoutY="111.0" text="Dette dekekr forsikringen vår:" textFill="WHITE" />
    </children>
 </AnchorPane>

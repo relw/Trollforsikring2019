@@ -51,9 +51,44 @@ public class SkjemaBåtforsikringController implements Initializable {
     @FXML
     private TextField innForsikringspremie;
     
+    @FXML
+    private TextField innØnsketOppstart;
+    
+    @FXML
+    private TextField innEier;
+    
+    @FXML
+    private TextField innForsikringsbeløp;
+    
+    @FXML
+    private TextField innLengde;
+    
+    @FXML
+    private TextField innÅrsmodell;
+    
+    @FXML
+    private TextField innBåttypeogModell;
+    
+    @FXML
+    private TextField innRegistreringsnummer;
+    
+    @FXML
+    private TextField innMotortypeogMotorstyrke;
+   
+    
     @FXML 
     private void registrerBåtForsikring(ActionEvent event){
        String forsikringspremie=innForsikringspremie.getText();
+       String ØnsketOppstart=innØnsketOppstart.getText();
+       String Eier= innEier.getText();
+       String ForsikringsBeløp=innForsikringsbeløp.getText();
+       String Lengde=innLengde.getText();
+       String Årsmodell=innÅrsmodell.getText();
+       String BåttypeogModell=innBåttypeogModell.getText();
+       String Registreringsnummer=innRegistreringsnummer.getText();
+       String MotortypeogMotorstyke=innMotortypeogMotorstyrke.getText();
+       
+       //SJEKKER FORSIKRINGSPREMIE INNPUT (INNPUT NR 1)
        try{
             feilhåndteringBåtforsikringSkjema.sjekkInputTall(forsikringspremie);
             feilmeldingForsikringspremie.setText("OK");
@@ -62,6 +97,9 @@ public class SkjemaBåtforsikringController implements Initializable {
         catch(feilhåndteringBåtforsikringSkjema.feilTallInnput ex){
             feilmeldingForsikringspremie.setText(ex.getMessage());
         }
+      //SJEKKER DATO FOR ØNSKET OPPSTART (INNPUT NR 2)
+      
+      
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

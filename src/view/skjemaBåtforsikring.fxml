@@ -15,25 +15,25 @@
             <Image url="@bilder/fjell-bunn.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="573.0" layoutX="26.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="480.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="573.0" layoutX="26.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="594.0" />
       <Label layoutX="41.0" layoutY="42.0" text="Registrer ny båtforsikring" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="104.0" text="Årlig forsikringspremie:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
       <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="244.0" layoutY="98.0" />
-      <TextField layoutX="244.0" layoutY="147.0" />
-      <TextField layoutX="244.0" layoutY="245.0" />
-      <TextField layoutX="244.0" layoutY="196.0" />
+      <TextField id="innØnsketOppstart" layoutX="244.0" layoutY="147.0" />
+      <TextField id="innEier" layoutX="244.0" layoutY="245.0" />
+      <TextField id="innForsikringsbeløp" layoutX="244.0" layoutY="196.0" />
       <Label layoutX="41.0" layoutY="251.0" text="Eier:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="398.0" prefHeight="27.0" prefWidth="161.0" text="Lengde (fot):" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="447.0" text="Årsmodell:" textFill="WHITE" />
-      <TextField layoutX="244.0" layoutY="392.0" />
-      <TextField layoutX="244.0" layoutY="441.0" />
-      <TextField layoutX="244.0" layoutY="343.0" />
-      <TextField layoutX="244.0" layoutY="294.0" />
+      <TextField id="innLengde" layoutX="244.0" layoutY="392.0" />
+      <TextField id="innÅrsmodell" layoutX="244.0" layoutY="441.0" />
+      <TextField id="innBåttypeogModell" layoutX="244.0" layoutY="343.0" />
+      <TextField id="innRegistreringsnummer" layoutX="244.0" layoutY="294.0" />
       <Label layoutX="41.0" layoutY="349.0" text="Båttype og modell:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="300.0" text="Registreringsnummer:" textFill="WHITE" />
-      <TextField layoutX="244.0" layoutY="491.0" />
+      <TextField id="innMotortypeogMotorstyrke" layoutX="244.0" layoutY="491.0" />
       <Label layoutX="36.0" layoutY="497.0" text="Motortype + motorstyrke:" textFill="WHITE" />
       <Button layoutX="244.0" layoutY="546.0" mnemonicParsing="false" onAction="#registrerBåtForsikring" text="Opprett forsikring" textFill="WHITE" />
       <Label layoutX="652.0" layoutY="91.0" text="Dette dekker forsikringen vår:" />

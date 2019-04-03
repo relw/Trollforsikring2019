@@ -11,6 +11,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import model.feilhåndteringBåtforsikringSkjema;
 
 /**
  * FXML Controller class
@@ -46,6 +48,21 @@ public class SkjemaBåtforsikringController implements Initializable {
     @FXML
     private Label feilmeldingMotortypeStyrke;
     
+    @FXML
+    private TextField innForsikringspremie;
+    
+    @FXML 
+    private void registrerBåtForsikring(ActionEvent event){
+       String forsikringspremie=innForsikringspremie.getText();
+       try{
+            feilhåndteringBåtforsikringSkjema.sjekkInputTall(forsikringspremie);
+            feilmeldingForsikringspremie.setText("OK");
+            
+        }
+        catch(feilhåndteringBåtforsikringSkjema.feilTallInnput ex){
+            feilmeldingForsikringspremie.setText(ex.getMessage());
+        }
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

@@ -22,7 +22,8 @@ import model.feilhåndteringBåtforsikringSkjema;
 
 
 public class SkjemaBåtforsikringController implements Initializable {
-       @FXML
+    
+    @FXML
     private Label feilmeldingForsikringspremie;
     
     @FXML
@@ -30,6 +31,7 @@ public class SkjemaBåtforsikringController implements Initializable {
     
     @FXML
     private Label feilmeldingForsikringsbeløp;
+    
     @FXML
     private Label feilmeldingEier;
     
@@ -80,16 +82,16 @@ public class SkjemaBåtforsikringController implements Initializable {
     private void registrerBåtForsikring(ActionEvent event){
        String forsikringspremie=innForsikringspremie.getText();
        String ØnsketOppstart=innØnsketOppstart.getText();
-       String Eier= innEier.getText();
-       String ForsikringsBeløp=innForsikringsbeløp.getText();
-       String Lengde=innLengde.getText();
-       String Årsmodell=innÅrsmodell.getText();
-       String BåttypeogModell=innBåttypeogModell.getText();
-       String Registreringsnummer=innRegistreringsnummer.getText();
-       String MotortypeogMotorstyke=innMotortypeogMotorstyrke.getText();
+//       String Eier= innEier.getText();
+//       String ForsikringsBeløp=innForsikringsbeløp.getText();
+//       String Lengde=innLengde.getText();
+//       String Årsmodell=innÅrsmodell.getText();
+//       String BåttypeogModell=innBåttypeogModell.getText();
+//       String Registreringsnummer=innRegistreringsnummer.getText();
+//       String MotortypeogMotorstyke=innMotortypeogMotorstyrke.getText();
        
        //SJEKKER FORSIKRINGSPREMIE INNPUT (INNPUT NR 1)
-       try{
+          try{
             feilhåndteringBåtforsikringSkjema.sjekkInputTall(forsikringspremie);
             feilmeldingForsikringspremie.setText("OK");
             
@@ -97,9 +99,8 @@ public class SkjemaBåtforsikringController implements Initializable {
         catch(feilhåndteringBåtforsikringSkjema.feilTallInnput ex){
             feilmeldingForsikringspremie.setText(ex.getMessage());
         }
+          
       //SJEKKER DATO FOR ØNSKET OPPSTART (INNPUT NR 2)
-      
-      
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

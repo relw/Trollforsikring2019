@@ -1,38 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaBåtforsikringController">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaBåtforsikringController">
    <children>
-      <Label layoutX="243.0" layoutY="50.0" text="Registrer ny fritidsbolig forsikring" />
-      <Label layoutX="41.0" layoutY="104.0" text="Årlig forsikringspremie:" />
-      <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" />
-      <TextField layoutX="244.0" layoutY="98.0" />
+      <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bilder/fjell-bunn.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="573.0" layoutX="26.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="480.0" />
+      <Label layoutX="41.0" layoutY="42.0" text="Registrer ny fritidsboligforsikring" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="104.0" text="Årlig forsikringspremie:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
+      <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="244.0" layoutY="98.0" />
       <TextField layoutX="244.0" layoutY="147.0" />
       <TextField layoutX="244.0" layoutY="245.0" />
       <TextField layoutX="244.0" layoutY="196.0" />
-      <Label layoutX="41.0" layoutY="251.0" text="Adresse fritidsbolig:" />
-      <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" />
-      <Label layoutX="41.0" layoutY="398.0" prefHeight="27.0" prefWidth="161.0" text="Byggemateriale:" />
-      <Label layoutX="41.0" layoutY="447.0" text="Standard:" />
+      <Label layoutX="41.0" layoutY="251.0" text="Boligens adresse:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="398.0" prefHeight="27.0" prefWidth="161.0" text="Byggemateriale:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="447.0" text="Standard:" textFill="WHITE" />
       <TextField layoutX="244.0" layoutY="392.0" />
       <TextField layoutX="244.0" layoutY="441.0" />
       <TextField layoutX="244.0" layoutY="343.0" />
       <TextField layoutX="244.0" layoutY="294.0" />
-      <Label layoutX="41.0" layoutY="349.0" text="Boligtype:" />
-      <Label layoutX="41.0" layoutY="300.0" text="Byggeår:" />
+      <Label layoutX="41.0" layoutY="349.0" text="Boligtype:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="300.0" text="Byggeår:" textFill="WHITE" />
       <TextField layoutX="244.0" layoutY="491.0" />
-      <Label layoutX="41.0" layoutY="497.0" text="Antall kvm: " />
-      <Button layoutX="244.0" layoutY="546.0" mnemonicParsing="false" text="Opprett forsikring" />
-      <Label layoutX="652.0" layoutY="239.0" text="* " />
-      <Button layoutX="164.0" layoutY="546.0" mnemonicParsing="false" text="Avbryt" />
-      <Label layoutX="486.0" layoutY="149.0" text="Forsikringsbeløp innbo:" />
-      <TextField layoutX="698.0" layoutY="143.0" />
-      <TextField layoutX="698.0" layoutY="93.0" />
-      <Label layoutX="486.0" layoutY="99.0" text="Forsikringsbeløp bygning:" />
+      <Label layoutX="36.0" layoutY="497.0" text="Antall kvadratmeter:" textFill="WHITE" />
+      <Button layoutX="244.0" layoutY="546.0" mnemonicParsing="false" text="Opprett forsikring" textFill="WHITE" />
+      <Button layoutX="164.0" layoutY="546.0" mnemonicParsing="false" text="Avbryt" textFill="WHITE" />
+      <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="476.0" layoutY="99.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingØnsketOppstart" layoutX="476.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingForsikringsbeløp" layoutX="476.0" layoutY="196.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingEier" layoutX="476.0" layoutY="245.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingRegistreringsnummer" layoutX="476.0" layoutY="294.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingBåttypeModell" layoutX="476.0" layoutY="343.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingLengde" layoutX="476.0" layoutY="392.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingÅrsmodell" layoutX="476.0" layoutY="441.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingMotortypeStyrke" layoutX="476.0" layoutY="491.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
    </children>
 </AnchorPane>

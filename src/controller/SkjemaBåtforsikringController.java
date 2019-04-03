@@ -20,7 +20,31 @@ import javafx.scene.control.Label;
 
 
 public class SkjemaBåtforsikringController implements Initializable {
+       @FXML
+    private Label feilmeldingForsikringspremie;
     
+    @FXML
+    private Label feilmeldingØnsketOppstart;
+    
+    @FXML
+    private Label feilmeldingForsikringsbeløp;
+    @FXML
+    private Label feilmeldingEier;
+    
+    @FXML
+    private Label feilmeldingRegistreringsnummer;
+    
+    @FXML
+    private Label feilmeldingBåttypeModell;
+    
+    @FXML
+    private Label feilmeldingLengde;
+    
+    @FXML
+    private Label feilmeldingÅrsmodell;
+    
+    @FXML
+    private Label feilmeldingMotortypeStyrke;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

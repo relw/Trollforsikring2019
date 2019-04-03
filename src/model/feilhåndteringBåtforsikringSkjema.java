@@ -53,8 +53,48 @@ public class feilhåndteringBåtforsikringSkjema {
 //        else{
 //            throw new feilRegistreringsnummer("Feil i reg nr");
 //        }
+    }
+    
+    //METODE SOM SJEKKER BÅTTYPE OG MODELL ER FYLT UT
+    public static void sjekkBåttypeogModell(String inntekst) throws feilBåttypeogModell{
+        if(inntekst.isEmpty()){
+            throw new feilBåttypeogModell("Du må fylle inn båttype og modell");
+        }
+    }
+    //METODE SOM SJEKKER OM LENGDE ER FYLT UT KORREKT
+    public static void sjekkLengde(String inntekst) throws feilLengde{
+        if(inntekst.isEmpty()){
+            throw new feilLengde("Du må fylle ut lengde ");
+        }
+        try{
+            int lengde=Integer.parseInt(inntekst);
+        }catch(Exception e){
+                throw new feilLengde("Du må skrive inn tall");
+                }
         
     }
+    //SJEKKER OM ÅRSMODELL ER FYLT UT KORREKT
+    public static void sjekkÅrsmodell(String inntekst) throws feilÅrsmodell{
+        if(inntekst.isEmpty()){
+            throw new feilÅrsmodell("Du må skrive inn et årstall");
+        }
+        if(inntekst.length() !=4){
+            throw new feilÅrsmodell("Skriv inn et årstall");
+        }
+        try{
+            int årsmodell=Integer.parseInt(inntekst);
+        }catch(Exception e){
+                throw new feilÅrsmodell("Du må skrive inn et årstall");
+          }
+    }
+    //SJEKKER OM MOTORTYPE OG STYRKE ER SKREVET INN
+    public static void sjekkMotortypeOgStyrke(String inntekst) throws feilMotortypeOgStyrke{
+        if(inntekst.isEmpty()){
+            throw new feilMotortypeOgStyrke("Skriv inn motortype og styrke");
+        }
+    }     
+            
+            
     public static class feilTallInnput extends Exception{
         public feilTallInnput(String msg) 
         {
@@ -81,6 +121,26 @@ public class feilhåndteringBåtforsikringSkjema {
     }
     public static class feilRegistreringsnummer extends Exception{
         public feilRegistreringsnummer(String msg){
+            super(msg);
+        }
+    }
+    public static class feilBåttypeogModell extends Exception{
+        public feilBåttypeogModell(String msg){
+            super(msg);
+        }
+    }
+    public static class feilLengde extends Exception{
+        public feilLengde(String msg){
+            super(msg);
+        }
+    }
+    public static class feilÅrsmodell extends Exception{
+        public feilÅrsmodell(String msg){
+            super(msg);
+        }
+    }
+    public static class feilMotortypeOgStyrke extends Exception{
+        public feilMotortypeOgStyrke(String msg){
             super(msg);
         }
     }

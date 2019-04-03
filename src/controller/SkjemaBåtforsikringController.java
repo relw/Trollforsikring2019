@@ -85,9 +85,11 @@ public class SkjemaBåtforsikringController implements Initializable {
        String ForsikringsBeløp=innForsikringsbeløp.getText();
        String Eier= innEier.getText();
        String Registreringsnummer=innRegistreringsnummer.getText();
+       String BåttypeogModell=innBåttypeogModell.getText();
        String Lengde=innLengde.getText();
        String Årsmodell=innÅrsmodell.getText();
-       String BåttypeogModell=innBåttypeogModell.getText();
+       String MotortypeOgStyrke=innMotortypeogMotorstyrke.getText();
+       
        
        String MotortypeogMotorstyke=innMotortypeogMotorstyrke.getText();
        
@@ -132,6 +134,37 @@ public class SkjemaBåtforsikringController implements Initializable {
      }
      catch(feilhåndteringBåtforsikringSkjema.feilRegistreringsnummer ex){
           feilmeldingRegistreringsnummer.setText(ex.getMessage());
+     }
+     //SJEKKER BÅTTYPE OG MODELL ER FYLT INN (INNPUT 6)
+     try{
+         feilhåndteringBåtforsikringSkjema.sjekkBåttypeogModell(BåttypeogModell);
+         feilmeldingBåttypeModell.setText("OK");
+     }
+     catch(feilhåndteringBåtforsikringSkjema.feilBåttypeogModell ex){
+         feilmeldingBåttypeModell.setText(ex.getMessage());
+     }
+     //SJEKKER OM LENGDE ER FYLT INN KORREKT (INNPUT 7)
+     try{
+         feilhåndteringBåtforsikringSkjema.sjekkLengde(Lengde);
+         feilmeldingLengde.setText("OK");
+     }
+     catch(feilhåndteringBåtforsikringSkjema.feilLengde ex){
+         feilmeldingLengde.setText(ex.getMessage());
+     }
+     //SJEKKER OM ÅRSMODELL ER FYLT INN KORREKT (INNPUT 8)
+     try{
+         feilhåndteringBåtforsikringSkjema.sjekkÅrsmodell(Årsmodell);
+         feilmeldingÅrsmodell.setText("OK");
+     }
+     catch(feilhåndteringBåtforsikringSkjema.feilÅrsmodell ex){
+         feilmeldingÅrsmodell.setText(ex.getMessage());
+     }
+     try{
+         feilhåndteringBåtforsikringSkjema.sjekkMotortypeOgStyrke(MotortypeOgStyrke);
+         feilmeldingMotortypeStyrke.setText("OK");
+     }
+     catch(feilhåndteringBåtforsikringSkjema.feilMotortypeOgStyrke ex){
+         feilmeldingMotortypeStyrke.setText(ex.getMessage());
      }
      
     }

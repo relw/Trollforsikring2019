@@ -84,15 +84,16 @@ public class SkjemaBåtforsikringController implements Initializable {
        String ØnsketOppstart=innØnsketOppstart.getText();
        String ForsikringsBeløp=innForsikringsbeløp.getText();
        String Eier= innEier.getText();
+       String Registreringsnummer=innRegistreringsnummer.getText();
        String Lengde=innLengde.getText();
        String Årsmodell=innÅrsmodell.getText();
        String BåttypeogModell=innBåttypeogModell.getText();
-       String Registreringsnummer=innRegistreringsnummer.getText();
+       
        String MotortypeogMotorstyke=innMotortypeogMotorstyrke.getText();
        
        //SJEKKER FORSIKRINGSPREMIE INNPUT (INNPUT NR 1)
           try{
-            feilhåndteringBåtforsikringSkjema.sjekkInputTall(Forsikringspremie);
+            feilhåndteringBåtforsikringSkjema.sjekkInputForsikringspremie(Forsikringspremie);
             feilmeldingForsikringspremie.setText("OK");
             
         }
@@ -116,6 +117,23 @@ public class SkjemaBåtforsikringController implements Initializable {
      catch(feilhåndteringBåtforsikringSkjema.feilTallInnput ex){
             feilmeldingForsikringsbeløp.setText(ex.getMessage());
       }
+     //SJEKKER OM EIER FELTET KUN INNEHOLDER BOKSTAVER (INNPUT 4)
+     try{
+         feilhåndteringBåtforsikringSkjema.sjekkEier(Eier);
+         feilmeldingEier.setText("OK");
+     }
+     catch(feilhåndteringBåtforsikringSkjema.feilInnputNavn ex){
+          feilmeldingEier.setText(ex.getMessage());
+     }
+     //SJEKKER OM REGISTRERINGSNUMMET ER SKREVET KORREKT (INNPUT 5)
+     try{
+         feilhåndteringBåtforsikringSkjema.sjekkRegistreringsnummer(Registreringsnummer);
+         feilmeldingRegistreringsnummer.setText("OK");
+     }
+     catch(feilhåndteringBåtforsikringSkjema.feilRegistreringsnummer ex){
+          feilmeldingRegistreringsnummer.setText(ex.getMessage());
+     }
+     
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

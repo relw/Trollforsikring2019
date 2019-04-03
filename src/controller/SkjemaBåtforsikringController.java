@@ -80,19 +80,19 @@ public class SkjemaBåtforsikringController implements Initializable {
     
     @FXML 
     private void registrerBåtForsikring(ActionEvent event){
-       String forsikringspremie=innForsikringspremie.getText();
+       String Forsikringspremie=innForsikringspremie.getText();
        String ØnsketOppstart=innØnsketOppstart.getText();
-//       String Eier= innEier.getText();
-//       String ForsikringsBeløp=innForsikringsbeløp.getText();
-//       String Lengde=innLengde.getText();
-//       String Årsmodell=innÅrsmodell.getText();
-//       String BåttypeogModell=innBåttypeogModell.getText();
-//       String Registreringsnummer=innRegistreringsnummer.getText();
-//       String MotortypeogMotorstyke=innMotortypeogMotorstyrke.getText();
+       String Eier= innEier.getText();
+       String ForsikringsBeløp=innForsikringsbeløp.getText();
+       String Lengde=innLengde.getText();
+       String Årsmodell=innÅrsmodell.getText();
+       String BåttypeogModell=innBåttypeogModell.getText();
+       String Registreringsnummer=innRegistreringsnummer.getText();
+       String MotortypeogMotorstyke=innMotortypeogMotorstyrke.getText();
        
        //SJEKKER FORSIKRINGSPREMIE INNPUT (INNPUT NR 1)
           try{
-            feilhåndteringBåtforsikringSkjema.sjekkInputTall(forsikringspremie);
+            feilhåndteringBåtforsikringSkjema.sjekkInputTall(Forsikringspremie);
             feilmeldingForsikringspremie.setText("OK");
             
         }
@@ -108,6 +108,8 @@ public class SkjemaBåtforsikringController implements Initializable {
       catch(feilhåndteringBåtforsikringSkjema.feilDatoInnput ex){
             feilmeldingØnsketOppstart.setText(ex.getMessage());
       }
+      //SJEKKER OM FORSIKRINGSBELØP ER I KORREKT FORMAT(INPUT 3)
+     
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

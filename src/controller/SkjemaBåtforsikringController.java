@@ -97,7 +97,6 @@ public class SkjemaBåtforsikringController implements Initializable {
           try{
             feilhåndteringBåtforsikringSkjema.sjekkInputForsikringspremie(Forsikringspremie);
             feilmeldingForsikringspremie.setText("OK");
-            
         }
         catch(feilhåndteringBåtforsikringSkjema.feilTallInnput ex){
             feilmeldingForsikringspremie.setText(ex.getMessage());

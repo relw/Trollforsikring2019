@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
@@ -56,7 +57,7 @@
       <Label id="feilmeldingForsikringsbeløp" fx:id="feilmeldingForsikringsbeløp" layoutX="456.0" layoutY="197.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingEier" fx:id="feilmeldingEier" layoutX="456.0" layoutY="245.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingRegistreringsnummer" fx:id="feilmeldingRegistreringsnummer" layoutX="456.0" layoutY="294.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingBåttypeModell" fx:id="feilmeldingBåttypeModell" layoutX="458.0" layoutY="343.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingBåttypeModell" fx:id="feilmeldingBåttypeModell" layoutX="456.0" layoutY="343.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingLengde" fx:id="feilmeldingLengde" layoutX="458.0" layoutY="392.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingÅrsmodell" fx:id="feilmeldingÅrsmodell" layoutX="455.0" layoutY="441.0" prefHeight="39.0" prefWidth="167.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingMotortypeStyrke" fx:id="feilmeldingMotortypeStyrke" layoutX="458.0" layoutY="491.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />

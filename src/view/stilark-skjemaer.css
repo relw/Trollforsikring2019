@@ -4,3 +4,7 @@
 .button{
     -fx-background-color:  #C73030; 
 }
+.text-field{
+  -fx-text-box-border: red ;
+  -fx-focus-color: red ;
+}

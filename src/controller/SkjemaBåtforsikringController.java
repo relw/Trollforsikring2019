@@ -88,15 +88,15 @@ public class SkjemaBåtforsikringController implements Initializable {
        String BåttypeogModell=innBåttypeogModell.getText();
        String Lengde=innLengde.getText();
        String Årsmodell=innÅrsmodell.getText();
-       String MotortypeOgStyrke=innMotortypeogMotorstyrke.getText();
-       
-       
+       String MotortypeOgStyrke=innMotortypeogMotorstyrke.getText(); 
        String MotortypeogMotorstyke=innMotortypeogMotorstyrke.getText();
        
+       int godkjentTeller=0;
        //SJEKKER FORSIKRINGSPREMIE INNPUT (INNPUT NR 1)
           try{
             feilhåndteringBåtforsikringSkjema.sjekkInputForsikringspremie(Forsikringspremie);
             feilmeldingForsikringspremie.setText("OK");
+            godkjentTeller++;
         }
         catch(feilhåndteringBåtforsikringSkjema.feilTallInnput ex){
             feilmeldingForsikringspremie.setText(ex.getMessage());
@@ -106,6 +106,7 @@ public class SkjemaBåtforsikringController implements Initializable {
       try{
           feilhåndteringBåtforsikringSkjema.sjekkInputDato(ØnsketOppstart);
           feilmeldingØnsketOppstart.setText("OK");
+          godkjentTeller++;
       }
       catch(feilhåndteringBåtforsikringSkjema.feilDatoInnput ex){
             feilmeldingØnsketOppstart.setText(ex.getMessage());
@@ -114,6 +115,7 @@ public class SkjemaBåtforsikringController implements Initializable {
      try{
          feilhåndteringBåtforsikringSkjema.sjekkForsikringsbeløp(ForsikringsBeløp);
          feilmeldingForsikringsbeløp.setText("OK");
+         godkjentTeller++;
      }
      catch(feilhåndteringBåtforsikringSkjema.feilTallInnput ex){
             feilmeldingForsikringsbeløp.setText(ex.getMessage());
@@ -122,6 +124,7 @@ public class SkjemaBåtforsikringController implements Initializable {
      try{
          feilhåndteringBåtforsikringSkjema.sjekkEier(Eier);
          feilmeldingEier.setText("OK");
+         godkjentTeller++;
      }
      catch(feilhåndteringBåtforsikringSkjema.feilInnputNavn ex){
           feilmeldingEier.setText(ex.getMessage());
@@ -130,6 +133,7 @@ public class SkjemaBåtforsikringController implements Initializable {
      try{
          feilhåndteringBåtforsikringSkjema.sjekkRegistreringsnummer(Registreringsnummer);
          feilmeldingRegistreringsnummer.setText("OK");
+         godkjentTeller++;
      }
      catch(feilhåndteringBåtforsikringSkjema.feilRegistreringsnummer ex){
           feilmeldingRegistreringsnummer.setText(ex.getMessage());
@@ -138,6 +142,7 @@ public class SkjemaBåtforsikringController implements Initializable {
      try{
          feilhåndteringBåtforsikringSkjema.sjekkBåttypeogModell(BåttypeogModell);
          feilmeldingBåttypeModell.setText("OK");
+         godkjentTeller++;
      }
      catch(feilhåndteringBåtforsikringSkjema.feilBåttypeogModell ex){
          feilmeldingBåttypeModell.setText(ex.getMessage());
@@ -146,6 +151,7 @@ public class SkjemaBåtforsikringController implements Initializable {
      try{
          feilhåndteringBåtforsikringSkjema.sjekkLengde(Lengde);
          feilmeldingLengde.setText("OK");
+         godkjentTeller++;
      }
      catch(feilhåndteringBåtforsikringSkjema.feilLengde ex){
          feilmeldingLengde.setText(ex.getMessage());
@@ -154,18 +160,25 @@ public class SkjemaBåtforsikringController implements Initializable {
      try{
          feilhåndteringBåtforsikringSkjema.sjekkÅrsmodell(Årsmodell);
          feilmeldingÅrsmodell.setText("OK");
+         godkjentTeller++;
      }
      catch(feilhåndteringBåtforsikringSkjema.feilÅrsmodell ex){
          feilmeldingÅrsmodell.setText(ex.getMessage());
+         godkjentTeller++;
      }
+     //SJEKKER OM MOTORTYE OG STYRKE ER FYLT INN KORREKT (INNPUT 9)
      try{
          feilhåndteringBåtforsikringSkjema.sjekkMotortypeOgStyrke(MotortypeOgStyrke);
          feilmeldingMotortypeStyrke.setText("OK");
+         godkjentTeller++;
      }
      catch(feilhåndteringBåtforsikringSkjema.feilMotortypeOgStyrke ex){
          feilmeldingMotortypeStyrke.setText(ex.getMessage());
      }
-     
+     if(godkjentTeller==9){
+         System.out.print("du har nå registrert forsikring");
+         //FUNKSJON FOR Å LAGE FORSIKRING HER?
+     }
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

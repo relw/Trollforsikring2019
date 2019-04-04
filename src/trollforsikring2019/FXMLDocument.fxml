@@ -38,5 +38,10 @@
             <Font size="18.0" />
          </font>
       </Button>
+      <ImageView fitHeight="75.0" fitWidth="200.0" layoutX="361.0" layoutY="67.0">
+         <image>
+            <Image url="@giphy-3.gif" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

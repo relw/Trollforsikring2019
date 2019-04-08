@@ -16,8 +16,7 @@ import javafx.fxml.Initializable;
  */
 public class SkjemaHusOgInnboforsikringController implements Initializable {
 
-    @FXML
-    private Label feilmeldingForsikringspremie;
+    
 
 
     @Override

@@ -16,9 +16,10 @@ import javafx.fxml.Initializable;
  */
 public class SkjemaHusOgInnboforsikringController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private Label feilmeldingForsikringspremie;
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

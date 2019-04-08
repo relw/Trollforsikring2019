@@ -23,17 +23,17 @@
             <Image url="@mountain-png-23.png" />
          </image>
       </ImageView>
-      <Button id="button" layoutX="361.0" layoutY="269.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" stylesheets="@stilark.css" text="Forsikring" textFill="WHITE">
+      <Button id="button" layoutX="361.0" layoutY="269.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" onAction="#forsikringKnapp" stylesheets="@stilark.css" text="Forsikring" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button id="button" layoutX="361.0" layoutY="324.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" stylesheets="@stilark.css" text="Kunderegistrering" textFill="WHITE">
+      <Button id="button" layoutX="361.0" layoutY="324.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" onAction="#KundeKnapp" stylesheets="@stilark.css" text="Kunderegistrering" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button id="button" layoutX="361.0" layoutY="378.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" stylesheets="@stilark.css" text="Skademelding" textFill="WHITE">
+      <Button id="button" layoutX="361.0" layoutY="378.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" onAction="#SkadeKnapp" stylesheets="@stilark.css" text="Skademelding" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>

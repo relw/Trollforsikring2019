@@ -40,5 +40,10 @@
             <Image url="@../trollforsikring2019/Spooky-Smoke-copy.png" />
          </image>
       </ImageView>
+      <Button layoutX="37.0" layoutY="553.0" mnemonicParsing="false" onAction="#tilbake" prefHeight="42.0" prefWidth="107.0" stylesheets="@../trollforsikring2019/stilark.css" text="Tilbake" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

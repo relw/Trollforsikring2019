@@ -23,7 +23,7 @@
          <font>
             <Font name="Segoe UI Historic" size="22.0" />
          </font></Label>
-      <Label layoutX="25.0" layoutY="104.0" text="Årlig forsikringspremie:" textFill="WHITE" />
+      <Label layoutX="25.0" layoutY="104.0" text="Årlig forsikringspremiie:" textFill="WHITE" />
       <Label layoutX="25.0" layoutY="153.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
       <Label layoutX="25.0" layoutY="202.0" text="Forsikringsbeløp:" textFill="WHITE" />
       <Label layoutX="25.0" layoutY="251.0" text="Eier:" textFill="WHITE" />

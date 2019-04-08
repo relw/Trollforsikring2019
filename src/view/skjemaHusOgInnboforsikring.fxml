@@ -13,11 +13,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<<<<<<< HEAD
 <AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaHusOgInnboforsikringController">
-=======
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaBåtforsikringController">
->>>>>>> 37c26e8ce69dba783f50aabea0bf4eaffd83e56a
+
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="168.0" layoutX="517.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="388.0" />
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">

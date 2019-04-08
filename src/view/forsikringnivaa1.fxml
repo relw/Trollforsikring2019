@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.Forsikringnivaa1Controller">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Forsikringnivaa1Controller">
    <children>
-      <Button layoutX="254.0" layoutY="198.0" mnemonicParsing="false" onAction="#nyBåtforsikringSkjema" prefHeight="144.0" prefWidth="204.0" text="Ny Båtforsikring" />
-      <Button layoutX="14.0" layoutY="198.0" mnemonicParsing="false" onAction="#NyFritidsboligforsikringSkjema" prefHeight="144.0" prefWidth="232.0" text="Ny Fritidsboligforsikring" />
-      <Button layoutX="468.0" layoutY="198.0" mnemonicParsing="false" onAction="#nyHusogInnboforsikringSkjema" prefHeight="144.0" prefWidth="247.0" text="Ny Hus- og Innboforsikring" />
-      <Button layoutX="721.0" layoutY="198.0" mnemonicParsing="false" onAction="#nyReiseforsikringSkjema" prefHeight="144.0" prefWidth="204.0" text="Ny Reiseforsikring" />
+      <Button layoutX="361.0" layoutY="300.0" mnemonicParsing="false" onAction="#nyBåtforsikringSkjema" prefHeight="42.0" prefWidth="213.0" stylesheets="@../trollforsikring2019/stilark.css" text="Ny Båtforsikring" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button layoutX="361.0" layoutY="241.0" mnemonicParsing="false" onAction="#NyFritidsboligforsikringSkjema" prefHeight="42.0" prefWidth="213.0" stylesheets="@../trollforsikring2019/stilark.css" text="Ny Fritidsboligforsikring" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button layoutX="361.0" layoutY="356.0" mnemonicParsing="false" onAction="#nyHusogInnboforsikringSkjema" prefHeight="42.0" prefWidth="213.0" stylesheets="@../trollforsikring2019/stilark.css" text="Ny Hus- og Innboforsikring" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button layoutX="361.0" layoutY="411.0" mnemonicParsing="false" onAction="#nyReiseforsikringSkjema" prefHeight="42.0" prefWidth="213.0" stylesheets="@../trollforsikring2019/stilark.css" text="Ny Reiseforsikring" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <ImageView fitHeight="177.0" fitWidth="936.0" layoutY="447.0">
+         <image>
+            <Image url="@bilder/fjell-bunn.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="278.0" layoutY="126.0" text="Velg type forsikring:">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="168.0" fitWidth="964.0" layoutX="-30.0" rotate="180.0">
+         <image>
+            <Image url="@../trollforsikring2019/Spooky-Smoke-copy.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -20,20 +20,20 @@
       <Label layoutX="41.0" layoutY="104.0" text="Årlig forsikringspremie:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
       <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="244.0" layoutY="98.0" />
-      <TextField layoutX="244.0" layoutY="147.0" />
-      <TextField layoutX="244.0" layoutY="245.0" />
-      <TextField layoutX="244.0" layoutY="196.0" />
+      <TextField id="innOppstart" fx:id="innOppstart" layoutX="244.0" layoutY="147.0" />
+      <TextField id="innBoligAdresse" fx:id="innBoligAdresse" layoutX="244.0" layoutY="245.0" />
+      <TextField id="innForsikringbeloop" fx:id="innForsikringbeloop" layoutX="244.0" layoutY="196.0" />
       <Label layoutX="41.0" layoutY="251.0" text="Boligens adresse:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="398.0" prefHeight="27.0" prefWidth="161.0" text="Byggemateriale:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="447.0" text="Standard:" textFill="WHITE" />
-      <TextField layoutX="244.0" layoutY="392.0" />
-      <TextField layoutX="244.0" layoutY="441.0" />
-      <TextField layoutX="244.0" layoutY="343.0" />
-      <TextField layoutX="244.0" layoutY="294.0" />
+      <TextField id="innByggemateriale" fx:id="innByggemateriale" layoutX="244.0" layoutY="392.0" />
+      <TextField id="innStandard" fx:id="innStandard" layoutX="244.0" layoutY="441.0" />
+      <TextField id="innBoligtype" fx:id="innBoligtype" layoutX="244.0" layoutY="343.0" />
+      <TextField id="innByggeaar" fx:id="innByggeaar" layoutX="244.0" layoutY="294.0" />
       <Label layoutX="41.0" layoutY="349.0" text="Boligtype:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="300.0" text="Byggeår:" textFill="WHITE" />
-      <TextField layoutX="244.0" layoutY="491.0" />
+      <TextField id="innAntallKvadratmeter" fx:id="innAntallKvadratmeter" layoutX="244.0" layoutY="491.0" />
       <Label layoutX="36.0" layoutY="497.0" text="Antall kvadratmeter:" textFill="WHITE" />
       <Button layoutX="244.0" layoutY="546.0" mnemonicParsing="false" text="Opprett forsikring" textFill="WHITE" />
       <Button layoutX="164.0" layoutY="546.0" mnemonicParsing="false" text="Avbryt" textFill="WHITE" />

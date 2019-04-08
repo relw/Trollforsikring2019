@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -8,8 +13,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
+<<<<<<< HEAD
 <AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaHusOgInnboforsikringController">
+=======
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaBåtforsikringController">
+>>>>>>> 37c26e8ce69dba783f50aabea0bf4eaffd83e56a
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="168.0" layoutX="517.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="388.0" />
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@bilder/fjell-bunn.png" />
@@ -46,5 +56,11 @@
       <Label id="feilmeldingByggemateriale" fx:id="feilmeldingByggemateriale" layoutX="476.0" layoutY="392.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingStandard" fx:id="feilmeldingStandard" layoutX="476.0" layoutY="441.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingAntallKvadratmeter" fx:id="feilmeldingAntallKvadratmeter" layoutX="476.0" layoutY="491.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label layoutX="518.0" layoutY="69.0" text="Forsikringsbeløp for bygning: " textFill="WHITE" />
+      <Label layoutX="518.0" layoutY="118.0" text="Forsikringsbeløp for innbo:" textFill="WHITE" />
+      <TextField id="innForsikringsbeløpBygning" fx:id="innForsikringsbeløpBygning" layoutX="750.0" layoutY="63.0" prefHeight="39.0" prefWidth="126.0" />
+      <TextField id="innForsikringsbeløpInnbo" fx:id="innForsikringsbeløpInnbo" layoutX="750.0" layoutY="119.0" prefHeight="39.0" prefWidth="126.0" />
+      <Label id="feilmeldingForsikringsbeløpBygning" fx:id="feilmeldingForsikringsbeløpBygning" layoutX="876.0" layoutY="69.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingForsikringsbeløpInnbo" fx:id="feilmeldingForsikringsbeløpInnbo" layoutX="876.0" layoutY="125.0" text="*" textFill="WHITE" />
    </children>
 </AnchorPane>

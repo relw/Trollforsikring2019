@@ -122,7 +122,78 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         catch(feilhåndteringFritidsboligforsikringSkjema.feilAdresseInnput ex){
             feilmeldingAdresse.setText(ex.getMessage());
         }
-        
+        //SJEKKER INNPUT 4 FORSIKRINGSBELØP
+        try{
+            feilhåndteringFritidsboligforsikringSkjema.sjekkInnputTall(forsikringsbeløp);
+            feilmeldingForsikringsbeløp.setText("OK");;
+            godkjentTeller++;
+        }
+        catch(feilhåndteringFritidsboligforsikringSkjema.feilTallInnput ex){
+            feilmeldingForsikringsbeløp.setText(ex.getMessage());
+        }
+        //SJEKKER INNPUT 5 BYGGEMATERIALE
+        try{
+            feilhåndteringFritidsboligforsikringSkjema.sjekkByggemateriale(byggemateriale);
+            feilmeldingByggemateriale.setText("OK");;
+            godkjentTeller++;
+        }
+        catch(feilhåndteringFritidsboligforsikringSkjema.tomtTekstfelt ex){
+            feilmeldingByggemateriale.setText(ex.getMessage());
+        }
+        //SJEKKER INNPUT 6 STANDARD
+       try{
+            feilhåndteringFritidsboligforsikringSkjema.sjekkStandard(standard);
+            feilmeldingStandard.setText("OK");;
+            godkjentTeller++;
+        }
+        catch(feilhåndteringFritidsboligforsikringSkjema.tomtTekstfelt ex){
+            feilmeldingStandard.setText(ex.getMessage());
+        }
+        //SJEKKER INNPUT 7 BOLIGTYPE
+        try{
+            feilhåndteringFritidsboligforsikringSkjema.sjekkBoligtype(boligtype);
+            feilmeldingBoligtype.setText("OK");;
+            godkjentTeller++;
+        }
+        catch(feilhåndteringFritidsboligforsikringSkjema.tomtTekstfelt ex){
+            feilmeldingBoligtype.setText(ex.getMessage());
+        }
+        //SJEKKER INNPUT 8 BYGGEÅR
+        try{
+            feilhåndteringFritidsboligforsikringSkjema.sjekkByggeår(byggeår);
+            feilmeldingByggeår.setText("OK");;
+            godkjentTeller++;
+        }
+        catch(feilhåndteringFritidsboligforsikringSkjema.feilByggeårInnput ex){
+            feilmeldingByggeår.setText(ex.getMessage());
+        }
+        //SJEKKER INNPUT 9 KVM
+        try{
+            feilhåndteringFritidsboligforsikringSkjema.sjekkKvm(kvm);
+            feilmeldingKvm.setText("OK");;
+            godkjentTeller++;
+        }
+        catch(feilhåndteringFritidsboligforsikringSkjema.feilTallInnput ex){
+            feilmeldingKvm.setText(ex.getMessage());
+        }
+        //SJEKKER INNPUT 10 FORSIKRINGSBELØP BYGNING
+        try{
+            feilhåndteringFritidsboligforsikringSkjema.sjekkInnputTall(forsikringsbeløpBygning);
+            feilmeldingForsikringsbeløpBygning.setText("OK");;
+            godkjentTeller++;
+        }
+        catch(feilhåndteringFritidsboligforsikringSkjema.feilTallInnput ex){
+           feilmeldingForsikringsbeløpBygning.setText(ex.getMessage());
+        }
+        //SJEKKER INNPUT 10 FORSIKRINGSBELØP INNBO
+        try{
+            feilhåndteringFritidsboligforsikringSkjema.sjekkInnputTall(forsikringsbeløpInnbo);
+            feilmeldingForsikringsbeløpInnbo.setText("OK");;
+            godkjentTeller++;
+        }
+        catch(feilhåndteringFritidsboligforsikringSkjema.feilTallInnput ex){
+           feilmeldingForsikringsbeløpInnbo.setText(ex.getMessage());
+        }
     }
             
     @Override

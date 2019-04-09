@@ -1,12 +1,12 @@
 package model;
 public class feilhåndteringFritidsboligforsikringSkjema {
     //SJEKKER OM ET FELT INNEHOLDER TALL
-    public static void sjekkInnputTall(String inntekst) throws feilInnputTall{
+    public static void sjekkInnputTall(String inntekst) throws feilTallInnput{
         try{
             int tall=Integer.parseInt(inntekst);
         }
         catch(Exception e){
-            throw new feilInnputTall("Du må skrive inn et tall");
+            throw new feilTallInnput("Du må skrive inn et tall");
         }
     }
     //
@@ -19,15 +19,27 @@ public class feilhåndteringFritidsboligforsikringSkjema {
                     throw new feilDatoInnput("Ikke korrekt skrevet inn dato");
                 }
         }
-    
-    public static class feilInnputTall extends Exception{
-        public feilInnputTall(String msg) 
+    public static void sjekkAdresse(String inntekst) throws feilAdresseInnput{
+        if(inntekst.isEmpty()){
+            throw new feilAdresseInnput("Du må skrive inn adresse");
+        }  
+        
+        //SKRIV EN IF HER SOM SJEKKER OM STRINGEN INNEHOLDER BÅDE BOKSTAVER OG TALL
+    }
+    public static class feilTallInnput extends Exception{
+        public feilTallInnput(String msg) 
         {
             super(msg);
         }
     }
      public static class feilDatoInnput extends Exception{
         public feilDatoInnput(String msg) 
+        {
+            super(msg);
+        }
+    }
+      public static class feilAdresseInnput extends Exception{
+        public feilAdresseInnput(String msg) 
         {
             super(msg);
         }

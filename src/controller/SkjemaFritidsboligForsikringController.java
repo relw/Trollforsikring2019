@@ -97,14 +97,32 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         String forsikringsbeløpInnbo=innForsikringsbeløpInnbo.getText();
         
         int godkjentTeller=0;
+        //SJEKKER INNPUT 1 FORSIKRINGSPREMIE
         try{
             feilhåndteringFritidsboligforsikringSkjema.sjekkInnputTall(forsikringspremie);
             feilmeldingForsikringspremie.setText("OK");;
             godkjentTeller++;
         }
-        catch(feilhåndteringFritidsboligforsikringSkjema.feilInnputTall ex){
+        catch(feilhåndteringFritidsboligforsikringSkjema.feilTallInnput ex){
             feilmeldingForsikringspremie.setText(ex.getMessage());
         }
+        //SJEKKER INPUT 2 ØNSKET OPPSTARTSDATO
+        try{
+            feilhåndteringFritidsboligforsikringSkjema.sjekkInputDato(ønsketOppstart);
+            feilmeldingØnsketOppstart.setText("OK");
+        }
+        catch(feilhåndteringFritidsboligforsikringSkjema.feilDatoInnput ex){
+            feilmeldingØnsketOppstart.setText(ex.getMessage());
+        }
+        //SJEKKER INNPUT 3 ADRESSE
+        try{
+            feilhåndteringFritidsboligforsikringSkjema.sjekkAdresse(adresse);
+            feilmeldingAdresse.setText("OK");
+        }
+        catch(feilhåndteringFritidsboligforsikringSkjema.feilAdresseInnput ex){
+            feilmeldingAdresse.setText(ex.getMessage());
+        }
+        
     }
             
     @Override

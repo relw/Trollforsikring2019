@@ -7,16 +7,13 @@ package controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import model.feilhåndteringFritidsboligforsikringSkjema;
 
-/**
- * FXML Controller class
- *
- * @author Rasmus
- */
 public class SkjemaFritidsboligForsikringController implements Initializable {
 
     @FXML
@@ -85,7 +82,30 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
     @FXML
     private TextField innForsikringsbeløpInnbo;
     
-    
+    @FXML 
+    private void registrerFritidsboligForsikring(ActionEvent event){
+        String forsikringspremie=innForsikringspremie.getText();
+        String ønsketOppstart=innØnsketOppstart.getText();
+        String adresse=innAdresse.getText();
+        String forsikringsbeløp=innForsikringsbeløp.getText();
+        String byggemateriale=innByggemateriale.getText();
+        String standard=innStandard.getText();
+        String boligtype=innBoligtype.getText();
+        String byggeår=innByggeår.getText();
+        String kvm=innKvm.getText();
+        String forsikringsbeløpBygning=innForsikringsbeløpBygning.getText();
+        String forsikringsbeløpInnbo=innForsikringsbeløpInnbo.getText();
+        
+        int godkjentTeller=0;
+        try{
+            feilhåndteringFritidsboligforsikringSkjema.sjekkInnputTall(forsikringspremie);
+            feilmeldingForsikringspremie.setText("OK");;
+            godkjentTeller++;
+        }
+        catch(feilhåndteringFritidsboligforsikringSkjema.feilInnputTall ex){
+            feilmeldingForsikringspremie.setText(ex.getMessage());
+        }
+    }
             
     @Override
     public void initialize(URL url, ResourceBundle rb) {

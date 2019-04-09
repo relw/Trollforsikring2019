@@ -36,7 +36,7 @@ public class Forsikringnivaa1Controller implements Initializable {
         app_stage.show();
 
     }
-    public void NyFritidsboligforsikringSkjema(ActionEvent event){
+    public void NyFritidsboligforsikringSkjema(ActionEvent event) throws IOException{
 //        Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/skjemaFritidsboligForsikring.fxml"));
 //        Scene home_page_scene=new Scene(home_page_parent);
 //        Stage app_stage= (Stage) ((Node) event.getSource()).getScene().getWindow();

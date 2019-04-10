@@ -45,6 +45,11 @@ public class kunder {
         for(forsikringer forsikringer: kundeForsikringer){
             ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+" Opprettet: "+forsikringer.getOpprettetForsikring()+" Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+ "Betingelser: "+forsikringer.getForsikringsBetingelser()+"\n";
         }
+        ut += "Skademeldinger: \n"; 
+        for(skademeldinger skader : kundeSkademeldinger)
+        {
+            ut += "Dato: "+skader.getDato()+", Skadebeskrivelse: "+skader.getBeskrivelse()+", Kontaktinformasjon: "+skader.getKontaktInfo()+", Skadenummer: "+skader.getSkadenummer()+", Takseringsbeløp: "+skader.getTakseringsbeløp()+", Ubetalt erstatningsbeløp: "+skader.getUbetaltErstatningsbeløp();  
+        }
         return ut;
     }
     }

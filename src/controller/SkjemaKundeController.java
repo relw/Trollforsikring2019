@@ -15,7 +15,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.feilhåndteringKundeSkjema;
 
 /**
  * FXML Controller class
@@ -23,8 +26,75 @@ import javafx.stage.Stage;
  * @author martin
  */
 public class SkjemaKundeController implements Initializable {
-
-     @FXML
+    @FXML
+    private TextField innOpprettetKundeforhold;
+    
+    @FXML
+    private TextField innNavn;
+    
+    @FXML
+    private TextField innForsikringsnummer;
+    
+    @FXML
+    private TextField innFakturaadresse;
+    
+    @FXML
+    private Label feilmeldingOpprettetKundeforhold;
+    
+    @FXML
+    private Label feilmeldingNavn;
+    
+    @FXML
+    private Label feilmeldingFakturaadresse;
+    
+    @FXML
+    private Label feilmeldingForsikringsnummer;
+    
+    @FXML
+    private void registrerKunde(ActionEvent event){
+        String opprettetKundeforhold=innOpprettetKundeforhold.getText();
+        String navn=innNavn.getText();
+        String forsikringsnummer=innForsikringsnummer.getText();
+        String fakturaAdresse=innFakturaadresse.getText();
+        
+        int godkjentTeller=0;
+        try{
+            feilhåndteringKundeSkjema.sjekkKundeForholdDato(opprettetKundeforhold);
+            feilmeldingOpprettetKundeforhold.setText("OK");
+            godkjentTeller++;
+        }
+        catch(feilhåndteringKundeSkjema.feilDatoInnput ex){
+            feilmeldingOpprettetKundeforhold.setText(ex.getMessage());
+        }
+        try{
+            feilhåndteringKundeSkjema.sjekkNavn(navn);
+            feilmeldingNavn.setText("OK");
+            godkjentTeller++;
+        }
+        catch(feilhåndteringKundeSkjema.feilTekstInnput ex){
+            feilmeldingNavn.setText(ex.getMessage());
+        }
+        try{
+            feilhåndteringKundeSkjema.sjekkFakturaAdresse(fakturaAdresse);
+            feilmeldingFakturaadresse.setText("OK");
+            godkjentTeller++;
+        }
+        catch(feilhåndteringKundeSkjema.feilTekstInnput ex){
+            feilmeldingFakturaadresse.setText(ex.getMessage());
+        }
+        try{
+            feilhåndteringKundeSkjema.sjekkForsikringsnummer(forsikringsnummer);
+            feilmeldingForsikringsnummer.setText("OK");
+            godkjentTeller++;
+        }
+        catch(feilhåndteringKundeSkjema.feilTallInnput ex){
+            feilmeldingForsikringsnummer.setText(ex.getMessage());
+        }
+        if(godkjentTeller==4){
+            System.out.print("Godkjent");
+        }
+    }
+    @FXML
     private void avbryt(ActionEvent event) throws IOException {
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/trollforsikring2019/FXMLDocument.fxml"));
         Scene home_page_scene=new Scene(home_page_parent);

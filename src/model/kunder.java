@@ -7,19 +7,12 @@ import java.util.ArrayList;
  * @author Aleksander
  */
 public class kunder {
-//    Dato for opprettet kundeforhold
-//• Navn
-//• Fakturaadresse
-//• Forsikringsnummer
-//• Alle kundens forsikringer
-//• Skademeldinger
-//• Ubetalte erstatninger
 
     private String datoforhold, navn, fakturaadresse; 
     private int forsikringsnummer;
     
-    private ArrayList<forsikringer> kundeForsikringer = new ArrayList<>(); 
-    //private ArrayList<skademeldinger> kundeSkademeldinger = new ArrayList<>(); 
+    public ArrayList<forsikringer> kundeForsikringer = new ArrayList<>(); 
+    public ArrayList<skademeldinger> kundeSkademeldinger = new ArrayList<>(); 
     
     public kunder(String innNavn, String dato, String fakturaadresse, int forsknummer)
     {
@@ -45,7 +38,8 @@ public class kunder {
     {
         return forsikringsnummer; 
     }
-    public String utskrift(){
+    public String utskrift()    // Skriver ut all informasjon om kunde som string. 
+    {
         String ut="";
         ut+="Navn: "+navn+" Dato: "+datoforhold+" FakturaAdresse: "+fakturaadresse+" Forsikringer:\n";
         for(forsikringer forsikringer: kundeForsikringer){

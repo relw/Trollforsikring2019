@@ -46,8 +46,15 @@ public class kunder {
         return forsikringsnummer; 
     }
     public String utskrift(){
-        return String.format("Navn: %s Dato: %s Fakturaadresse: %s Forsikringsnummer: %s Forsikringer: %s "
-                + " Skademeldinger: %s",navn, datoforhold, fakturaadresse, 
-                forsikringsnummer, );
+//        return String.format("Navn: %s Dato: %s Fakturaadresse: %s Forsikringsnummer: %s Forsikringer: %s "
+//                + " Skademeldinger: %s",navn, datoforhold, fakturaadresse, 
+//                forsikringsnummer, );
+        String ut="";
+        ut+="Navn: "+navn+" Dato: "+datoforhold+" FakturaAdresse: "+fakturaadresse+" Forsikringer:\n";
+        for(forsikringer forsikringer: kundeForsikringer){
+            ut+=forsikringer+"\n";
+        }
+        return ut;
     }
+    
 }

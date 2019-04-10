@@ -18,8 +18,8 @@ public class kunder {
     private String datoforhold, navn, fakturaadresse; 
     private int forsikringsnummer;
     
-    public ArrayList<forsikringer> kundeForsikringer = new ArrayList<>(); 
-    //public ArrayList<skademeldinger> kundeSkademeldinger = new ArrayList<>(); 
+    private ArrayList<forsikringer> kundeForsikringer = new ArrayList<>(); 
+    //private ArrayList<skademeldinger> kundeSkademeldinger = new ArrayList<>(); 
     
     public kunder(String innNavn, String dato, String fakturaadresse, int forsknummer)
     {
@@ -46,8 +46,13 @@ public class kunder {
         return forsikringsnummer; 
     }
     public String utskrift(){
-        
-        
-        
+        String ut="";
+        ut+="Navn: "+navn+" Dato: "+datoforhold+" FakturaAdresse: "+fakturaadresse+" Forsikringer:\n";
+        for(forsikringer forsikringer: kundeForsikringer){
+            ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+" Opprettet: "+forsikringer.getOpprettetForsikring()+" Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+ "Betingelser: "+forsikringer.getForsikringsBetingelser()+"\n";
+        }
+        return ut;
     }
-}
+    }
+    
+

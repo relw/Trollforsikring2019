@@ -54,9 +54,9 @@
       <Label id="feilmeldingKvm" fx:id="feilmeldingKvm" layoutX="476.0" layoutY="491.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label layoutX="525.0" layoutY="42.0" text="Forsikringsbeløp for bygning:" textFill="WHITE" />
       <Label layoutX="530.0" layoutY="105.0" text="Forsikringsbeløp for innbo:" textFill="WHITE" />
-      <TextField id="innForsikringsbeløpBygning" fx:id="innForsikringsbeløpBygning" layoutX="758.0" layoutY="36.0" prefHeight="39.0" prefWidth="143.0" />
-      <TextField id="innForsikringsbeløpInnbo" fx:id="innForsikringsbeløpInnbo" layoutX="758.0" layoutY="98.0" prefHeight="39.0" prefWidth="143.0" />
-      <Label id="feilmeldingForsikringsbeløpBygning" fx:id="feilmeldingForsikringsbeløpBygning" layoutX="901.0" layoutY="42.0" text="*" />
-      <Label id="feilmeldingForsikringsbeløpInnbo" fx:id="feilmeldingForsikringsbeløpInnbo" layoutX="901.0" layoutY="104.0" text="*" />
+      <TextField id="innForsikringsbeløpBygning" fx:id="innForsikringsbeløpBygning" layoutX="758.0" layoutY="36.0" prefWidth="143.0" />
+      <TextField id="innForsikringsbeløpInnbo" fx:id="innForsikringsbeløpInnbo" layoutX="758.0" layoutY="98.0" prefWidth="143.0" />
+      <Label id="feilmeldingForsikringsbeløpBygning" fx:id="feilmeldingForsikringsbeløpBygning" layoutX="901.0" layoutY="42.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingForsikringsbeløpInnbo" fx:id="feilmeldingForsikringsbeløpInnbo" layoutX="901.0" layoutY="104.0" text="*" textFill="WHITE" />
    </children>
 </AnchorPane>

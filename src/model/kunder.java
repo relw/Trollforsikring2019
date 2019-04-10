@@ -18,8 +18,8 @@ public class kunder {
     private String datoforhold, navn, fakturaadresse; 
     private int forsikringsnummer;
     
-    private ArrayList<forsikringer> kundeForsikringer = new ArrayList<>(); 
-    private ArrayList<skademeldinger> kundeSkademeldinger = new ArrayList<>(); 
+    public ArrayList<forsikringer> kundeForsikringer = new ArrayList<>(); 
+    //public ArrayList<skademeldinger> kundeSkademeldinger = new ArrayList<>(); 
     
     public kunder(String innNavn, String dato, String fakturaadresse, int forsknummer)
     {
@@ -46,8 +46,8 @@ public class kunder {
         return forsikringsnummer; 
     }
     public String utskrift(){
-        return String.format("Navn: %s Dato: %s Fakturaadresse: %s Forsikringsnummer: %s Forsikringer: %s "
-                + " Skademeldinger: %s",navn, datoforhold, fakturaadresse, 
-                forsikringsnummer, );
+        
+        
+        
     }
 }

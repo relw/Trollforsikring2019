@@ -20,6 +20,7 @@ public class skademeldinger {
     , int inntakseringsbeløp, int innubetaltErstatningsbeløp)
     {
         this.dato = inndato;
+        this.typeSkade = inntype; 
         this.beskrivelse = innbeskrivelse; 
         this.kontaktInfo = innkontaktInfo; 
         this.skadenummer = innskadenummer; 
@@ -28,6 +29,9 @@ public class skademeldinger {
     }
     public String getDato(){
         return dato; 
+    }
+    public String getType(){
+        return typeSkade; 
     }
     public String getBeskrivelse(){
         return beskrivelse; 

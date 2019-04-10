@@ -43,7 +43,7 @@
       <TextField id="innAntallKvadratmeter" fx:id="innAntallKvadratmeter" layoutX="244.0" layoutY="491.0" />
       <Label layoutX="36.0" layoutY="497.0" text="Antall kvadratmeter:" textFill="WHITE" />
       <Button layoutX="244.0" layoutY="546.0" mnemonicParsing="false" text="Opprett forsikring" textFill="WHITE" />
-      <Button layoutX="164.0" layoutY="546.0" mnemonicParsing="false" text="Avbryt" textFill="WHITE" />
+      <Button layoutX="164.0" layoutY="546.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
       <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="476.0" layoutY="99.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingOppstart" fx:id="feilmeldingOppstart" layoutX="476.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringsbeløp" fx:id="feilmeldingForsikringsbeløp" layoutX="476.0" layoutY="196.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />

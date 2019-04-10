@@ -31,10 +31,10 @@
       <TextField id="innForsikringsbeløp" fx:id="innForsikringsbeløp" layoutX="244.0" layoutY="196.0" />
       <Label layoutX="41.0" layoutY="251.0" text="Forsikringsområde:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" textFill="WHITE" />
-      <TextField id="innForsikringssum" fx:id="innForsikringssum"layoutX="244.0" layoutY="294.0" />
+      <TextField id="innForsikringssum" fx:id="innForsikringssum" layoutX="244.0" layoutY="294.0" />
       <Label layoutX="41.0" layoutY="300.0" text="Forsikringssum:" textFill="WHITE" />
       <Button layoutX="244.0" layoutY="333.0" mnemonicParsing="false" text="Opprett forsikring" textFill="WHITE" />
-      <Button layoutX="175.0" layoutY="333.0" mnemonicParsing="false" text="Avbryt" textFill="WHITE" />
+      <Button layoutX="175.0" layoutY="333.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
       <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="476.0" layoutY="99.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingØnsketOppstart" fx:id="feilmeldingØnsketOppstart" layoutX="476.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringsbeløp" fx:id="feilmeldingForsikringsbeløp" layoutX="476.0" layoutY="196.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />

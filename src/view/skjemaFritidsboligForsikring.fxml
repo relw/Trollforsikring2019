@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -15,48 +16,50 @@
 
 <AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaFritidsboligForsikringController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="165.0" layoutX="513.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="416.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="573.0" layoutX="26.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="480.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="603.0" layoutX="12.0" layoutY="11.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="912.0" />
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@bilder/fjell-bunn.png" />
          </image>
       </ImageView>
-      <Label layoutX="41.0" layoutY="42.0" text="Registrer ny fritidsboligforsikring" textFill="WHITE" />
-      <Label layoutX="41.0" layoutY="104.0" text="Årlig forsikringspremie:" textFill="WHITE" />
-      <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
-      <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="244.0" layoutY="98.0" />
-      <TextField id="innØnsketOppstart" fx:id="innØnsketOppstart" layoutX="244.0" layoutY="147.0" />
-      <TextField id="innAdresse" fx:id="innAdresse" layoutX="244.0" layoutY="245.0" />
-      <TextField id="innForsikringsbeløp" fx:id="innForsikringsbeløp" layoutX="244.0" layoutY="196.0" />
-      <Label layoutX="41.0" layoutY="251.0" text="Boligens adresse:" textFill="WHITE" />
-      <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" textFill="WHITE" />
-      <Label layoutX="41.0" layoutY="398.0" prefHeight="27.0" prefWidth="161.0" text="Byggemateriale:" textFill="WHITE" />
-      <Label layoutX="41.0" layoutY="447.0" text="Standard:" textFill="WHITE" />
-      <TextField id="innByggemateriale" fx:id="innByggemateriale" layoutX="244.0" layoutY="392.0" />
-      <TextField id="innStandard" fx:id="innStandard" layoutX="244.0" layoutY="441.0" />
-      <TextField id="innBoligtype" fx:id="innBoligtype" layoutX="244.0" layoutY="343.0" />
-      <TextField id="innByggeår" fx:id="innByggeår" layoutX="244.0" layoutY="294.0" />
-      <Label layoutX="41.0" layoutY="349.0" text="Boligtype:" textFill="WHITE" />
-      <Label layoutX="41.0" layoutY="300.0" text="Byggeår:" textFill="WHITE" />
-      <TextField id="innKvm" fx:id="innKvm" layoutX="244.0" layoutY="491.0" />
-      <Label layoutX="36.0" layoutY="497.0" text="Antall kvadratmeter:" textFill="WHITE" />
-      <Button layoutX="244.0" layoutY="546.0" mnemonicParsing="false" onAction="#registrerFritidsboligForsikring" text="Opprett forsikring" textFill="WHITE" />
-      <Button layoutX="164.0" layoutY="546.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
-      <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="476.0" layoutY="99.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingØnsketOppstart" fx:id="feilmeldingØnsketOppstart" layoutX="476.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingForsikringsbeløp" fx:id="feilmeldingForsikringsbeløp" layoutX="476.0" layoutY="196.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingAdresse" fx:id="feilmeldingAdresse" layoutX="476.0" layoutY="245.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingByggeår" fx:id="feilmeldingByggeår" layoutX="476.0" layoutY="294.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingBoligtype" fx:id="feilmeldingBoligtype" layoutX="476.0" layoutY="343.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingByggemateriale" fx:id="feilmeldingByggemateriale" layoutX="476.0" layoutY="392.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingStandard" fx:id="feilmeldingStandard" layoutX="476.0" layoutY="441.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingKvm" fx:id="feilmeldingKvm" layoutX="476.0" layoutY="491.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label layoutX="525.0" layoutY="42.0" text="Forsikringsbeløp for bygning:" textFill="WHITE" />
-      <Label layoutX="530.0" layoutY="105.0" text="Forsikringsbeløp for innbo:" textFill="WHITE" />
-      <TextField id="innForsikringsbeløpBygning" fx:id="innForsikringsbeløpBygning" layoutX="758.0" layoutY="36.0" prefWidth="143.0" />
-      <TextField id="innForsikringsbeløpInnbo" fx:id="innForsikringsbeløpInnbo" layoutX="758.0" layoutY="98.0" prefWidth="143.0" />
-      <Label id="feilmeldingForsikringsbeløpBygning" fx:id="feilmeldingForsikringsbeløpBygning" layoutX="901.0" layoutY="42.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingForsikringsbeløpInnbo" fx:id="feilmeldingForsikringsbeløpInnbo" layoutX="901.0" layoutY="104.0" text="*" textFill="WHITE" />
+      <Label layoutX="49.0" layoutY="24.0" text="Registrer ny fritidsboligforsikring" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font></Label>
+      <Label layoutX="32.0" layoutY="63.0" text="Årlig forsikringspremie:" textFill="WHITE" />
+      <Label layoutX="32.0" layoutY="111.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
+      <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="235.0" layoutY="56.0" />
+      <TextField id="innØnsketOppstart" fx:id="innØnsketOppstart" layoutX="235.0" layoutY="105.0" />
+      <TextField id="innAdresse" fx:id="innAdresse" layoutX="235.0" layoutY="203.0" />
+      <TextField id="innForsikringsbeløp" fx:id="innForsikringsbeløp" layoutX="235.0" layoutY="154.0" />
+      <Label layoutX="32.0" layoutY="209.0" text="Boligens adresse:" textFill="WHITE" />
+      <Label layoutX="32.0" layoutY="160.0" text="Forsikringsbeløp:" textFill="WHITE" />
+      <Label layoutX="32.0" layoutY="356.0" prefHeight="27.0" prefWidth="161.0" text="Byggemateriale:" textFill="WHITE" />
+      <Label layoutX="32.0" layoutY="405.0" text="Standard:" textFill="WHITE" />
+      <TextField id="innByggemateriale" fx:id="innByggemateriale" layoutX="235.0" layoutY="350.0" />
+      <TextField id="innStandard" fx:id="innStandard" layoutX="235.0" layoutY="399.0" />
+      <TextField id="innBoligtype" fx:id="innBoligtype" layoutX="235.0" layoutY="301.0" />
+      <TextField id="innByggeår" fx:id="innByggeår" layoutX="235.0" layoutY="252.0" />
+      <Label layoutX="32.0" layoutY="307.0" text="Boligtype:" textFill="WHITE" />
+      <Label layoutX="32.0" layoutY="258.0" text="Byggeår:" textFill="WHITE" />
+      <TextField id="innKvm" fx:id="innKvm" layoutX="235.0" layoutY="449.0" />
+      <Label layoutX="27.0" layoutY="455.0" text="Antall kvadratmeter:" textFill="WHITE" />
+      <Button layoutX="711.0" layoutY="546.0" mnemonicParsing="false" onAction="#registrerFritidsboligForsikring" text="Opprett forsikring" textFill="WHITE" />
+      <Button layoutX="614.0" layoutY="546.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
+      <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="467.0" layoutY="57.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingØnsketOppstart" fx:id="feilmeldingØnsketOppstart" layoutX="467.0" layoutY="105.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingForsikringsbeløp" fx:id="feilmeldingForsikringsbeløp" layoutX="467.0" layoutY="154.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingAdresse" fx:id="feilmeldingAdresse" layoutX="467.0" layoutY="203.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingByggeår" fx:id="feilmeldingByggeår" layoutX="467.0" layoutY="252.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingBoligtype" fx:id="feilmeldingBoligtype" layoutX="467.0" layoutY="301.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingByggemateriale" fx:id="feilmeldingByggemateriale" layoutX="467.0" layoutY="350.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingStandard" fx:id="feilmeldingStandard" layoutX="467.0" layoutY="399.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingKvm" fx:id="feilmeldingKvm" layoutX="467.0" layoutY="449.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label layoutX="27.0" layoutY="497.0" text="Forsikringsbeløp bygning:" textFill="WHITE" />
+      <Label layoutX="25.0" layoutY="546.0" text="Forsikringsbeløp innbo:" textFill="WHITE" />
+      <TextField id="innForsikringsbeløpBygning" fx:id="innForsikringsbeløpBygning" layoutX="235.0" layoutY="497.0" />
+      <TextField id="innForsikringsbeløpInnbo" fx:id="innForsikringsbeløpInnbo" layoutX="235.0" layoutY="546.0" />
+      <Label id="feilmeldingForsikringsbeløpBygning" fx:id="feilmeldingForsikringsbeløpBygning" layoutX="467.0" layoutY="497.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingForsikringsbeløpInnbo" fx:id="feilmeldingForsikringsbeløpInnbo" layoutX="467.0" layoutY="546.0" text="*" textFill="WHITE" />
    </children>
 </AnchorPane>

@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.SkademeldingSkjemaController">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaReiseforsikringController">
    <children>
-      <Label layoutX="197.0" layoutY="129.0" text="SKADEMELDINGSKJEMA" />
+      <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bilder/fjell-bunn.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="492.0" layoutX="26.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="576.0" />
+      <Label layoutX="41.0" layoutY="42.0" text="Registrer ny skademelding " textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="104.0" text="Årlig forsikringspremie:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
+      <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="244.0" layoutY="98.0" />
+      <TextField id="innØnsketOppstart" fx:id="innØnsketOppstart" layoutX="244.0" layoutY="147.0" />
+      <TextField id="innForsikringsområde" fx:id="innForsikringsområde" layoutX="244.0" layoutY="245.0" />
+      <TextField id="innForsikringsbeløp" fx:id="innForsikringsbeløp" layoutX="244.0" layoutY="196.0" />
+      <Label layoutX="41.0" layoutY="251.0" text="Forsikringsområde:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" textFill="WHITE" />
+      <TextField id="innForsikringssum" fx:id="innForsikringssum" layoutX="244.0" layoutY="294.0" />
+      <Label layoutX="41.0" layoutY="300.0" text="Forsikringssum:" textFill="WHITE" />
+      <Button layoutX="329.0" layoutY="456.0" mnemonicParsing="false" onAction="#registrerReiseforsikring" text="Registrer skademelding" textFill="WHITE" />
+      <Button layoutX="149.0" layoutY="456.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
+      <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="476.0" layoutY="99.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingØnsketOppstart" fx:id="feilmeldingØnsketOppstart" layoutX="476.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingForsikringsbeløp" fx:id="feilmeldingForsikringsbeløp" layoutX="476.0" layoutY="196.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingOmråde" fx:id="feilmeldingOmråde" layoutX="476.0" layoutY="245.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingForsikringssum" fx:id="feilmeldingForsikringssum" layoutX="476.0" layoutY="294.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
    </children>
 </AnchorPane>

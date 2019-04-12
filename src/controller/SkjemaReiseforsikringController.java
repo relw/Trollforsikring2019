@@ -64,14 +64,51 @@ public class SkjemaReiseforsikringController implements Initializable {
          String forsikringsOmråde=innForsikringsområde.getText();
          String forsikringsbeløp=innForsikringsbeløp.getText();
          String forsikringssum=innForsikringssum.getText();
+         int godkjentteller=0;
          try{
              feilhåndteringReiseforsikringSkjema.sjekkForsikringspremie(forsikringspremie);
              feilmeldingForsikringspremie.setText("OK");
+             godkjentteller++;
          }
          catch(feilhåndteringReiseforsikringSkjema.feilTallInnput ex){
              feilmeldingForsikringspremie.setText(ex.getMessage());
          }
+         try{
+             feilhåndteringReiseforsikringSkjema.sjekkInputDato(ønsketOppstart);
+             feilmeldingØnsketOppstart.setText("OK");
+             godkjentteller++;
+         }
+         catch(feilhåndteringReiseforsikringSkjema.feilDatoInnput ex){
+             feilmeldingØnsketOppstart.setText(ex.getMessage());
+         }
+         try{
+             feilhåndteringReiseforsikringSkjema.sjekkForsikringsbeløp(forsikringsbeløp);
+             feilmeldingForsikringsbeløp.setText("OK");
+             godkjentteller++;
+         }
+          catch(feilhåndteringReiseforsikringSkjema.feilTallInnput ex){
+             feilmeldingForsikringsbeløp.setText(ex.getMessage());
+         }
+         try{
+             feilhåndteringReiseforsikringSkjema.sjekkForsikringsOmråde(forsikringsOmråde);
+             feilmeldingOmråde.setText("OK");
+             godkjentteller++;
+         }
+          catch(feilhåndteringReiseforsikringSkjema.feilOmrådeInnput ex){
+             feilmeldingOmråde.setText(ex.getMessage());
      }
+         try{
+             feilhåndteringReiseforsikringSkjema.sjekkForsikringsSum(forsikringssum);
+             feilmeldingForsikringssum.setText("OK");
+             godkjentteller++;
+         }
+         catch(feilhåndteringReiseforsikringSkjema.feilTallInnput ex){
+             feilmeldingForsikringssum.setText(ex.getMessage());
+     }
+         if(godkjentteller==5){
+             System.out.print("GODKJENT");
+         }
+  }
      
      @FXML
     private void avbryt(ActionEvent event) throws IOException {
@@ -87,3 +124,4 @@ public class SkjemaReiseforsikringController implements Initializable {
     }    
     
 }
+

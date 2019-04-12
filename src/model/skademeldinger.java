@@ -5,13 +5,6 @@ package model;
  * @author Aleksander
  */
 public class skademeldinger {
-//    Dato for skade
-//• Skadenummer
-//• Type skade
-//• Beskrivelse av skaden
-//• Kontaktinformasjon til eventuelle vitner
-//• Takseringsbeløp av skaden
-//• Utbetalt erstatningsbeløp (kan være lavere enn taksert beløp)
     
     private String dato, typeSkade, beskrivelse, kontaktInfo;
     private int skadenummer, takseringsbeløp, ubetaltErstatningsbeløp;

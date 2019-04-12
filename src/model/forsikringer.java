@@ -55,17 +55,6 @@ class fritidsboligforsikring extends forsikringer
    
    public fritidsboligforsikring(int forsikringPremie, int opprettetForsikring, int forsikringsBeloop, String forsikringBetingelser, String innadresse, String innboligtype, String innByggemateriale, String innStandard, int innByggeår, int antallKvadratmeter, int innForsikringsbeløpInnbo)
    {
-     super(forsikringPremie, opprettetForsikring, forsikringsBeloop, forsikringBetingelser);  
-   }
-}
-
-class fritidsboligforsikring extends forsikringer
-{
-   private String adresse, boligtype, byggemateriale, standard;  
-   private int byggeår, antallKvadratmeter, forsikringsbeløpInnbo;
-   
-   public fritidsboligforsikring(int forsikringPremie, int opprettetForsikring, int forsikringsBeloop, String forsikringBetingelser, String innadresse, String innboligtype, String innByggemateriale, String innStandard, int innByggeår, int antallKvadratmeter, int innForsikringsbeløpInnbo)
-   {
      super(forsikringPremie, opprettetForsikring, forsikringsBeloop, forsikringBetingelser);
      this.adresse = innadresse; 
      this.boligtype = innboligtype;

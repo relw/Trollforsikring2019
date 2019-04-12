@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaReiseforsikringController">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkademeldingSkjemaController">
    <children>
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -27,7 +27,7 @@
       <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" textFill="WHITE" />
       <TextField id="innForsikringssum" fx:id="innForsikringssum" layoutX="244.0" layoutY="294.0" />
       <Label layoutX="41.0" layoutY="300.0" text="Forsikringssum:" textFill="WHITE" />
-      <Button layoutX="329.0" layoutY="456.0" mnemonicParsing="false" onAction="#registrerReiseforsikring" text="Registrer skademelding" textFill="WHITE" />
+      <Button layoutX="329.0" layoutY="456.0" mnemonicParsing="false" text="Registrer skademelding" textFill="WHITE" />
       <Button layoutX="149.0" layoutY="456.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
       <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="476.0" layoutY="99.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingØnsketOppstart" fx:id="feilmeldingØnsketOppstart" layoutX="476.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />

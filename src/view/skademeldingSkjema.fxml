@@ -7,6 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkademeldingSkjemaController">
    <children>
@@ -16,7 +17,10 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="492.0" layoutX="26.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="891.0" />
-      <Label layoutX="41.0" layoutY="42.0" text="Registrer ny skademelding " textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="42.0" text="Registrer ny skademelding " textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
       <Label layoutX="41.0" layoutY="104.0" text="Dato for skade:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="153.0" text="Skadenummer:" textFill="WHITE" />
       <TextField id="innDatoSkade" fx:id="innForsikringspremie" layoutX="257.0" layoutY="98.0" />

@@ -96,3 +96,34 @@ class båtforsikring extends forsikringer
    } 
 }
 
+class reiseforsikring extends forsikringer
+{
+   private String forsikringsområde;
+   private int forsikringssum;  
+    
+   public reiseforsikring(int forsikringPremie, int opprettetForsikring, int forsikringsBeloop, String forsikringBetingelser, String innforsikringsområde, int innforsikringssum)
+   {
+     super(forsikringPremie, opprettetForsikring, forsikringsBeloop, forsikringBetingelser);
+     this.forsikringsområde = innforsikringsområde;
+     this.forsikringssum = innforsikringssum; 
+   } 
+}
+
+class husoginnboforsikring extends forsikringer
+{
+   private String boligadresse, boligtype, standard, byggemateriale;
+   private int byggeår, antallKvadratmeter, beløpForByggning, beløpForInnbo; 
+    
+    public husoginnboforsikring(int forsikringPremie, int opprettetForsikring, int forsikringsBeloop, String forsikringBetingelser, String innboligadresse, String innboligtype, String innstandard, String innbyggemateriale, int innbyggeår, int innantallkvadratmeter, int innbeløpforbyggning, int innbeløpforinnbo)
+   {
+     super(forsikringPremie, opprettetForsikring, forsikringsBeloop, forsikringBetingelser);
+     this.boligadresse = innboligadresse;
+     this.antallKvadratmeter = innantallkvadratmeter;
+     this.beløpForByggning = innbeløpforbyggning;
+     this.beløpForInnbo = innbeløpforinnbo;
+     this.byggeår = innbyggeår;
+     this.boligtype = innboligtype;
+     this.standard = innstandard; 
+     this.byggemateriale = innbyggemateriale; 
+   } 
+}

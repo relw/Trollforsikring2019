@@ -17,7 +17,7 @@
             <Image url="@bilder/fjell-bunn.png" />
          </image>
       </ImageView>
-      <Label layoutX="31.0" layoutY="18.0" text="Registrer ny fritidsboligforsikring:" textFill="WHITE">
+      <Label layoutX="31.0" layoutY="18.0" text="Registrer ny fritidsboligforsikring" textFill="WHITE">
          <font>
             <Font name="System Bold" size="22.0" />
          </font></Label>

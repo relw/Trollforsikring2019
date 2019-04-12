@@ -19,6 +19,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.feilhåndteringKundeSkjema;
+import model.kunder;
 
 /**
  * FXML Controller class
@@ -55,6 +56,7 @@ public class SkjemaKundeController implements Initializable {
         String opprettetKundeforhold=innOpprettetKundeforhold.getText();
         String navn=innNavn.getText();
         String forsikringsnummer=innForsikringsnummer.getText();
+        int intForsikringsnummer = Integer.parseInt(forsikringsnummer);
         String fakturaAdresse=innFakturaadresse.getText();
         
         int godkjentTeller=0;
@@ -92,6 +94,7 @@ public class SkjemaKundeController implements Initializable {
         }
         if(godkjentTeller==4){
             System.out.print("Godkjent");
+            kunder nyKunde = new kunder(navn, opprettetKundeforhold, fakturaAdresse, intForsikringsnummer);
         }
     }
     @FXML

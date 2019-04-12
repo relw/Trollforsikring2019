@@ -15,24 +15,30 @@
             <Image url="@bilder/fjell-bunn.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="492.0" layoutX="26.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="576.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="492.0" layoutX="26.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="793.0" />
       <Label layoutX="41.0" layoutY="42.0" text="Registrer ny skademelding " textFill="WHITE" />
-      <Label layoutX="41.0" layoutY="104.0" text="Årlig forsikringspremie:" textFill="WHITE" />
-      <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
-      <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="244.0" layoutY="98.0" />
-      <TextField id="innØnsketOppstart" fx:id="innØnsketOppstart" layoutX="244.0" layoutY="147.0" />
-      <TextField id="innForsikringsområde" fx:id="innForsikringsområde" layoutX="244.0" layoutY="245.0" />
-      <TextField id="innForsikringsbeløp" fx:id="innForsikringsbeløp" layoutX="244.0" layoutY="196.0" />
-      <Label layoutX="41.0" layoutY="251.0" text="Forsikringsområde:" textFill="WHITE" />
-      <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" textFill="WHITE" />
-      <TextField id="innForsikringssum" fx:id="innForsikringssum" layoutX="244.0" layoutY="294.0" />
-      <Label layoutX="41.0" layoutY="300.0" text="Forsikringssum:" textFill="WHITE" />
-      <Button layoutX="329.0" layoutY="456.0" mnemonicParsing="false" text="Registrer skademelding" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="104.0" text="Dato for skade:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="153.0" text="Skadenummer:" textFill="WHITE" />
+      <TextField id="innDatoSkade" fx:id="innForsikringspremie" layoutX="257.0" layoutY="98.0" />
+      <TextField id="innSkadenummer" fx:id="innØnsketOppstart" layoutX="257.0" layoutY="147.0" />
+      <TextField id="InnBeskrivelseSkade" fx:id="innForsikringsområde" layoutX="257.0" layoutY="245.0" />
+      <TextField id="innTypeSkade" fx:id="innForsikringsbeløp" layoutX="257.0" layoutY="196.0" />
+      <Label layoutX="41.0" layoutY="251.0" text="Beskrivelse av skade:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="202.0" text="Type skade:" textFill="WHITE" />
+      <TextField id="innKontaktinfoVitner" fx:id="innForsikringssum" layoutX="257.0" layoutY="294.0" />
+      <Label layoutX="41.0" layoutY="300.0" text="Kontaktinformasjon vitner:" textFill="WHITE" />
+      <Button layoutX="300.0" layoutY="456.0" mnemonicParsing="false" text="Registrer skademelding" textFill="WHITE" />
       <Button layoutX="149.0" layoutY="456.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
-      <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="476.0" layoutY="99.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingØnsketOppstart" fx:id="feilmeldingØnsketOppstart" layoutX="476.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingForsikringsbeløp" fx:id="feilmeldingForsikringsbeløp" layoutX="476.0" layoutY="196.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingOmråde" fx:id="feilmeldingOmråde" layoutX="476.0" layoutY="245.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingForsikringssum" fx:id="feilmeldingForsikringssum" layoutX="476.0" layoutY="294.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingDatoSkade" fx:id="feilmeldingForsikringspremie" layoutX="482.0" layoutY="98.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingSkadenummer" fx:id="feilmeldingØnsketOppstart" layoutX="482.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingTypeSkade" fx:id="feilmeldingForsikringsbeløp" layoutX="482.0" layoutY="196.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingBeskrivelseSkade" fx:id="feilmeldingOmråde" layoutX="482.0" layoutY="245.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingKontaktinfoVitner" fx:id="feilmeldingForsikringssum" layoutX="482.0" layoutY="294.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="348.0" text="Takseringsbeløp av skaden:" textFill="WHITE" />
+      <TextField id="innTakseringSkade" fx:id="innForsikringssum1" layoutX="257.0" layoutY="342.0" />
+      <TextField id="innUtbetalteErstatninger" fx:id="innForsikringssum2" layoutX="257.0" layoutY="390.0" />
+      <Label layoutX="41.0" layoutY="396.0" text="Utbetalte erstatninger:" textFill="WHITE" />
+      <Label id="feilmeldingTakseringsbeløp" fx:id="feilmeldingForsikringssum1" layoutX="482.0" layoutY="342.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingUtbetalteErstatninger" fx:id="feilmeldingForsikringssum2" layoutX="482.0" layoutY="390.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
    </children>
 </AnchorPane>

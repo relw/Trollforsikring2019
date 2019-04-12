@@ -9,6 +9,6 @@ package model;
  *
  * @author martin
  */
-public class skrivKundeTilFil {
+public class skrivKundeFil {
     
 }

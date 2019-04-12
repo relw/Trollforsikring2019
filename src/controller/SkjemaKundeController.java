@@ -56,7 +56,6 @@ public class SkjemaKundeController implements Initializable {
         String opprettetKundeforhold=innOpprettetKundeforhold.getText();
         String navn=innNavn.getText();
         String forsikringsnummer=innForsikringsnummer.getText();
-        int intForsikringsnummer = Integer.parseInt(forsikringsnummer);
         String fakturaAdresse=innFakturaadresse.getText();
         
         int godkjentTeller=0;
@@ -94,7 +93,9 @@ public class SkjemaKundeController implements Initializable {
         }
         if(godkjentTeller==4){
             System.out.print("Godkjent");
+            int intForsikringsnummer = Integer.parseInt(forsikringsnummer);
             kunder nyKunde = new kunder(navn, opprettetKundeforhold, fakturaAdresse, intForsikringsnummer);
+           
         }
     }
     @FXML

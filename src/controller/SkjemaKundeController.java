@@ -7,6 +7,7 @@ package controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -97,8 +98,14 @@ public class SkjemaKundeController implements Initializable {
             int intForsikringsnummer = Integer.parseInt(forsikringsnummer);
             kunder nyKunde = new kunder(navn, opprettetKundeforhold, fakturaAdresse, intForsikringsnummer);
             skrivKundeFil.skrive(nyKunde);
-            skrivKundeFil.lese();
-           
+            ArrayList<Object> liste = skrivKundeFil.leseAlle(); 
+            
+            for(Object o:liste)
+            {
+                System.out.println("Kunde from loaded jobj file:\n" + o.toString());
+            }
+                
+            
         }
     }
     @FXML

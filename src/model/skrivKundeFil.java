@@ -10,14 +10,17 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 /**
  *
  * @author martin
  */
 public class skrivKundeFil {
+    
     public static boolean skrive(kunder kundeObj)
     {
+        
         
         String filepath = "kunder.jobj";
         try (
@@ -25,6 +28,7 @@ public class skrivKundeFil {
             ObjectOutputStream out = new ObjectOutputStream(fos);
         ) {
             out.writeObject(kundeObj);
+            
             return true; 
         }
         catch (IOException e) {
@@ -45,6 +49,28 @@ public class skrivKundeFil {
             System.err.println("Could not convert Object");
         }
         return true;
+        
+        
+   }
+    public static ArrayList<Object> leseAlle(){
+        
+        ArrayList<Object> objectsList = new ArrayList<Object>();
+        boolean cont = true;
+        try{
+            FileInputStream fis = new FileInputStream("kunder.jobj");
+           ObjectInputStream input = new ObjectInputStream(fis);
+           while(cont){
+              Object obj = input.readObject();
+              if(obj != null)
+                 objectsList.add(obj);
+              else
+                 cont = false;
+           }
+        }catch(Exception e){
+           //System.out.println(e.printStackTrace());
+        }
+        return objectsList; 
     }
-     
+        
 }
+

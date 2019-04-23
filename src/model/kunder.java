@@ -1,12 +1,13 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Aleksander
  */
-public class kunder {
+public class kunder implements Serializable{
 
     private String datoforhold, navn, fakturaadresse; 
     private int forsikringsnummer;
@@ -38,18 +39,34 @@ public class kunder {
     {
         return forsikringsnummer; 
     }
-    public String utskrift()    // Skriver ut all informasjon om kunde som string. 
+    @Override
+    public String toString()    // Skriver ut all informasjon om kunde som string. 
     {
         String ut="";
-        ut+="Navn: "+navn+" Dato: "+datoforhold+" FakturaAdresse: "+fakturaadresse+" Forsikringer:\n";
-        for(forsikringer forsikringer: kundeForsikringer){
-            ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+" Opprettet: "+forsikringer.getOpprettetForsikring()+" Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+ "Betingelser: "+forsikringer.getForsikringsBetingelser()+"\n";
-        }
-        ut += "Skademeldinger: \n"; 
-        for(skademeldinger skader : kundeSkademeldinger)
+        ut+="Navn: "+navn+" Dato: "+datoforhold+" FakturaAdresse: "+fakturaadresse;
+        if(!kundeForsikringer.isEmpty())
         {
-            ut += "Dato: "+skader.getDato()+", Skadebeskrivelse: "+skader.getBeskrivelse()+", Type skade: "+skader.getType()+", Kontaktinformasjon: "+skader.getKontaktInfo()+", Skadenummer: "+skader.getSkadenummer()+", Takseringsbeløp: "+skader.getTakseringsbeløp()+", Ubetalt erstatningsbeløp: "+skader.getUbetaltErstatningsbeløp();  
+           ut += " Forsikringer:\n"; 
+            for(forsikringer forsikringer: kundeForsikringer){
+            ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+" Opprettet: "+forsikringer.getOpprettetForsikring()+" Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+ "Betingelser: "+forsikringer.getForsikringsBetingelser()+"\n";
+            } 
         }
+        if(!kundeSkademeldinger.isEmpty())
+        {
+            ut += "Skademeldinger: \n"; 
+            for(skademeldinger skader : kundeSkademeldinger)
+            {
+                ut += "Dato: "+skader.getDato()+", Skadebeskrivelse: "+skader.getBeskrivelse()+", Type skade: "+skader.getType()+", Kontaktinformasjon: "+skader.getKontaktInfo()+", Skadenummer: "+skader.getSkadenummer()+", Takseringsbeløp: "+skader.getTakseringsbeløp()+", Ubetalt erstatningsbeløp: "+skader.getUbetaltErstatningsbeløp();  
+            }
+        }
+        
+        return ut;
+    }
+    
+    public String utskriftKunde()    // Skriver ut kundeinformasjon som string. 
+    {
+        String ut="";
+        ut+="Navn: "+navn+" Dato: "+datoforhold+" FakturaAdresse: "+fakturaadresse+"\n";
         return ut;
     }
     }

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaKundeController">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaKundeController">
    <children>
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -21,8 +21,8 @@
       <Label layoutX="41.0" layoutY="153.0" text="Navn:" textFill="WHITE" />
       <TextField id="innOpprettetKundeforhold" fx:id="innOpprettetKundeforhold" layoutX="330.0" layoutY="98.0" />
       <TextField id="innNavn" fx:id="innNavn" layoutX="330.0" layoutY="147.0" />
-      <TextField id="innForsikringsnummer" fx:id="innForsikringsnummer" layoutX="330.0" layoutY="245.0" />
       <TextField id="innFakturaadresse" fx:id="innFakturaadresse" layoutX="330.0" layoutY="196.0" />
+      <TextField id="innForsikringsnummer" fx:id="innForsikringsnummer" layoutX="330.0" layoutY="245.0" />
       <Label layoutX="41.0" layoutY="251.0" text="Forsikringsnummer:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Fakturaadresse:" textFill="WHITE" />
       <Button layoutX="345.0" layoutY="301.0" mnemonicParsing="false" onAction="#registrerKunde" text="Opprett forsikring" textFill="WHITE" />

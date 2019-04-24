@@ -45,7 +45,7 @@
       <Label layoutX="19.0" layoutY="254.0" text="Byggeår:" textFill="WHITE" />
       <TextField id="innAntallKvadratmeter" fx:id="innAntallKvadratmeter" layoutX="222.0" layoutY="445.0" />
       <Label layoutX="14.0" layoutY="451.0" text="Antall kvadratmeter:" textFill="WHITE" />
-      <Button layoutX="738.0" layoutY="527.0" mnemonicParsing="false" text="Opprett forsikring" textFill="WHITE" />
+      <Button layoutX="738.0" layoutY="527.0" mnemonicParsing="false" onAction="#registrerHusOgInnboForsikring" text="Opprett forsikring" textFill="WHITE" />
       <Button layoutX="577.0" layoutY="519.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
       <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="454.0" layoutY="53.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingOppstart" fx:id="feilmeldingOppstart" layoutX="454.0" layoutY="101.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />

@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaKundeController">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaKundeController">
    <children>
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@bilder/fjell-bunn.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="322.0" layoutX="17.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="897.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="322.0" layoutX="17.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="905.0" />
       <Label layoutX="41.0" layoutY="42.0" text="Registrer ny kunde" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="104.0" text="Dato for opprettet kundeforhold:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="153.0" text="Navn:" textFill="WHITE" />
@@ -25,12 +25,11 @@
       <TextField id="innForsikringsnummer" fx:id="innForsikringsnummer" layoutX="330.0" layoutY="245.0" />
       <Label layoutX="41.0" layoutY="251.0" text="Forsikringsnummer:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Fakturaadresse:" textFill="WHITE" />
-      <Button layoutX="308.0" layoutY="301.0" mnemonicParsing="false" onAction="#registrerKunde" text="Opprett forsikring" textFill="WHITE" />
+      <Button layoutX="348.0" layoutY="301.0" mnemonicParsing="false" onAction="#registrerKunde" text="Opprett forsikring" textFill="WHITE" />
       <Button layoutX="57.0" layoutY="301.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
       <Label id="feilmeldingOpprettetKundeforhold" fx:id="feilmeldingOpprettetKundeforhold" layoutX="562.0" layoutY="99.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingNavn" fx:id="feilmeldingNavn" layoutX="562.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingFakturaadresse" fx:id="feilmeldingFakturaadresse" layoutX="562.0" layoutY="196.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringsnummer" fx:id="feilmeldingForsikringsnummer" layoutX="562.0" layoutY="245.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Button layoutX="444.0" layoutY="301.0" mnemonicParsing="false" onAction="#registrerKunde" text="Lagre" textFill="WHITE" />
    </children>
 </AnchorPane>

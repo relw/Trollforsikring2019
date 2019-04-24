@@ -16,12 +16,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.feilhåndteringKundeSkjema;
+import model.kundeLagring;
 import model.kunder;
 import model.skrivKundeFil;
+
 
 /**
  * FXML Controller class
@@ -29,8 +33,13 @@ import model.skrivKundeFil;
  * @author martin
  */
 public class SkjemaKundeController implements Initializable {
+    kundeLagring lagring = new kundeLagring();
+    
     @FXML
     private TextField innOpprettetKundeforhold;
+    
+    @FXML
+    private Button btnLagre;
     
     @FXML
     private TextField innNavn;
@@ -53,12 +62,15 @@ public class SkjemaKundeController implements Initializable {
     @FXML
     private Label feilmeldingForsikringsnummer;
     
+    ArrayList<kunder> listeUlagretKunder = new ArrayList<>();
+    
     @FXML
     private void registrerKunde(ActionEvent event){
         String opprettetKundeforhold=innOpprettetKundeforhold.getText();
         String navn=innNavn.getText();
         String forsikringsnummer=innForsikringsnummer.getText();
         String fakturaAdresse=innFakturaadresse.getText();
+        
         
         int godkjentTeller=0;
         try{
@@ -96,15 +108,21 @@ public class SkjemaKundeController implements Initializable {
         if(godkjentTeller==4){
             System.out.print("Godkjent");
             int intForsikringsnummer = Integer.parseInt(forsikringsnummer);
-            kunder nyKunde = new kunder(navn, opprettetKundeforhold, fakturaAdresse, intForsikringsnummer);
-            skrivKundeFil.skrive(nyKunde);
-            ArrayList<Object> liste = skrivKundeFil.leseAlle(); 
             
-            for(Object o:liste)
-            {
-                System.out.println("Kunde from loaded jobj file:\n" + o.toString());
-            }
-                
+            Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/skjemaKunde.fxml"));
+            
+            
+            
+//            FileChooser fileChooser = new FileChooser();
+//            fileChooser.setTitle("Open Resource File");
+//            fileChooser.showOpenDialog(app_stage);
+            
+            kunder nyKunde = new kunder(navn, opprettetKundeforhold, fakturaAdresse, intForsikringsnummer);
+            
+            
+            lagring.pluss(nyKunde); 
+            skrivKundeFil.skrive(lagring); 
+            skrivKundeFil.lese(); 
             
         }
     }
@@ -116,6 +134,11 @@ public class SkjemaKundeController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
+    
+   
+    
+                    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

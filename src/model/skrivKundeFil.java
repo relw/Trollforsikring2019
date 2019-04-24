@@ -18,16 +18,21 @@ import java.util.ArrayList;
  */
 public class skrivKundeFil {
     
-    public static boolean skrive(kunder kundeObj)
-    {
+    public static boolean skrive(kundeLagring obj){
+     
         
+        String fp2 = "C:\\Users\\aleks\\Documents\\kunder.jobj";
+        String filepath = fp2;
         
-        String filepath = "kunder.jobj";
         try (
             FileOutputStream fos = new FileOutputStream(filepath);
             ObjectOutputStream out = new ObjectOutputStream(fos);
         ) {
-            out.writeObject(kundeObj);
+           
+               out.writeObject(obj);
+           
+            
+            out.close(); 
             
             return true; 
         }
@@ -38,10 +43,10 @@ public class skrivKundeFil {
     }
     public static boolean lese()
     {
-        try (FileInputStream fin = new FileInputStream("kunder.jobj");
+        try (FileInputStream fin = new FileInputStream("C:\\Users\\aleks\\Documents\\kunder.jobj");
         ObjectInputStream oin = new ObjectInputStream(fin)) {
             Object loadedKunde = oin.readObject();
-            System.out.println("Kunde from loaded jobj file:\n" + loadedKunde);
+            System.out.println("Kunde from loaded jobj file:\n" + loadedKunde.toString());
             
         } catch(IOException e) {
             System.err.println("Could not read file. Cause: " + e.getCause());
@@ -57,7 +62,7 @@ public class skrivKundeFil {
         ArrayList<Object> objectsList = new ArrayList<Object>();
         boolean cont = true;
         try{
-            FileInputStream fis = new FileInputStream("kunder.jobj");
+            FileInputStream fis = new FileInputStream("C:\\Users\\aleks\\Documents\\kunder.jobj");
            ObjectInputStream input = new ObjectInputStream(fis);
            while(cont){
               Object obj = input.readObject();

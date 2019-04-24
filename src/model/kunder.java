@@ -7,6 +7,7 @@ import java.util.ArrayList;
  *
  * @author Aleksander
  */
+
 public class kunder implements Serializable{
 
     private String datoforhold, navn, fakturaadresse; 
@@ -43,7 +44,7 @@ public class kunder implements Serializable{
     public String toString()    // Skriver ut all informasjon om kunde som string. 
     {
         String ut="";
-        ut+="Navn: "+navn+" Dato: "+datoforhold+" FakturaAdresse: "+fakturaadresse;
+        ut+="Navn: "+navn+", Dato: "+datoforhold+", FakturaAdresse: "+fakturaadresse+", Forsikringsnummer: "+getForsikringsNummer(); 
         if(!kundeForsikringer.isEmpty())
         {
            ut += " Forsikringer:\n"; 

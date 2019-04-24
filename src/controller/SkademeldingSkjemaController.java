@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 /**
@@ -23,7 +24,29 @@ import javafx.stage.Stage;
  * @author Rasmus
  */
 public class SkademeldingSkjemaController implements Initializable {
-
+    
+    @FXML
+    private Label innDatoSkade;
+    
+    @FXML
+    private Label innSkadenummer;
+    
+    @FXML
+    private Label InnBeskrivelseSkade;
+    
+    @FXML
+    private Label innTypeSkade;
+    
+    @FXML
+    private Label innKontaktinfoVitner;
+    
+    @FXML
+    private Label innTakseringSkade;
+    
+    @FXML
+    private Label innUtbetalteErstatninger;
+    
+    
     @FXML 
     public void avbryt(ActionEvent event) throws IOException{
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/trollforsikring2019/FXMLDocument.fxml"));

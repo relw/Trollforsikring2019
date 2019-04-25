@@ -17,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import model.feilmeldingSkademeldingSkjema;
 
 /**
  * FXML Controller class
@@ -26,13 +27,34 @@ import javafx.stage.Stage;
 public class SkademeldingSkjemaController implements Initializable {
     
     @FXML
+    private Label feilmeldingDatoSkade; 
+    
+    @FXML
+    private Label feilmeldingSkadenummer;
+    
+    @FXML
+    private Label feilmeldingBeskrivelseSkade;
+    
+    @FXML
+    private Label feilmeldingTypeSkade;
+    
+    @FXML
+    private Label feilmeldingKontaktinfoVitner;
+            
+    @FXML
+    private Label feilmeldingTakseringsSkade;
+            
+    @FXML
+    private Label feilmeldingUtbetalteErstatninger;
+            
+    @FXML
     private Label innDatoSkade;
     
     @FXML
     private Label innSkadenummer;
     
     @FXML
-    private Label InnBeskrivelseSkade;
+    private Label innBeskrivelseSkade;
     
     @FXML
     private Label innTypeSkade;
@@ -45,6 +67,90 @@ public class SkademeldingSkjemaController implements Initializable {
     
     @FXML
     private Label innUtbetalteErstatninger;
+    
+     @FXML 
+    private void registrerSkademelding(ActionEvent event){
+       String DatoSkade=innDatoSkade.getText();
+       String Skadenummer=innSkadenummer.getText();
+       String BeskrivelseSkade=innBeskrivelseSkade.getText();
+       String TypeSkade=innTypeSkade.getText();
+       String KontaktinfoVitner=innKontaktinfoVitner.getText();
+       String TakseringSkade=innTakseringSkade.getText();
+       String UtbetalteErstatninger=innUtbetalteErstatninger.getText();
+       
+       
+       int godkjentTeller=0;
+       //SJEKKER SKADE DATO INNPUT (INNPUT NR 1)
+          try{
+            feilmeldingSkademeldingSkjema.sjekkDatoForSkade(DatoSkade);
+            feilmeldingDatoSkade.setText("OK");
+            godkjentTeller++;
+        }
+        catch(feilmeldingSkademeldingSkjema.feilDatoInnput ex){
+            feilmeldingDatoSkade.setText(ex.getMessage());
+        }
+          
+      //SJEKKER SKADENUMMER (INNPUT NR 2)
+      try{
+          feilmeldingSkademeldingSkjema.sjekkSkadenummer(Skadenummer);
+          feilmeldingSkadenummer.setText("OK");
+          godkjentTeller++;
+      }
+      catch(feilmeldingSkademeldingSkjema.feilTallInnput ex){
+           feilmeldingSkadenummer.setText(ex.getMessage());
+      }
+      //SJEKKER BESKRIVELSE AV SKADE (INNPUT 3)
+     try{
+         feilmeldingSkademeldingSkjema.sjekkBeskrivelseAvSkade(BeskrivelseSkade);
+         feilmeldingBeskrivelseSkade.setText("OK");
+         godkjentTeller++;
+     }
+     catch(feilmeldingSkademeldingSkjema.feilTekstInnput ex){
+            feilmeldingBeskrivelseSkade.setText(ex.getMessage());
+      }
+     //SJEKKER TYPE SKADE (INNPUT 4)
+     try{
+         feilmeldingSkademeldingSkjema.sjekkTypeSkade(TypeSkade);
+         feilmeldingTypeSkade.setText("OK");
+         godkjentTeller++;
+     }
+     catch(feilmeldingSkademeldingSkjema.feilTekstInnput ex){
+          feilmeldingTypeSkade.setText(ex.getMessage());
+     }
+     //SJEKKER KONTAKTINFO FRA VITNER (INNPUT 5)
+     try{
+         feilmeldingSkademeldingSkjema.sjekkKontaktinformasjonVitner(KontaktinfoVitner);
+         feilmeldingKontaktinfoVitner.setText("OK");
+         godkjentTeller++;
+     }
+     catch(feilmeldingSkademeldingSkjema.feilTekstInnput ex){
+          feilmeldingKontaktinfoVitner.setText(ex.getMessage());
+     }
+     //SJEKKER TAKSERING AV SKADE (INNPUT 6)
+     try{
+         feilmeldingSkademeldingSkjema.sjekkTakseringsbeløpAvSkaden(TakseringSkade);
+         feilmeldingTakseringsSkade.setText("OK");
+         godkjentTeller++;
+     }
+     catch(feilmeldingSkademeldingSkjema.feilTallInnput ex){
+         feilmeldingTakseringsSkade.setText(ex.getMessage());
+     }
+     //SJEKKER UTBETALTE ERSTATNINGER (INNPUT 7)
+     try{
+         feilmeldingSkademeldingSkjema.sjekkUbetalteErstatninger(UtbetalteErstatninger);
+         feilmeldingUtbetalteErstatninger.setText("OK");
+         godkjentTeller++;
+     }
+     catch(feilmeldingSkademeldingSkjema.feilTallInnput ex){
+         feilmeldingUtbetalteErstatninger.setText(ex.getMessage());
+     }
+     
+     if(godkjentTeller==9){
+         System.out.print("du har nå registrert forsikring");
+         //FUNKSJON FOR Å LAGE FORSIKRING HER?
+     }
+    }
+ 
     
     
     @FXML 

@@ -109,7 +109,7 @@ public class SkjemaKundeController implements Initializable {
             System.out.print("Godkjent");
             int intForsikringsnummer = Integer.parseInt(forsikringsnummer);
             
-            Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/skjemaKunde.fxml"));
+            //Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/skjemaKunde.fxml"));
             
             
             

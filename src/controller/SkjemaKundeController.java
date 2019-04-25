@@ -16,10 +16,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.feilhåndteringKundeSkjema;
 import model.kundeLagring;
@@ -39,7 +38,7 @@ public class SkjemaKundeController implements Initializable {
     private TextField innOpprettetKundeforhold;
     
     @FXML
-    private Button btnLagre;
+    private ScrollPane scrollPane; 
     
     @FXML
     private TextField innNavn;
@@ -123,6 +122,10 @@ public class SkjemaKundeController implements Initializable {
             lagring.pluss(nyKunde); 
             skrivKundeFil.skrive(lagring); 
             skrivKundeFil.lese(); 
+            
+            Label scrollContent = new Label();
+            scrollContent.setText(skrivKundeFil.lese()); 
+            scrollPane.setContent(scrollContent); 
             
         }
     }

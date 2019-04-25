@@ -41,19 +41,20 @@ public class skrivKundeFil {
             return false; 
         } 
     }
-    public static boolean lese()
+    public static String lese()
     {
+        String res = ""; 
         try (FileInputStream fin = new FileInputStream("C:\\Users\\aleks\\Documents\\kunder.jobj");
         ObjectInputStream oin = new ObjectInputStream(fin)) {
             Object loadedKunde = oin.readObject();
-            System.out.println("Kunde from loaded jobj file:\n" + loadedKunde.toString());
+            res = loadedKunde.toString();
             
         } catch(IOException e) {
             System.err.println("Could not read file. Cause: " + e.getCause());
         } catch(ClassNotFoundException e) {
             System.err.println("Could not convert Object");
         }
-        return true;
+        return res;
         
         
    }

@@ -2,11 +2,13 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaKundeController">
    <children>
@@ -15,21 +17,31 @@
             <Image url="@bilder/fjell-bunn.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="322.0" layoutX="17.0" layoutY="27.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="905.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="594.0" layoutX="16.0" layoutY="25.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="905.0" />
       <Label layoutX="41.0" layoutY="42.0" text="Registrer ny kunde" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="104.0" text="Dato for opprettet kundeforhold:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="153.0" text="Navn:" textFill="WHITE" />
-      <TextField id="innOpprettetKundeforhold" fx:id="innOpprettetKundeforhold" layoutX="330.0" layoutY="98.0" />
-      <TextField id="innNavn" fx:id="innNavn" layoutX="330.0" layoutY="147.0" />
-      <TextField id="innFakturaadresse" fx:id="innFakturaadresse" layoutX="330.0" layoutY="196.0" />
-      <TextField id="innForsikringsnummer" fx:id="innForsikringsnummer" layoutX="330.0" layoutY="245.0" />
+      <TextField id="innOpprettetKundeforhold" fx:id="innOpprettetKundeforhold" layoutX="293.0" layoutY="98.0" />
+      <TextField id="innNavn" fx:id="innNavn" layoutX="293.0" layoutY="147.0" />
+      <TextField id="innFakturaadresse" fx:id="innFakturaadresse" layoutX="293.0" layoutY="196.0" />
+      <TextField id="innForsikringsnummer" fx:id="innForsikringsnummer" layoutX="293.0" layoutY="245.0" />
       <Label layoutX="41.0" layoutY="251.0" text="Forsikringsnummer:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Fakturaadresse:" textFill="WHITE" />
-      <Button layoutX="348.0" layoutY="301.0" mnemonicParsing="false" onAction="#registrerKunde" text="Opprett forsikring" textFill="WHITE" />
+      <Button layoutX="311.0" layoutY="301.0" mnemonicParsing="false" onAction="#registrerKunde" text="Opprett forsikring" textFill="WHITE" />
       <Button layoutX="57.0" layoutY="301.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
-      <Label id="feilmeldingOpprettetKundeforhold" fx:id="feilmeldingOpprettetKundeforhold" layoutX="562.0" layoutY="99.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingNavn" fx:id="feilmeldingNavn" layoutX="562.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingFakturaadresse" fx:id="feilmeldingFakturaadresse" layoutX="562.0" layoutY="196.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
-      <Label id="feilmeldingForsikringsnummer" fx:id="feilmeldingForsikringsnummer" layoutX="562.0" layoutY="245.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingOpprettetKundeforhold" fx:id="feilmeldingOpprettetKundeforhold" layoutX="562.0" layoutY="99.0" prefHeight="39.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingNavn" fx:id="feilmeldingNavn" layoutX="562.0" layoutY="147.0" prefHeight="39.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingFakturaadresse" fx:id="feilmeldingFakturaadresse" layoutX="562.0" layoutY="196.0" prefHeight="39.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingForsikringsnummer" fx:id="feilmeldingForsikringsnummer" layoutX="562.0" layoutY="245.0" prefHeight="39.0" text="*" textFill="WHITE" />
+      <ScrollPane fx:id="scrollPane" layoutX="33.0" layoutY="389.0" prefHeight="208.0" prefWidth="872.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+      <Label layoutX="33.0" layoutY="358.0" text="Registrerte kunder:" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

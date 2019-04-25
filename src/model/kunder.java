@@ -44,7 +44,7 @@ public class kunder implements Serializable{
     public String toString()    // Skriver ut all informasjon om kunde som string. 
     {
         String ut="";
-        ut+="Navn: "+navn+", Dato: "+datoforhold+", FakturaAdresse: "+fakturaadresse+", Forsikringsnummer: "+getForsikringsNummer(); 
+        ut+="Navn: "+navn+", Dato: "+datoforhold+", FakturaAdresse: "+fakturaadresse+", Forsikringsnummer: "+getForsikringsNummer()+"\n"; 
         if(!kundeForsikringer.isEmpty())
         {
            ut += " Forsikringer:\n"; 

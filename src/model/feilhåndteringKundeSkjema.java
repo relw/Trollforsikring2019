@@ -5,34 +5,34 @@ public class feilhåndteringKundeSkjema {
     
                 }
                 else{
-                    throw new feilDatoInnput("Ikke korrekt skrevet inn dato");
+                    throw new feilDatoInnput("Feil dato format");
                 }
         }
     public static void sjekkNavn(String inntekst) throws feilTekstInnput{
         if(inntekst.isEmpty()){
-            throw new feilTekstInnput("Du må skrive inn et navn");
+            throw new feilTekstInnput("Skriv inn navn");
         }
         if(inntekst.matches("[a-zA-Z]+")){
             
         }
         else{
-            throw new feilTekstInnput("Noe er feil med navnet ditt");
+            throw new feilTekstInnput("Feil med navnet ditt");
         }
     }
     public static void sjekkFakturaAdresse(String inntekst) throws feilTekstInnput{
         if(inntekst.isEmpty()){
-            throw new feilTekstInnput("Du må skrive inn fakturaAdresse");
+            throw new feilTekstInnput("Skriv inn fakturaAdresse");
         }
     }
     public static void sjekkForsikringsnummer(String inntekst) throws feilTallInnput{
         if(inntekst.isEmpty()){
-            throw new feilTallInnput("Du må skrive inn forsikringsnummer");
+            throw new feilTallInnput("Skriv inn forsikringsnummer");
         }
         try{
             int tall=Integer.parseInt(inntekst);
         }
         catch(Exception e){
-            throw new feilTallInnput("Du må skrive et tall");
+            throw new feilTallInnput("Skriv et tall");
         }
     }
     

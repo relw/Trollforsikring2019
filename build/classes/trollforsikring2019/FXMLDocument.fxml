@@ -6,16 +6,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="936" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trollforsikring2019.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="936" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trollforsikring2019.FXMLDocumentController">
     <children>
-      <ImageView fitHeight="85.0" fitWidth="200.0" layoutX="368.0" layoutY="138.0">
-         <image>
-            <Image url="@troll2.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="311.0" fitWidth="948.0" layoutX="-13.0" rotate="180.0">
          <image>
             <Image url="@Spooky-Smoke-copy.png" />
+         </image>
+      </ImageView>
+      <ImageView id="button" fitHeight="85.0" fitWidth="200.0" layoutX="361.0" layoutY="153.0">
+         <image>
+            <Image url="@troll2.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="257.0" fitWidth="936.0" layoutY="370.0">

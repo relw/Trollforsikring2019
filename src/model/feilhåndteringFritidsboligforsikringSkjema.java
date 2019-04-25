@@ -6,7 +6,7 @@ public class feilhåndteringFritidsboligforsikringSkjema {
             int tall=Integer.parseInt(inntekst);
         }
         catch(Exception e){
-            throw new feilTallInnput("Du må skrive inn et tall");
+            throw new feilTallInnput("Skriv inn et tall");
         }
     }
     //
@@ -16,41 +16,41 @@ public class feilhåndteringFritidsboligforsikringSkjema {
     
                 }
                 else{
-                    throw new feilDatoInnput("Ikke korrekt skrevet inn dato");
+                    throw new feilDatoInnput("Ikke korrekt dato format");
                 }
         }
     public static void sjekkAdresse(String inntekst) throws feilAdresseInnput{
         if(inntekst.isEmpty()){
-            throw new feilAdresseInnput("Du må skrive inn adresse"); 
+            throw new feilAdresseInnput("Skriv inn adresse"); 
             //SKRIV EN IF HER SOM SJEKKER OM STRINGEN INNEHOLDER BÅDE BOKSTAVER OG TALL
         }
     }
     public static void sjekkByggemateriale(String inntekst) throws tomtTekstfelt{
         if(inntekst.isEmpty()){
-            throw new tomtTekstfelt("Du må skrive inn byggemateriale");
+            throw new tomtTekstfelt("Skriv inn byggemateriale");
         }
     }
     public static void sjekkStandard(String inntekst) throws tomtTekstfelt{
         if(inntekst.isEmpty()){
-            throw new tomtTekstfelt("Du må skrive inn standard");
+            throw new tomtTekstfelt("Skriv inn standard");
         }
     }
     public static void sjekkBoligtype(String inntekst) throws tomtTekstfelt{
         if(inntekst.isEmpty()){
-            throw new tomtTekstfelt("Du må skrive inn boligtype");
+            throw new tomtTekstfelt("Skriv inn boligtype");
         }
     }
      public static void sjekkByggeår(String inntekst) throws feilByggeårInnput{
         if(inntekst.isEmpty()){
-            throw new feilByggeårInnput("Du må skrive inn et årstall");
+            throw new feilByggeårInnput("Skriv inn årstall");
         }
         try{
             int årsmodell=Integer.parseInt(inntekst);
         }catch(Exception e){
-                throw new feilByggeårInnput("Du må skrive inn et årstall");
+                throw new feilByggeårInnput("Skriv inn årstall");
           }
         if(inntekst.length() !=4){
-            throw new feilByggeårInnput("Skriv inn et årstall");
+            throw new feilByggeårInnput("Skriv inn årstall");
         }
         
     }
@@ -59,7 +59,7 @@ public class feilhåndteringFritidsboligforsikringSkjema {
             int tall=Integer.parseInt(inntekst);
         }
         catch(Exception e){
-            throw new feilTallInnput("Du må skrive inn antall kvm");
+            throw new feilTallInnput("Skriv antall kvm");
         }
      }
     

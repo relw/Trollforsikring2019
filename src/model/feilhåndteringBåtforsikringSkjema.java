@@ -5,7 +5,7 @@ public class feilhåndteringBåtforsikringSkjema {
         try{
             int tall=Integer.parseInt(inntekst);
         }catch(Exception e){
-                throw new feilTallInnput("Du må skrive inn tall");
+                throw new feilTallInnput("Skriv inn tall");
                 }
         }
     //METODE SOM SJEKKER OM DET SOM ER SKREVET INN ER I DATO FORMAT
@@ -14,7 +14,7 @@ public class feilhåndteringBåtforsikringSkjema {
     
                 }
                 else{
-                    throw new feilDatoInnput("Ikke korrekt skrevet inn dato");
+                    throw new feilDatoInnput("Ikke korrekt dato format");
                 }
         }
     //METODE SOM SJEKKER OM FORSIKRINGSBELØP INNEHOLDER KUN TALL
@@ -22,25 +22,25 @@ public class feilhåndteringBåtforsikringSkjema {
         try{
             int tall=Integer.parseInt(inntekst);
         }catch(Exception e){
-                throw new feilTallInnput("Du må skrive inn tall");
+                throw new feilTallInnput("Skriv inn tall");
                 }
         }
     //METODE SOM SJEKKER OM EIER FELTET INNEHOLDER ET NAVN
     public static void sjekkEier(String inntekst) throws feilInnputNavn{
         if(inntekst.isEmpty()){
-            throw new tomtNavn("Du må skrive inn et navn");
+            throw new tomtNavn("Skriv inn navn");
         }
         if(inntekst.matches("[a-zA-Z]+")){
             
         }
         else{
-            throw new feilInnputNavn("Noe er feil med navnet ditt");
+            throw new feilInnputNavn("Feil med navnet");
         }
     }
     //METODE SOM SJEKKER OM REGISTRERINGSNUMMER FELTET ER RIKTIG
     public static void sjekkRegistreringsnummer(String inntekst) throws feilRegistreringsnummer{
         if(inntekst.isEmpty()){
-            throw new feilRegistreringsnummer("Du må skrive inn reg nr");
+            throw new feilRegistreringsnummer("Skriv inn reg nr");
         }
         //RESTEN BLE KOMMENTERT BORT FORDI ETTER Å HA SJEKKET ER DET MANGE FORSKJELLIGE MÅTER Å SKRIVE REGNR PÅ
 //        String[] splittRegistreringsnummer = inntekst.split(" ");
@@ -58,39 +58,39 @@ public class feilhåndteringBåtforsikringSkjema {
     //METODE SOM SJEKKER BÅTTYPE OG MODELL ER FYLT UT
     public static void sjekkBåttypeogModell(String inntekst) throws feilBåttypeogModell{
         if(inntekst.isEmpty()){
-            throw new feilBåttypeogModell("Du må fylle inn båttype og modell");
+            throw new feilBåttypeogModell("Skriv inn båttype og modell");
         }
     }
     //METODE SOM SJEKKER OM LENGDE ER FYLT UT KORREKT
     public static void sjekkLengde(String inntekst) throws feilLengde{
         if(inntekst.isEmpty()){
-            throw new feilLengde("Du må fylle ut lengde ");
+            throw new feilLengde("Skriv inn lengde ");
         }
         try{
             int lengde=Integer.parseInt(inntekst);
         }catch(Exception e){
-                throw new feilLengde("Du må skrive inn tall");
+                throw new feilLengde("Skriv inn tall");
                 }
         
     }
     //SJEKKER OM ÅRSMODELL ER FYLT UT KORREKT
     public static void sjekkÅrsmodell(String inntekst) throws feilÅrsmodell{
         if(inntekst.isEmpty()){
-            throw new feilÅrsmodell("Du må skrive inn et årstall");
+            throw new feilÅrsmodell("Skriv et årstall");
         }
         if(inntekst.length() !=4){
-            throw new feilÅrsmodell("Skriv inn et årstall");
+            throw new feilÅrsmodell("Skriv et årstall");
         }
         try{
             int årsmodell=Integer.parseInt(inntekst);
         }catch(Exception e){
-                throw new feilÅrsmodell("Du må skrive inn et årstall");
+                throw new feilÅrsmodell("Skriv et årstall");
           }
     }
     //SJEKKER OM MOTORTYPE OG STYRKE ER SKREVET INN
     public static void sjekkMotortypeOgStyrke(String inntekst) throws feilMotortypeOgStyrke{
         if(inntekst.isEmpty()){
-            throw new feilMotortypeOgStyrke("Skriv inn motortype og styrke");
+            throw new feilMotortypeOgStyrke("Skriv motortype og styrke");
         }
     }     
             

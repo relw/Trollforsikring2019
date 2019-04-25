@@ -19,9 +19,10 @@
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="602.0" layoutX="14.0" layoutY="13.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="594.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="602.0" layoutX="619.0" layoutY="13.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="307.0" />
+      <Pane layoutX="225.0" layoutY="80.0" prefHeight="463.0" prefWidth="245.0" />
       <Label layoutX="41.0" layoutY="42.0" text="Registrer ny båtforsikring" textFill="WHITE">
          <font>
-            <Font name="Segoe UI Historic" size="22.0" />
+            <Font name="System Bold" size="22.0" />
          </font></Label>
       <Label layoutX="25.0" layoutY="104.0" text="Årlig forsikringspremie:" textFill="WHITE" />
       <Label layoutX="25.0" layoutY="153.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
@@ -51,7 +52,7 @@
       <Label layoutX="652.0" layoutY="286.0" text="* Tyveri" textFill="WHITE" />
       <Label layoutX="652.0" layoutY="239.0" text="* " textFill="WHITE" />
       <Label layoutX="652.0" layoutY="216.0" text="* Ansvar" textFill="WHITE" />
-      <Button layoutX="79.0" layoutY="546.0" onAction="#avbryt" mnemonicParsing="false" text="Avbryt"  textFill="WHITE" />
+      <Button layoutX="79.0" layoutY="546.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
       <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="456.0" layoutY="99.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingØnsketOppstart" fx:id="feilmeldingØnsketOppstart" layoutX="456.0" layoutY="147.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringsbeløp" fx:id="feilmeldingForsikringsbeløp" layoutX="456.0" layoutY="197.0" prefHeight="39.0" prefWidth="161.0" text="*" textFill="WHITE" />

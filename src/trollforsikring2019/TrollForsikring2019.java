@@ -24,6 +24,7 @@ public class TrollForsikring2019 extends Application {
         
         Scene scene = new Scene(root);
         
+        // Setter programikon og tittel
         stage.setScene(scene);
         stage.setTitle("Troll Forsikring");
         

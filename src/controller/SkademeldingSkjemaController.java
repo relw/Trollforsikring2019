@@ -145,7 +145,7 @@ public class SkademeldingSkjemaController implements Initializable {
          feilmeldingUtbetalteErstatninger.setText(ex.getMessage());
      }
      
-     if(godkjentTeller==9){
+     if(godkjentTeller==7){
          System.out.print("du har nå registrert forsikring");
          //FUNKSJON FOR Å LAGE FORSIKRING HER?
      }

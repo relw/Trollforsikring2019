@@ -13,7 +13,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-
 <AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaReiseforsikringController">
    <children>
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
@@ -26,7 +25,7 @@
       <Label layoutX="41.0" layoutY="104.0" text="Årlig forsikringspremie:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
       <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="244.0" layoutY="98.0" />
-      <TextField id="innØnsketOppstart" fx:id="innØnsketOppstart" layoutX="244.0" layoutY="147.0" />
+      <TextField id="innØnsketOppstart" fx:id="innØnsketOppstart" layoutX="244.0" layoutY="147.0" promptText="DD-MM-ÅÅÅÅ" />
       <TextField id="innForsikringsområde" fx:id="innForsikringsområde" layoutX="244.0" layoutY="245.0" />
       <TextField id="innForsikringsbeløp" fx:id="innForsikringsbeløp" layoutX="244.0" layoutY="196.0" />
       <Label layoutX="41.0" layoutY="251.0" text="Forsikringsområde:" textFill="WHITE" />

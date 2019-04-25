@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.feilmeldingSkademeldingSkjema;
 
@@ -48,25 +49,25 @@ public class SkademeldingSkjemaController implements Initializable {
     private Label feilmeldingUtbetalteErstatninger;
             
     @FXML
-    private Label innDatoSkade;
+    private TextField innDatoSkade;
     
     @FXML
-    private Label innSkadenummer;
+    private TextField innSkadenummer;
     
     @FXML
-    private Label innBeskrivelseSkade;
+    private TextField innBeskrivelseSkade;
     
     @FXML
-    private Label innTypeSkade;
+    private TextField innTypeSkade;
     
     @FXML
-    private Label innKontaktinfoVitner;
+    private TextField innKontaktinfoVitner;
     
     @FXML
-    private Label innTakseringSkade;
+    private TextField innTakseringSkade;
     
     @FXML
-    private Label innUtbetalteErstatninger;
+    private TextField innUtbetalteErstatninger;
     
      @FXML 
     private void registrerSkademelding(ActionEvent event){

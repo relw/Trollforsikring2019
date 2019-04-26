@@ -17,7 +17,7 @@ public class skrivKundeFil {
     public static boolean skrive(kundeLagring obj){
      
         
-        String fp2 = "C:\\Users\\aleks\\Documents\\kunder.jobj";
+        String fp2 = "kunder.jobj";
         String filepath = fp2;
         
         try (
@@ -40,7 +40,7 @@ public class skrivKundeFil {
     public static String lese()
     {
         String res = ""; 
-        try (FileInputStream fin = new FileInputStream("C:\\Users\\aleks\\Documents\\kunder.jobj");
+        try (FileInputStream fin = new FileInputStream("kunder.jobj");
         ObjectInputStream oin = new ObjectInputStream(fin)) {
             Object loadedKunde = oin.readObject();
             res = loadedKunde.toString();
@@ -59,7 +59,7 @@ public class skrivKundeFil {
         ArrayList<Object> objectsList = new ArrayList<Object>();
         boolean cont = true;
         try{
-            FileInputStream fis = new FileInputStream("C:\\Users\\aleks\\Documents\\kunder.jobj");
+            FileInputStream fis = new FileInputStream("kunder.jobj");
            ObjectInputStream input = new ObjectInputStream(fis);
            while(cont){
               Object obj = input.readObject();

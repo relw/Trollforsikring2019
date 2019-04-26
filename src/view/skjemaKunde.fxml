@@ -12,9 +12,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaKundeController">
    <children>
-      <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="168.0" fitWidth="964.0" layoutX="-20.0" layoutY="456.0">
          <image>
-            <Image url="@bilder/fjell-bunn.png" />
+            <Image url="@../trollforsikring2019/Spooky-Smoke-copy.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="311.0" layoutX="16.0" layoutY="15.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="905.0" />
@@ -30,8 +30,8 @@
       <TextField id="innForsikringsnummer" fx:id="innForsikringsnummer" layoutX="293.0" layoutY="245.0" promptText="8 siffer" />
       <Label layoutX="41.0" layoutY="251.0" text="Forsikringsnummer:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Fakturaadresse:" textFill="WHITE" />
-      <Button layoutX="310.0" layoutY="289.0" mnemonicParsing="false" onAction="#registrerKunde" text="Opprett forsikring" textFill="WHITE" />
-      <Button layoutX="56.0" layoutY="289.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
+      <Button layoutX="310.0" layoutY="285.0" mnemonicParsing="false" onAction="#registrerKunde" text="Opprett forsikring" textFill="WHITE" />
+      <Button layoutX="56.0" layoutY="285.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
       <Label id="feilmeldingOpprettetKundeforhold" fx:id="feilmeldingOpprettetKundeforhold" layoutX="562.0" layoutY="99.0" prefHeight="39.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingNavn" fx:id="feilmeldingNavn" layoutX="562.0" layoutY="147.0" prefHeight="39.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingFakturaadresse" fx:id="feilmeldingFakturaadresse" layoutX="562.0" layoutY="196.0" prefHeight="39.0" text="*" textFill="WHITE" />

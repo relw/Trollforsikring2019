@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="936" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trollforsikring2019.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="936" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trollforsikring2019.FXMLDocumentController">
     <children>
       <ImageView fitHeight="311.0" fitWidth="948.0" layoutX="-13.0" rotate="180.0">
          <image>
             <Image url="@Spooky-Smoke-copy.png" />
          </image>
       </ImageView>
-      <ImageView id="button" fitHeight="85.0" fitWidth="200.0" layoutX="361.0" layoutY="153.0">
+      <ImageView id="button" fitHeight="85.0" fitWidth="200.0" layoutX="361.0" layoutY="140.0">
          <image>
             <Image url="@troll2.png" />
          </image>
@@ -23,25 +23,30 @@
             <Image url="@mountain-png-23.png" />
          </image>
       </ImageView>
-      <Button id="button" layoutX="361.0" layoutY="269.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" onAction="#forsikringKnapp" stylesheets="@stilark.css" text="Forsikring" textFill="WHITE">
+      <Button id="button" layoutX="361.0" layoutY="256.0" mnemonicParsing="false" onAction="#forsikringKnapp" prefHeight="42.0" prefWidth="213.0" stylesheets="@stilark.css" text="Forsikring" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button id="button" layoutX="361.0" layoutY="324.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" onAction="#KundeKnapp" stylesheets="@stilark.css" text="Kunderegistrering" textFill="WHITE">
+      <Button id="button" layoutX="361.0" layoutY="311.0" mnemonicParsing="false" onAction="#KundeKnapp" prefHeight="42.0" prefWidth="213.0" stylesheets="@stilark.css" text="Kunderegistrering" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button id="button" layoutX="361.0" layoutY="378.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" onAction="#SkadeKnapp" stylesheets="@stilark.css" text="Skademelding" textFill="WHITE">
+      <Button id="button" layoutX="361.0" layoutY="365.0" mnemonicParsing="false" onAction="#SkadeKnapp" prefHeight="42.0" prefWidth="213.0" stylesheets="@stilark.css" text="Skademelding" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <ImageView fitHeight="75.0" fitWidth="200.0" layoutX="361.0" layoutY="67.0">
+      <ImageView fitHeight="75.0" fitWidth="200.0" layoutX="361.0" layoutY="63.0">
          <image>
             <Image url="@giphy-3.gif" />
          </image>
       </ImageView>
+      <Button id="button" fx:id="btnRegister" layoutX="361.0" layoutY="419.0" mnemonicParsing="false" onAction="#registerKnapp" prefHeight="42.0" prefWidth="213.0" stylesheets="@stilark.css" text="Register" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

@@ -29,6 +29,9 @@ public class FXMLDocumentController implements Initializable {
     private Label label;
     
     @FXML
+    private Button btnRegister;
+    
+    @FXML
     private Button btnKunde; 
     
     @FXML
@@ -56,6 +59,14 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void SkadeKnapp(ActionEvent event) throws IOException {
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/skademeldingSkjema.fxml"));
+        Scene home_page_scene=new Scene(home_page_parent);
+        Stage app_stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
+    }
+    @FXML
+    private void registerKnapp(ActionEvent event) throws IOException {
+        Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/register.fxml"));
         Scene home_page_scene=new Scene(home_page_parent);
         Stage app_stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(home_page_scene);

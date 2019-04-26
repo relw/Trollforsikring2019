@@ -17,7 +17,7 @@
             <Image url="@bilder/fjell-bunn.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="594.0" layoutX="16.0" layoutY="25.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="905.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="316.0" layoutX="16.0" layoutY="25.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="905.0" />
       <Label layoutX="41.0" layoutY="42.0" text="Registrer ny kunde" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="104.0" text="Dato for opprettet kundeforhold:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="153.0" text="Navn:" textFill="WHITE" />
@@ -38,7 +38,7 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
         </content>
       </ScrollPane>
-      <Label layoutX="33.0" layoutY="358.0" text="Registrerte kunder:" textFill="WHITE">
+      <Label layoutX="33.0" layoutY="358.0" text="Registrerte kunder:">
          <font>
             <Font size="20.0" />
          </font>

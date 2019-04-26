@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -15,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaBåtforsikringController">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaBåtforsikringController">
    <children>
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -23,7 +17,7 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="602.0" layoutX="14.0" layoutY="13.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="909.0" />
-      <Label layoutX="41.0" layoutY="42.0" text="Registrer ny båtforsikring" textFill="WHITE">
+      <Label layoutX="26.0" layoutY="42.0" text="Registrer ny båtforsikring" textFill="WHITE">
          <font>
             <Font name="Segoe UI Historic" size="22.0" />
          </font></Label>
@@ -36,15 +30,15 @@
       <Label layoutX="25.0" layoutY="398.0" prefHeight="27.0" prefWidth="161.0" text="Lengde (fot):" textFill="WHITE" />
       <Label layoutX="25.0" layoutY="447.0" text="Årsmodell:" textFill="WHITE" />
       <Label layoutX="25.0" layoutY="497.0" text="Motortype + motorstyrke:" textFill="WHITE" />
-      <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="232.0" layoutY="98.0" />
+      <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="232.0" layoutY="98.0" promptText="Eks: &quot;100000&quot;" />
       <TextField id="innØnsketOppstart" fx:id="innØnsketOppstart" layoutX="232.0" layoutY="147.0" promptText="DD-MM-ÅÅÅÅ" />
-      <TextField id="innForsikringsbeløp" fx:id="innForsikringsbeløp" layoutX="232.0" layoutY="196.0" />
-      <TextField id="innEier" fx:id="innEier" layoutX="232.0" layoutY="245.0" />
-      <TextField id="innRegistreringsnummer" fx:id="innRegistreringsnummer" layoutX="232.0" layoutY="294.0" />
-      <TextField id="innLengde" fx:id="innLengde" layoutX="232.0" layoutY="392.0" />
-      <TextField id="innÅrsmodell" fx:id="innÅrsmodell" layoutX="232.0" layoutY="441.0" />
-      <TextField id="innBåttypeogModell" fx:id="innBåttypeogModell" layoutX="232.0" layoutY="343.0" />
-      <TextField id="innMotortypeogMotorstyrke" fx:id="innMotortypeogMotorstyrke" layoutX="232.0" layoutY="491.0" />
+      <TextField id="innForsikringsbeløp" fx:id="innForsikringsbeløp" layoutX="232.0" layoutY="196.0" promptText="Eks: &quot;100000&quot;" />
+      <TextField id="innEier" fx:id="innEier" layoutX="232.0" layoutY="245.0" promptText="Eks: &quot;Ola Nordmann&quot;" />
+      <TextField id="innRegistreringsnummer" fx:id="innRegistreringsnummer" layoutX="232.0" layoutY="294.0" promptText="Eks: &quot;12345678&quot;" />
+      <TextField id="innLengde" fx:id="innLengde" layoutX="232.0" layoutY="392.0" promptText="Eks: &quot;40&quot;" />
+      <TextField id="innÅrsmodell" fx:id="innÅrsmodell" layoutX="232.0" layoutY="441.0" promptText="Eks: &quot;1999&quot;" />
+      <TextField id="innBåttypeogModell" fx:id="innBåttypeogModell" layoutX="232.0" layoutY="343.0" promptText="Eks: &quot;Ibiza 770&quot;" />
+      <TextField id="innMotortypeogMotorstyrke" fx:id="innMotortypeogMotorstyrke" layoutX="232.0" layoutY="491.0" promptText="Eks: &quot;Yamaha 2,5&quot;" />
       <Button layoutX="232.0" layoutY="546.0" mnemonicParsing="false" onAction="#registrerBåtForsikring" text="Opprett forsikring" textFill="WHITE" />
       <Button layoutX="79.0" layoutY="546.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
       <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="456.0" layoutY="99.0" prefHeight="39.0" prefWidth="270.0" text="*" textFill="WHITE" />
@@ -56,6 +50,6 @@
       <Label id="feilmeldingLengde" fx:id="feilmeldingLengde" layoutX="458.0" layoutY="392.0" prefHeight="39.0" prefWidth="270.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingÅrsmodell" fx:id="feilmeldingÅrsmodell" layoutX="455.0" layoutY="441.0" prefHeight="39.0" prefWidth="270.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingMotortypeStyrke" fx:id="feilmeldingMotortypeStyrke" layoutX="458.0" layoutY="491.0" prefHeight="39.0" prefWidth="270.0" text="*" textFill="WHITE" />
-      <Button layoutX="426.0" layoutY="546.0" mnemonicParsing="false" onAction="#visVilkår" text="Vis vilkår" textFill="WHITE" />
+      <Button layoutX="426.0" layoutY="546.0" mnemonicParsing="false" onAction="#visVilkår" text="Vis betingelser" textFill="WHITE" />
    </children>
 </AnchorPane>

@@ -17,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import model.feilhåndteringFritidsboligforsikringSkjema;
 
@@ -216,7 +217,10 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         fxmlLoader.setLocation(getClass().getResource("/view/betingelserFritidsboligforsikring.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
-        stage.setTitle("Forsikring vilkår fritidsboligforsikring");
+        
+        stage.setTitle("Troll Forsikring");
+        stage.getIcons().add(new Image("trollforsikring2019/ikon.png")); 
+        
         stage.setScene(scene);
         stage.show();
     } catch (IOException e) {

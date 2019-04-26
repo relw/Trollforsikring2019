@@ -12,6 +12,7 @@ import java.util.ArrayList;
  *
  * @author Aleksander
  */
+// Klasse for lagring av kunder til jobj
 public class kundeLagring implements Serializable {
     public ArrayList<kunder> liste = new ArrayList<>(); 
     public void pluss(kunder k)

@@ -18,8 +18,8 @@ public class TrollForsikring2019 extends Application {
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
-        stage.setTitle("Troll Forsikring");
         
+        stage.setTitle("Troll Forsikring");
         stage.getIcons().add(new Image("trollforsikring2019/ikon.png")); 
         
         stage.show();

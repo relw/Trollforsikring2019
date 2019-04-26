@@ -24,6 +24,16 @@ public class kunder implements Serializable{
         this.forsikringsnummer = forsknummer; 
     }
     
+    public void setForsikring(forsikringer f)
+    {
+        kundeForsikringer.add(f); 
+    }
+    
+    public void setSkademelding(skademeldinger s)
+    {
+        kundeSkademeldinger.add(s); 
+    }
+    
     public String getNavn()
     {
         return navn; 

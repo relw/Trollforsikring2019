@@ -115,6 +115,8 @@ public class SkjemaKundeController implements Initializable {
 //            FileChooser fileChooser = new FileChooser();
 //            fileChooser.setTitle("Open Resource File");
 //            fileChooser.showOpenDialog(app_stage);
+
+        
             
             kunder nyKunde = new kunder(navn, opprettetKundeforhold, fakturaAdresse, intForsikringsnummer);
             

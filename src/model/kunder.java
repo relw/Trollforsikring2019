@@ -40,11 +40,20 @@ public class kunder implements Serializable{
     {
         return forsikringsnummer; 
     }
+    public static String newline = System.getProperty("line.separator");
+    
     @Override
     public String toString()    // Skriver ut all informasjon om kunde som string. 
     {
         String ut="";
-        ut+="Navn: "+navn+", Dato: "+datoforhold+", FakturaAdresse: "+fakturaadresse+", Forsikringsnummer: "+getForsikringsNummer()+"\n"; 
+        ut+="Kunde:" + newline 
+        + "----------------------------" + newline 
+        + "Navn:"+ navn + newline 
+        + "Dato:"+ datoforhold + newline 
+        + "Fakturaadresse:"+ fakturaadresse + newline 
+        + "Forsikringsnummer:"+ getForsikringsNummer() + newline 
+        + "____________________________" + newline+"\n"; 
+
         if(!kundeForsikringer.isEmpty())
         {
            ut += " Forsikringer:\n"; 

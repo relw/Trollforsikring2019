@@ -41,6 +41,9 @@ public class feilhåndteringKundeSkjema {
         catch(Exception e){
             throw new feilTallInnput("Du må skrive et tall");
         }
+        if(inntekst.length() != 8) {
+            throw new feilTallInnput("Nummeret må bestå av 8 siffer!");
+        }
     }
     
     

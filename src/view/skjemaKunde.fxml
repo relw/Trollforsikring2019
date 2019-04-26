@@ -21,10 +21,10 @@
       <Label layoutX="41.0" layoutY="42.0" text="Registrer ny kunde" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="104.0" text="Dato for opprettet kundeforhold:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="153.0" text="Navn:" textFill="WHITE" />
-      <TextField id="innOpprettetKundeforhold" fx:id="innOpprettetKundeforhold" layoutX="293.0" layoutY="98.0" />
-      <TextField id="innNavn" fx:id="innNavn" layoutX="293.0" layoutY="147.0" />
-      <TextField id="innFakturaadresse" fx:id="innFakturaadresse" layoutX="293.0" layoutY="196.0" />
-      <TextField id="innForsikringsnummer" fx:id="innForsikringsnummer" layoutX="293.0" layoutY="245.0" />
+      <TextField id="innOpprettetKundeforhold" fx:id="innOpprettetKundeforhold" layoutX="293.0" layoutY="98.0" promptText="DD-MM-ÅÅÅÅ" />
+      <TextField id="innNavn" fx:id="innNavn" layoutX="293.0" layoutY="147.0" promptText="Fornavn Etternavn" />
+      <TextField id="innFakturaadresse" fx:id="innFakturaadresse" layoutX="293.0" layoutY="196.0" promptText="Eks: &quot;Osloveien 6&quot;" />
+      <TextField id="innForsikringsnummer" fx:id="innForsikringsnummer" layoutX="293.0" layoutY="245.0" promptText="8 siffer" />
       <Label layoutX="41.0" layoutY="251.0" text="Forsikringsnummer:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Fakturaadresse:" textFill="WHITE" />
       <Button layoutX="311.0" layoutY="301.0" mnemonicParsing="false" onAction="#registrerKunde" text="Opprett forsikring" textFill="WHITE" />

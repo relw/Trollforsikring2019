@@ -31,12 +31,12 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
         </content>
       </ScrollPane>
-      <Label layoutX="703.0" layoutY="21.0" text="Sortering:" textFill="WHITE">
+      <Label layoutX="684.0" layoutY="21.0" text="Sortering:" textFill="WHITE">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <MenuButton layoutX="804.0" layoutY="25.0" mnemonicParsing="false" text="MenuButton">
+      <MenuButton layoutX="785.0" layoutY="23.0" mnemonicParsing="false" text="MenuButton">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
           <MenuItem mnemonicParsing="false" text="Action 2" />

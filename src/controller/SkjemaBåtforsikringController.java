@@ -197,7 +197,7 @@ public class SkjemaBåtforsikringController implements Initializable {
      public void visVilkår(ActionEvent event) throws IOException{
         try {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("/view/vilkårBåtforsikring.fxml"));
+        fxmlLoader.setLocation(getClass().getResource("/view/betingelserBåtforsikring.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setTitle("Forsikring vilkår båtforsikring");

@@ -213,7 +213,7 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
      public void visVilkår(ActionEvent event) throws IOException{
         try {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("/view/vilkårFritidsboligforsikring.fxml"));
+        fxmlLoader.setLocation(getClass().getResource("/view/betingelserFritidsboligforsikring.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setTitle("Forsikring vilkår fritidsboligforsikring");

@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="165.0" layoutY="200.0" text="BÅTFORSIKRING VILKÅR" />
+      <Label layoutX="51.0" layoutY="43.0" />
+      <Label layoutX="38.0" layoutY="30.0" text="Forsikringsvilkår båtforsikring">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="81.0" text="* Ansvarsforsikring " />
+      <Label layoutX="44.0" layoutY="108.0" text="* Ulykkesforsikring  " />
+      <Label layoutX="51.0" layoutY="108.0" />
+      <Label layoutX="51.0" layoutY="162.0" />
+      <Label layoutX="44.0" layoutY="162.0" text="* Tyveri og brann" />
+      <Label layoutX="44.0" layoutY="135.0" text="* Rettshjelp" />
+      <Label layoutX="44.0" layoutY="189.0" text="* Sammenstøt, grunnstøting" />
+      <Label layoutX="44.0" layoutY="216.0" text="* Skade på seil og motor" />
    </children>
 </AnchorPane>

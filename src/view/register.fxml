@@ -5,12 +5,19 @@
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Forsikringnivaa1Controller">
    <children>
+      <ImageView fitHeight="168.0" fitWidth="948.0" layoutX="-13.0" layoutY="457.0">
+         <image>
+            <Image url="@../trollforsikring2019/Spooky-Smoke-copy.png" />
+         </image>
+      </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="492.0" layoutX="14.0" layoutY="14.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="909.0" />
       <Button layoutX="361.0" layoutY="541.0" mnemonicParsing="false" onAction="#nyReiseforsikringSkjema" prefHeight="42.0" prefWidth="213.0" stylesheets="@../trollforsikring2019/stilark.css" text="Last inn elementer fra fil" textFill="WHITE">
          <font>

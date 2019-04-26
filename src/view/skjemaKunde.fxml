@@ -17,8 +17,11 @@
             <Image url="@bilder/fjell-bunn.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="316.0" layoutX="16.0" layoutY="25.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="905.0" />
-      <Label layoutX="41.0" layoutY="42.0" text="Registrer ny kunde" textFill="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="311.0" layoutX="16.0" layoutY="15.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="905.0" />
+      <Label layoutX="41.0" layoutY="42.0" text="Registrer ny kunde" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
       <Label layoutX="41.0" layoutY="104.0" text="Dato for opprettet kundeforhold:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="153.0" text="Navn:" textFill="WHITE" />
       <TextField id="innOpprettetKundeforhold" fx:id="innOpprettetKundeforhold" layoutX="293.0" layoutY="98.0" promptText="DD-MM-ÅÅÅÅ" />
@@ -27,18 +30,18 @@
       <TextField id="innForsikringsnummer" fx:id="innForsikringsnummer" layoutX="293.0" layoutY="245.0" promptText="8 siffer" />
       <Label layoutX="41.0" layoutY="251.0" text="Forsikringsnummer:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Fakturaadresse:" textFill="WHITE" />
-      <Button layoutX="311.0" layoutY="301.0" mnemonicParsing="false" onAction="#registrerKunde" text="Opprett forsikring" textFill="WHITE" />
-      <Button layoutX="57.0" layoutY="301.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
+      <Button layoutX="310.0" layoutY="289.0" mnemonicParsing="false" onAction="#registrerKunde" text="Opprett forsikring" textFill="WHITE" />
+      <Button layoutX="56.0" layoutY="289.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
       <Label id="feilmeldingOpprettetKundeforhold" fx:id="feilmeldingOpprettetKundeforhold" layoutX="562.0" layoutY="99.0" prefHeight="39.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingNavn" fx:id="feilmeldingNavn" layoutX="562.0" layoutY="147.0" prefHeight="39.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingFakturaadresse" fx:id="feilmeldingFakturaadresse" layoutX="562.0" layoutY="196.0" prefHeight="39.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringsnummer" fx:id="feilmeldingForsikringsnummer" layoutX="562.0" layoutY="245.0" prefHeight="39.0" text="*" textFill="WHITE" />
-      <ScrollPane fx:id="scrollPane" layoutX="33.0" layoutY="389.0" prefHeight="208.0" prefWidth="872.0">
+      <ScrollPane fx:id="scrollPane" layoutX="32.0" layoutY="367.0" prefHeight="245.0" prefWidth="872.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
         </content>
       </ScrollPane>
-      <Label layoutX="33.0" layoutY="358.0" text="Registrerte kunder:">
+      <Label layoutX="32.0" layoutY="336.0" text="Registrerte kunder:">
          <font>
             <Font size="20.0" />
          </font>

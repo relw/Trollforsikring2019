@@ -12,10 +12,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-/**
- *
- * @author martin
- */
 public class skrivKundeFil {
     
     public static boolean skrive(kundeLagring obj){

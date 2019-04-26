@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package trollforsikring2019;
 
 import javafx.application.Application;
@@ -12,10 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-/**
- *
- * @author Rasmus
- */
+
 public class TrollForsikring2019 extends Application {
     
     @Override

@@ -218,6 +218,19 @@ public class SkjemaHusOgInnboforsikringController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
+     public void visVilkår(ActionEvent event) throws IOException{
+        try {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("/view/vilkårHusOgInnboforsikring.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Forsikring vilkår hus-og innboforsikring");
+        stage.setScene(scene);
+        stage.show();
+    } catch (IOException e) {
+      
+    }
+     }
     
 
     @Override

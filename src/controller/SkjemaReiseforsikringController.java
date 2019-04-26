@@ -124,7 +124,7 @@ public class SkjemaReiseforsikringController implements Initializable {
         fxmlLoader.setLocation(getClass().getResource("/view/vilkårReiseforsikring.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
-        stage.setTitle("Forsikring vilkår båtforsikring");
+        stage.setTitle("Forsikring vilkår reiseforsikring");
         stage.setScene(scene);
         stage.show();
     } catch (IOException e) {

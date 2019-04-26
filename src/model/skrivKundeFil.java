@@ -54,24 +54,39 @@ public class skrivKundeFil {
         
         
    }
+    public static kundeLagring hentObjekt(){
+        try (FileInputStream fin = new FileInputStream("kunder.jobj");
+        ObjectInputStream oin = new ObjectInputStream(fin)) {
+            kundeLagring loadedKunde = (kundeLagring)oin.readObject();
+            return loadedKunde; 
+            
+        } catch(IOException e) {
+            System.err.println("Could not read file. Cause: " + e.getCause());
+        } catch(ClassNotFoundException e) {
+            System.err.println("Could not convert Object");
+        }
+        
+    }
     public static ArrayList<Object> leseAlle(){
         
-        ArrayList<Object> objectsList = new ArrayList<Object>();
-        boolean cont = true;
+        ArrayList<Object> objektListe = new ArrayList<Object>();
+        boolean fortsett = true;
         try{
             FileInputStream fis = new FileInputStream("kunder.jobj");
-           ObjectInputStream input = new ObjectInputStream(fis);
-           while(cont){
-              Object obj = input.readObject();
+           ObjectInputStream inn = new ObjectInputStream(fis);
+           while(fortsett)
+           {
+              Object obj = inn.readObject();
               if(obj != null)
-                 objectsList.add(obj);
+                 objektListe.add(obj);
               else
-                 cont = false;
+                 fortsett = false;
            }
-        }catch(Exception e){
+        }catch(Exception e)
+        {
            //System.out.println(e.printStackTrace());
         }
-        return objectsList; 
+        return objektListe; 
     }
         
 }

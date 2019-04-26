@@ -3,12 +3,9 @@ package model;
 
 public class forsikringer {
     
-    public int forsikringPremie;
-    public int opprettetForsikring;
-    public int forsikringsBeloop;
-    public String forsikringBetingelser;
+    public String forsikringPremie, opprettetForsikring, forsikringsBeloop, forsikringBetingelser;
 
-    public forsikringer(int forsikringPremie, int opprettetForsikring, int forsikringsBeloop, String forsikringBetingelser) 
+    public forsikringer(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String forsikringBetingelser) 
     {
         
         this.forsikringPremie = forsikringPremie;
@@ -17,17 +14,17 @@ public class forsikringer {
         this.forsikringBetingelser = forsikringBetingelser;
     }
 
-    public int getForsikringPremie() {
+    public String getForsikringPremie() {
         
         return forsikringPremie;
     }
 
-    public int getOpprettetForsikring() {
+    public String getOpprettetForsikring() {
         
         return opprettetForsikring;
     }
     
-    public int getForsikringsBeloop() {
+    public String getForsikringsBeloop() {
         
         return forsikringsBeloop;
     }
@@ -48,31 +45,14 @@ public class forsikringer {
 
 }
 
-class fritidsboligforsikring extends forsikringer
-{
-   private String adresse, boligtype, byggemateriale, standard;  
-   private int byggeår, antallKvadratmeter, forsikringsbeløpInnbo;
-   
-   public fritidsboligforsikring(int forsikringPremie, int opprettetForsikring, int forsikringsBeloop, String forsikringBetingelser, String innadresse, String innboligtype, String innByggemateriale, String innStandard, int innByggeår, int antallKvadratmeter, int innForsikringsbeløpInnbo)
-   {
-     super(forsikringPremie, opprettetForsikring, forsikringsBeloop, forsikringBetingelser);
-     this.adresse = innadresse; 
-     this.boligtype = innboligtype;
-     this.byggemateriale = innByggemateriale; 
-     this.standard = innStandard; 
-     this.byggeår = innByggeår;
-     this.antallKvadratmeter = antallKvadratmeter; 
-     this.forsikringsbeløpInnbo = innForsikringsbeløpInnbo; 
-             
-   }
-}
+
     
 class båtforsikring extends forsikringer
 {
    private String eier, båttype, model, motortype, motorstyrke;
    private int regnummer, lendgeAntallFot, årsmodell; 
     
-    public båtforsikring(int forsikringPremie, int opprettetForsikring, int forsikringsBeloop, String forsikringBetingelser, String inneier, String innbåttype, String innmodel, String innmotortype, String innmotorstyrke, int innregnummer, int innlengde, int innårsmodell)
+    public båtforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String forsikringBetingelser, String inneier, String innbåttype, String innmodel, String innmotortype, String innmotorstyrke, int innregnummer, int innlengde, int innårsmodell)
    {
      super(forsikringPremie, opprettetForsikring, forsikringsBeloop, forsikringBetingelser);
      this.eier = inneier; 
@@ -90,7 +70,7 @@ class reiseforsikring extends forsikringer
    private String forsikringsområde;
    private int forsikringssum;  
     
-   public reiseforsikring(int forsikringPremie, int opprettetForsikring, int forsikringsBeloop, String forsikringBetingelser, String innforsikringsområde, int innforsikringssum)
+   public reiseforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String forsikringBetingelser, String innforsikringsområde, int innforsikringssum)
    {
      super(forsikringPremie, opprettetForsikring, forsikringsBeloop, forsikringBetingelser);
      this.forsikringsområde = innforsikringsområde;
@@ -103,7 +83,7 @@ class husoginnboforsikring extends forsikringer
    private String boligadresse, boligtype, standard, byggemateriale;
    private int byggeår, antallKvadratmeter, beløpForByggning, beløpForInnbo; 
     
-    public husoginnboforsikring(int forsikringPremie, int opprettetForsikring, int forsikringsBeloop, String forsikringBetingelser, String innboligadresse, String innboligtype, String innstandard, String innbyggemateriale, int innbyggeår, int innantallkvadratmeter, int innbeløpforbyggning, int innbeløpforinnbo)
+    public husoginnboforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String forsikringBetingelser, String innboligadresse, String innboligtype, String innstandard, String innbyggemateriale, int innbyggeår, int innantallkvadratmeter, int innbeløpforbyggning, int innbeløpforinnbo)
    {
      super(forsikringPremie, opprettetForsikring, forsikringsBeloop, forsikringBetingelser);
      this.boligadresse = innboligadresse;

@@ -19,6 +19,14 @@ public class kundeLagring implements Serializable {
     {
         liste.add(k); 
     }
+    public ArrayList<kunder> putKunderIListe(){
+        ArrayList<kunder> listeKunder = new ArrayList<>(); 
+        for(kunder k:liste)
+        {
+            listeKunder.add(k); 
+        }
+        return listeKunder; 
+    }
     @Override
     public String toString()
     {

@@ -7,6 +7,7 @@ package controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,10 +17,16 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import model.feilhåndteringFritidsboligforsikringSkjema;
+import model.fritidsboligforsikring; 
+import model.kunder; 
+import model.skrivKundeFil;
+import model.kundeLagring; 
 
 public class SkjemaFritidsboligForsikringController implements Initializable {
 
@@ -40,6 +47,9 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
             
     @FXML
     private Label feilmeldingBoligtype;
+    
+    @FXML
+    private MenuButton menuButton;
             
     @FXML
     private Label feilmeldingByggemateriale;
@@ -201,7 +211,21 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         catch(feilhåndteringFritidsboligforsikringSkjema.feilTallInnput ex){
            feilmeldingForsikringsbeløpInnbo.setText(ex.getMessage());
         }
-        
+        if(godkjentTeller == 10)
+        {
+            fritidsboligforsikring forsikring = new fritidsboligforsikring(forsikringspremie, ønsketOppstart, adresse, forsikringsbeløp, byggemateriale, 
+            standard, boligtype, byggeår, kvm, forsikringsbeløpBygning, forsikringsbeløpInnbo);
+            
+            // FORTSETT HER!!! TO DO: PUT ARRAYET I DROPDOWNBUTTON!!!
+            menuButton.getItems().addAll(new MenuItem(""));
+            kundeLagring kundeListe = new kundeLagring();
+            kundeListe = skrivKundeFil.hentObjekt();
+            ArrayList<kunder> array = new ArrayList<>();
+            array = kundeListe.putKunderIListe(); 
+            
+            
+            
+        }
     }
      @FXML
     private void avbryt(ActionEvent event) throws IOException {

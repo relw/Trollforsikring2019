@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="308.0" layoutY="187.0" text="REISEFORSIKRING VILKÅR" />
+      <Label layoutX="58.0" layoutY="50.0" text="Betingelser for reiseforsikring">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="101.0" text="* Reisegods" />
+      <Label layoutX="64.0" layoutY="128.0" prefHeight="17.0" prefWidth="151.0" text="* Verdigjenstander" />
+      <Label layoutX="64.0" layoutY="182.0" text="* Forsinket bagasje" />
+      <Label layoutX="64.0" layoutY="155.0" text="* Tyveri av penger" />
+      <Label layoutX="64.0" layoutY="209.0" prefHeight="17.0" prefWidth="231.0" text="*Forsinkelse" />
+      <Label layoutX="64.0" layoutY="236.0" prefHeight="17.0" prefWidth="314.0" text="* Hjemtransport" />
    </children>
 </AnchorPane>

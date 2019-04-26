@@ -31,7 +31,7 @@
       <Label layoutX="41.0" layoutY="153.0" text="Skadenummer:" textFill="WHITE" />
       <TextField id="innDatoSkade" fx:id="innDatoSkade" layoutX="257.0" layoutY="98.0" promptText="DD-MM-ÅÅÅÅ" />
       <TextField id="innSkadenummer" fx:id="innSkadenummer" layoutX="257.0" layoutY="147.0" />
-      <TextField id="InnBeskrivelseSkade" fx:id="InnBeskrivelseSkade" layoutX="257.0" layoutY="245.0" />
+      <TextField id="innBeskrivelseSkade" fx:id="innBeskrivelseSkade" layoutX="257.0" layoutY="245.0" />
       <TextField id="innTypeSkade" fx:id="innTypeSkade" layoutX="257.0" layoutY="196.0" />
       <Label layoutX="41.0" layoutY="251.0" text="Beskrivelse av skade:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Type skade:" textFill="WHITE" />

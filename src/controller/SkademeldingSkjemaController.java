@@ -73,8 +73,8 @@ public class SkademeldingSkjemaController implements Initializable {
     private void registrerSkademelding(ActionEvent event){
        String DatoSkade=innDatoSkade.getText();
        String Skadenummer=innSkadenummer.getText();
-       String BeskrivelseSkade=innBeskrivelseSkade.getText();
        String TypeSkade=innTypeSkade.getText();
+       String BeskrivelseSkade=innBeskrivelseSkade.getText();
        String KontaktinfoVitner=innKontaktinfoVitner.getText();
        String TakseringSkade=innTakseringSkade.getText();
        String UtbetalteErstatninger=innUtbetalteErstatninger.getText();
@@ -118,7 +118,7 @@ public class SkademeldingSkjemaController implements Initializable {
      catch(feilmeldingSkademeldingSkjema.feilTekstInnput ex){
           feilmeldingTypeSkade.setText(ex.getMessage());
      }
-     //SJEKKER KONTAKTINFO FRA VITNER (INNPUT 5)
+//     //SJEKKER KONTAKTINFO FRA VITNER (INNPUT 5)
      try{
          feilmeldingSkademeldingSkjema.sjekkKontaktinformasjonVitner(KontaktinfoVitner);
          feilmeldingKontaktinfoVitner.setText("OK");

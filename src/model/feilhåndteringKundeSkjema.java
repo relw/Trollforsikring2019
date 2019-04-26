@@ -10,14 +10,21 @@ public class feilhåndteringKundeSkjema {
         }
     public static void sjekkNavn(String inntekst) throws feilTekstInnput{
         if(inntekst.isEmpty()){
-            throw new feilTekstInnput("Du må skrive inn et navn");
+            throw new feilTekstInnput("Skriv inn et navn");
         }
-        if(inntekst.matches("[a-zA-Z]+")){
-            
+        String[] splitt = inntekst.split(" ");
+        if(splitt.length>=2){
+            for(int i=0;i<splitt.length;i++){
+            if(splitt[i].matches("[0-9]+")){
+               throw new feilTekstInnput("Det er tall i navnet"); 
+            }
+        }
         }
         else{
-            throw new feilTekstInnput("Noe er feil med navnet ditt");
+            throw new feilTekstInnput("Skriv fullt navn");
         }
+        
+        
     }
     public static void sjekkFakturaAdresse(String inntekst) throws feilTekstInnput{
         if(inntekst.isEmpty()){

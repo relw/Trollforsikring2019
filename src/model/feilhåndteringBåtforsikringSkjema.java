@@ -28,14 +28,21 @@ public class feilhåndteringBåtforsikringSkjema {
     //METODE SOM SJEKKER OM EIER FELTET INNEHOLDER ET NAVN
     public static void sjekkEier(String inntekst) throws feilInnputNavn{
         if(inntekst.isEmpty()){
-            throw new tomtNavn("Du må skrive inn et navn");
+            throw new tomtNavn("Skriv inn et navn");
         }
-        if(inntekst.matches("[a-zA-Z]+")){
-            
+        String[] splitt = inntekst.split(" ");
+        if(splitt.length>=2){
+            for(int i=0;i<splitt.length;i++){
+            if(splitt[i].matches("[0-9]+")){
+               throw new feilInnputNavn("Det er tall i navnet"); 
+            }
+        }
         }
         else{
-            throw new feilInnputNavn("Noe er feil med navnet ditt");
+            throw new feilInnputNavn("Skriv fullt navn");
         }
+        
+        
     }
     //METODE SOM SJEKKER OM REGISTRERINGSNUMMER FELTET ER RIKTIG
     public static void sjekkRegistreringsnummer(String inntekst) throws feilRegistreringsnummer{

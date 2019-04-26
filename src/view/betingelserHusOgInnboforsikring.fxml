@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="128.0" layoutY="143.0" text="Hus og innbo vilkår" />
+      <Label layoutX="58.0" layoutY="50.0" text="Betingelser for hus og inneboforsikring">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="121.0" text="* Følgeskade som skyldes sviktende drenering" />
+      <Label layoutX="64.0" layoutY="148.0" prefHeight="17.0" prefWidth="360.0" text="* Tilpasse bolig dersom noen i familien utsettes for ulykke" />
+      <Label layoutX="64.0" layoutY="235.0" text="* Tyveri" />
+      <Label layoutX="64.0" layoutY="175.0" text="* Dobbel Boligforsikring - Dekning av renteutgifter ved usolgt bolig" />
+      <Label layoutX="64.0" layoutY="259.0" prefHeight="17.0" prefWidth="231.0" text="* Flyttegods" />
+      <Label layoutX="64.0" layoutY="285.0" prefHeight="17.0" prefWidth="314.0" text="* Varer i fryser" />
+      <Label layoutX="72.0" layoutY="212.0" prefHeight="17.0" prefWidth="80.0" text="Innebo:" />
+      <Label layoutX="72.0" layoutY="96.0" text="Hus:" />
    </children>
 </AnchorPane>

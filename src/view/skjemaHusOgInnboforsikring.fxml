@@ -62,5 +62,6 @@
       <TextField id="innForsikringsbeløpInnbo" fx:id="innForsikringsbeløpInnbo" layoutX="222.0" layoutY="539.0" />
       <Label id="feilmeldingForsikringsbeløpBygning" fx:id="feilmeldingForsikringsbeløpBygning" layoutX="454.0" layoutY="497.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringsbeløpInnbo" fx:id="feilmeldingForsikringsbeløpInnbo" layoutX="454.0" layoutY="546.0" text="*" textFill="WHITE" />
+      <Button layoutX="623.0" layoutY="445.0" mnemonicParsing="false" onAction="#visVilkår" text="Vis vilkår" textFill="WHITE" />
    </children>
 </AnchorPane>

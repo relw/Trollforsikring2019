@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkademeldingSkjemaController">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkademeldingSkjemaController">
    <children>
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -25,8 +25,8 @@
       <Label layoutX="41.0" layoutY="153.0" text="Skadenummer:" textFill="WHITE" />
       <TextField id="innDatoSkade" fx:id="innDatoSkade" layoutX="257.0" layoutY="98.0" promptText="DD-MM-ÅÅÅÅ" />
       <TextField id="innSkadenummer" fx:id="innSkadenummer" layoutX="257.0" layoutY="147.0" promptText="Eks: &quot;12345678&quot;" />
-      <TextField id="innBeskrivelseSkade" fx:id="innBeskrivelseSkade" layoutX="257.0" layoutY="245.0" promptText="Eks: &quot;Grunnstøting&quot;" />
       <TextField id="innTypeSkade" fx:id="innTypeSkade" layoutX="257.0" layoutY="196.0" promptText="Eks: &quot;Brann&quot;" />
+      <TextField id="innBeskrivelseSkade" fx:id="innBeskrivelseSkade" layoutX="257.0" layoutY="245.0" promptText="Eks: &quot;Grunnstøting&quot;" />
       <Label layoutX="41.0" layoutY="251.0" text="Beskrivelse av skade:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Type skade:" textFill="WHITE" />
       <TextField id="innKontaktinfoVitner" fx:id="innKontaktinfoVitner" layoutX="257.0" layoutY="294.0" promptText="Eks: &quot;ola@gmail.com&quot;" />

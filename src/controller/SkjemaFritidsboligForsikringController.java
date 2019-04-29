@@ -18,9 +18,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import model.feilhåndteringFritidsboligforsikringSkjema;
 import model.fritidsboligforsikring; 
@@ -30,6 +31,7 @@ import model.kundeLagring;
 
 public class SkjemaFritidsboligForsikringController implements Initializable {
 
+     
     @FXML
     private Label feilmeldingForsikringspremie;
     
@@ -38,6 +40,7 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
     
     @FXML
     private Label feilmeldingForsikringsbeløp;
+   
     
     @FXML
     private Label feilmeldingAdresse;
@@ -99,7 +102,8 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
     
     @FXML
     private TextField innForsikringsbeløpInnbo;
-    
+    @FXML
+    private Label bes;
             
     
     @FXML 
@@ -114,8 +118,7 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         String byggeår=innByggeår.getText();
         String kvm=innKvm.getText();
         String forsikringsbeløpBygning=innForsikringsbeløpBygning.getText();
-        String forsikringsbeløpInnbo=innForsikringsbeløpInnbo.getText();
-        
+        String forsikringsbeløpInnbo=innForsikringsbeløpInnbo.getText(); 
         
         
         int godkjentTeller=0;
@@ -132,6 +135,7 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         try{
             feilhåndteringFritidsboligforsikringSkjema.sjekkInputDato(ønsketOppstart);
             feilmeldingØnsketOppstart.setText("OK");
+            godkjentTeller++;
         }
         catch(feilhåndteringFritidsboligforsikringSkjema.feilDatoInnput ex){
             feilmeldingØnsketOppstart.setText(ex.getMessage());
@@ -140,6 +144,7 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         try{
             feilhåndteringFritidsboligforsikringSkjema.sjekkAdresse(adresse);
             feilmeldingAdresse.setText("OK");
+            godkjentTeller++;
         }
         catch(feilhåndteringFritidsboligforsikringSkjema.feilAdresseInnput ex){
             feilmeldingAdresse.setText(ex.getMessage());
@@ -216,7 +221,7 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         catch(feilhåndteringFritidsboligforsikringSkjema.feilTallInnput ex){
            feilmeldingForsikringsbeløpInnbo.setText(ex.getMessage());
         }
-        if(godkjentTeller == 10)
+        if(godkjentTeller == 11)
         {
             fritidsboligforsikring forsikring = new fritidsboligforsikring(forsikringspremie, ønsketOppstart, adresse, forsikringsbeløp, byggemateriale, 
             standard, boligtype, byggeår, kvm, forsikringsbeløpBygning, forsikringsbeløpInnbo);
@@ -227,12 +232,17 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
             kundeListe = skrivKundeFil.hentObjekt();
             ArrayList<kunder> array = new ArrayList<>();
             array = kundeListe.putKunderIListe(); // Har nå et array med kunder
-            
+          
             for(kunder k:array)
             {
-                String navn = k.getNavn(); 
-                box.getItems().addAll(new MenuItem(navn));
+                String navn = k.getNavn();
+                box.getItems().add(navn);
+                
             }
+            box.setVisible(true); 
+            bes.setVisible(true); 
+            
+            
             
             
             

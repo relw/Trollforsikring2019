@@ -36,4 +36,5 @@ public class kundeLagring implements Serializable {
         }
          return ut; 
     }
+    
 }

@@ -58,10 +58,10 @@ public class kunder implements Serializable{
         String ut="";
         ut+="Kunde:" + newline 
         + "----------------------------" + newline 
-        + "Navn:"+ navn + newline 
-        + "Dato:"+ datoforhold + newline 
-        + "Fakturaadresse:"+ fakturaadresse + newline 
-        + "Forsikringsnummer:"+ getForsikringsNummer() + newline 
+        + "Navn: "+ navn + newline 
+        + "Dato: "+ datoforhold + newline 
+        + "Fakturaadresse: "+ fakturaadresse + newline 
+        + "Forsikringsnummer: "+ getForsikringsNummer() + newline 
         + "____________________________" + newline+"\n"; 
 
         if(!kundeForsikringer.isEmpty())

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="48.0" layoutY="40.0" text="Betingelser for fritidsboligforsikring">
          <font>
@@ -15,7 +19,7 @@
       <Label layoutX="54.0" layoutY="118.0" text="* Erstatningsansvar" />
       <Label layoutX="54.0" layoutY="172.0" text="* Skade som skyldes andre dyr enn egne kjæledyr" />
       <Label layoutX="54.0" layoutY="145.0" text="* Rettshjelp" />
-      <Label layoutX="54.0" layoutY="199.0" prefHeight="17.0" prefWidth="231.0" text="* Skade som skyldes sopp og råte" />
-      <Label layoutX="54.0" layoutY="226.0" prefHeight="17.0" prefWidth="314.0" text="* Følgeskade av vanninntrenging gjennom utett tak" />
+      <Label layoutX="54.0" layoutY="199.0" prefHeight="27.0" prefWidth="498.0" text="* Skade som skyldes sopp og råte" />
+      <Label layoutX="54.0" layoutY="226.0" prefHeight="27.0" prefWidth="535.0" text="* Følgeskade av vanninntrenging gjennom utett tak" />
    </children>
 </AnchorPane>

@@ -16,8 +16,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -49,7 +49,7 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
     private Label feilmeldingBoligtype;
     
     @FXML
-    private MenuButton menuButton;
+    private ChoiceBox box;
             
     @FXML
     private Label feilmeldingByggemateriale;
@@ -74,6 +74,7 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
     
     @FXML
     private TextField innAdresse;
+   
     
     @FXML
     private TextField innForsikringsbeløp;
@@ -99,6 +100,8 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
     @FXML
     private TextField innForsikringsbeløpInnbo;
     
+            
+    
     @FXML 
     private void registrerFritidsboligForsikring(ActionEvent event){
         String forsikringspremie=innForsikringspremie.getText();
@@ -112,6 +115,8 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         String kvm=innKvm.getText();
         String forsikringsbeløpBygning=innForsikringsbeløpBygning.getText();
         String forsikringsbeløpInnbo=innForsikringsbeløpInnbo.getText();
+        
+        
         
         int godkjentTeller=0;
         //SJEKKER INNPUT 1 FORSIKRINGSPREMIE
@@ -217,11 +222,17 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
             standard, boligtype, byggeår, kvm, forsikringsbeløpBygning, forsikringsbeløpInnbo);
             
             // FORTSETT HER!!! TO DO: PUT ARRAYET I DROPDOWNBUTTON!!!
-            menuButton.getItems().addAll(new MenuItem(""));
+            // menuButton.getItems().addAll(new MenuItem(""));
             kundeLagring kundeListe = new kundeLagring();
             kundeListe = skrivKundeFil.hentObjekt();
             ArrayList<kunder> array = new ArrayList<>();
-            array = kundeListe.putKunderIListe(); 
+            array = kundeListe.putKunderIListe(); // Har nå et array med kunder
+            
+            for(kunder k:array)
+            {
+                String navn = k.getNavn(); 
+                box.getItems().addAll(new MenuItem(navn));
+            }
             
             
             
@@ -254,6 +265,7 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+            
     }    
     
 }

@@ -55,17 +55,18 @@ public class skrivKundeFil {
         
    }
     public static kundeLagring hentObjekt(){
+        kundeLagring loadedKunde = null; 
         try (FileInputStream fin = new FileInputStream("kunder.jobj");
         ObjectInputStream oin = new ObjectInputStream(fin)) {
-            kundeLagring loadedKunde = (kundeLagring)oin.readObject();
-            return loadedKunde; 
+            loadedKunde = (kundeLagring)oin.readObject();
             
+            return loadedKunde; 
         } catch(IOException e) {
             System.err.println("Could not read file. Cause: " + e.getCause());
         } catch(ClassNotFoundException e) {
             System.err.println("Could not convert Object");
         }
-        
+        return loadedKunde; 
     }
     public static ArrayList<Object> leseAlle(){
         

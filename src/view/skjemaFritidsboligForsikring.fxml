@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -57,6 +58,11 @@
       <Label id="feilmeldingForsikringsbeløpBygning" fx:id="feilmeldingForsikringsbeløpBygning" layoutX="467.0" layoutY="497.0" prefHeight="17.0" prefWidth="260.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringsbeløpInnbo" fx:id="feilmeldingForsikringsbeløpInnbo" layoutX="467.0" layoutY="546.0" prefHeight="17.0" prefWidth="267.0" text="*" textFill="WHITE" />
       <Button layoutX="424.0" layoutY="588.0" mnemonicParsing="false" onAction="#visVilkår" text="Vis betingelser" textFill="WHITE" />
-      <Button layoutX="654.0" layoutY="21.0" mnemonicParsing="false" onAction="#visVilkår" text="Velg kunde" textFill="WHITE" />
+      <ChoiceBox fx:id="box" layoutX="635.0" layoutY="259.0" prefWidth="150.0" visible="false" />
+      <Label fx:id="bes" layoutX="572.0" layoutY="229.0" text="Velg kunde som skal ha forsikringen:" textFill="WHITE" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

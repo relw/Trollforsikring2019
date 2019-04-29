@@ -25,8 +25,8 @@
       <Label layoutX="41.0" layoutY="153.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
       <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="244.0" layoutY="98.0" promptText="Eks: &quot;100000&quot;" />
       <TextField id="innØnsketOppstart" fx:id="innØnsketOppstart" layoutX="244.0" layoutY="147.0" promptText="DD-MM-ÅÅÅÅ" />
-      <TextField id="innForsikringsområde" fx:id="innForsikringsområde" layoutX="244.0" layoutY="245.0" promptText="Eks: &quot;EU&quot;" />
       <TextField id="innForsikringsbeløp" fx:id="innForsikringsbeløp" layoutX="244.0" layoutY="196.0" promptText="Eks: &quot;100000&quot;" />
+      <TextField id="innForsikringsområde" fx:id="innForsikringsområde" layoutX="244.0" layoutY="245.0" promptText="Eks: &quot;EU&quot;" />
       <Label layoutX="41.0" layoutY="251.0" text="Forsikringsområde:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Forsikringsbeløp:" textFill="WHITE" />
       <TextField id="innForsikringssum" fx:id="innForsikringssum" layoutX="244.0" layoutY="294.0" promptText="Eks: &quot;100000&quot;" />

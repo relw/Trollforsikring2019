@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaFritidsboligForsikringController">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaFritidsboligForsikringController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="603.0" layoutX="12.0" layoutY="11.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="912.0" />
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
@@ -37,12 +37,10 @@
       <TextField id="innByggemateriale" fx:id="innByggemateriale" layoutX="235.0" layoutY="350.0" promptText="Eks: &quot;Murhus&quot;" />
       <TextField id="innStandard" fx:id="innStandard" layoutX="235.0" layoutY="399.0" promptText="Eks: &quot;Oppussingsobjekt&quot;" />
       <TextField id="innKvm" fx:id="innKvm" layoutX="235.0" layoutY="449.0" promptText="Eks: &quot;47&quot;" />
-      <TextField id="innForsikringsbeløpBygning" fx:id="innForsikringsbeløpBygning" layoutX="235.0" layoutY="497.0" promptText="Eks: &quot;100000&quot;" />
-      <TextField id="innForsikringsbeløpInnbo" fx:id="innForsikringsbeløpInnbo" layoutX="235.0" layoutY="546.0" promptText="Eks: &quot;100000&quot;" />
       <Label layoutX="32.0" layoutY="307.0" text="Boligtype:" textFill="WHITE" />
       <Label layoutX="32.0" layoutY="258.0" text="Byggeår:" textFill="WHITE" />
       <Label layoutX="27.0" layoutY="455.0" text="Antall kvadratmeter:" textFill="WHITE" />
-      <Button layoutX="253.0" layoutY="588.0" mnemonicParsing="false" onAction="#registrerFritidsboligForsikring" text="Opprett forsikring" textFill="WHITE" />
+      <Button fx:id="btnFortsett" layoutX="290.0" layoutY="588.0" mnemonicParsing="false" onAction="#registrerFritidsboligForsikring" text="Fortsett" textFill="WHITE" />
       <Button layoutX="14.0" layoutY="588.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
       <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="467.0" layoutY="57.0" prefHeight="39.0" prefWidth="260.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingØnsketOppstart" fx:id="feilmeldingØnsketOppstart" layoutX="467.0" layoutY="105.0" prefHeight="39.0" prefWidth="260.0" text="*" textFill="WHITE" />
@@ -55,14 +53,17 @@
       <Label id="feilmeldingKvm" fx:id="feilmeldingKvm" layoutX="467.0" layoutY="449.0" prefHeight="39.0" prefWidth="260.0" text="*" textFill="WHITE" />
       <Label layoutX="27.0" layoutY="497.0" text="Forsikringsbeløp bygning:" textFill="WHITE" />
       <Label layoutX="25.0" layoutY="546.0" text="Forsikringsbeløp innbo:" textFill="WHITE" />
+      <TextField id="innForsikringsbeløpBygning" fx:id="innForsikringsbeløpBygning" layoutX="235.0" layoutY="497.0" promptText="Eks: &quot;100000&quot;" />
+      <TextField id="innForsikringsbeløpInnbo" fx:id="innForsikringsbeløpInnbo" layoutX="235.0" layoutY="546.0" promptText="Eks: &quot;100000&quot;" />
       <Label id="feilmeldingForsikringsbeløpBygning" fx:id="feilmeldingForsikringsbeløpBygning" layoutX="467.0" layoutY="497.0" prefHeight="17.0" prefWidth="260.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringsbeløpInnbo" fx:id="feilmeldingForsikringsbeløpInnbo" layoutX="467.0" layoutY="546.0" prefHeight="17.0" prefWidth="267.0" text="*" textFill="WHITE" />
-      <Button layoutX="424.0" layoutY="588.0" mnemonicParsing="false" onAction="#visVilkår" text="Vis betingelser" textFill="WHITE" />
+      <Button layoutX="794.0" layoutY="588.0" mnemonicParsing="false" onAction="#visVilkår" text="Vis betingelser" textFill="WHITE" />
       <ChoiceBox fx:id="box" layoutX="635.0" layoutY="259.0" prefWidth="150.0" visible="false" />
       <Label fx:id="bes" layoutX="572.0" layoutY="229.0" text="Velg kunde som skal ha forsikringen:" textFill="WHITE" visible="false">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
+      <Button fx:id="btnReg" layoutX="637.0" layoutY="303.0" mnemonicParsing="false" onAction="#fullfør" text="Registrer forsikring" textFill="WHITE" visible="false" />
    </children>
 </AnchorPane>

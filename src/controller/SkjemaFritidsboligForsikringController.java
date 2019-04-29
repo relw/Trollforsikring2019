@@ -16,12 +16,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import model.feilhåndteringFritidsboligforsikringSkjema;
 import model.fritidsboligforsikring; 
@@ -105,9 +104,12 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
     @FXML
     private Label bes;
             
-    
+    @FXML
+    private Button btnFortsett;
+    @FXML
+    private Button btnReg;
     @FXML 
-    private void registrerFritidsboligForsikring(ActionEvent event){
+    public void registrerFritidsboligForsikring(ActionEvent event){
         String forsikringspremie=innForsikringspremie.getText();
         String ønsketOppstart=innØnsketOppstart.getText();
         String adresse=innAdresse.getText();
@@ -241,12 +243,20 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
             }
             box.setVisible(true); 
             bes.setVisible(true); 
+            btnReg.setVisible(true);
+            btnFortsett.setVisible(false); 
             
-            
+             
+            // Koble forsikring til kunde (value fra choicebox)
             
             
             
         }
+    }
+    @FXML
+    private void fullfør(ActionEvent event) throws IOException {
+        String valgtNavn = (String)box.getValue();
+        System.out.print(valgtNavn);
     }
      @FXML
     private void avbryt(ActionEvent event) throws IOException {

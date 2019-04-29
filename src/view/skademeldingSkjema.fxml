@@ -27,9 +27,11 @@
       <TextField id="innSkadenummer" fx:id="innSkadenummer" layoutX="257.0" layoutY="147.0" promptText="Eks: &quot;12345678&quot;" />
       <TextField id="innTypeSkade" fx:id="innTypeSkade" layoutX="257.0" layoutY="196.0" promptText="Eks: &quot;Brann&quot;" />
       <TextField id="innBeskrivelseSkade" fx:id="innBeskrivelseSkade" layoutX="257.0" layoutY="245.0" promptText="Eks: &quot;Grunnstøting&quot;" />
+      <TextField id="innKontaktinfoVitner" fx:id="innKontaktinfoVitner" layoutX="257.0" layoutY="294.0" promptText="Eks: &quot;ola@gmail.com&quot;" />
+      <TextField id="innTakseringSkade" fx:id="innTakseringSkade" layoutX="257.0" layoutY="342.0" promptText="Eks: &quot;100000&quot;" />
+      <TextField id="innUtbetalteErstatninger" fx:id="innUtbetalteErstatninger" layoutX="257.0" layoutY="390.0" promptText="Eks: &quot;100000&quot;" />
       <Label layoutX="41.0" layoutY="251.0" text="Beskrivelse av skade:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Type skade:" textFill="WHITE" />
-      <TextField id="innKontaktinfoVitner" fx:id="innKontaktinfoVitner" layoutX="257.0" layoutY="294.0" promptText="Eks: &quot;ola@gmail.com&quot;" />
       <Label layoutX="41.0" layoutY="300.0" text="Kontaktinformasjon vitner:" textFill="WHITE" />
       <Button layoutX="261.0" layoutY="456.0" mnemonicParsing="false" onAction="#registrerSkademelding" text="Registrer skademelding" textFill="WHITE" />
       <Button layoutX="60.0" layoutY="456.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
@@ -39,8 +41,6 @@
       <Label id="feilmeldingBeskrivelseSkade" fx:id="feilmeldingBeskrivelseSkade" layoutX="482.0" layoutY="245.0" prefHeight="39.0" prefWidth="340.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingKontaktinfoVitner" fx:id="feilmeldingKontaktinfoVitner" layoutX="482.0" layoutY="294.0" prefHeight="39.0" prefWidth="340.0" text="*" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="348.0" text="Takseringsbeløp av skaden:" textFill="WHITE" />
-      <TextField id="innTakseringSkade" fx:id="innTakseringSkade" layoutX="257.0" layoutY="342.0" promptText="Eks: &quot;100000&quot;" />
-      <TextField id="innUtbetalteErstatninger" fx:id="innUtbetalteErstatninger" layoutX="257.0" layoutY="390.0" promptText="Eks: &quot;100000&quot;" />
       <Label layoutX="41.0" layoutY="396.0" text="Utbetalte erstatninger:" textFill="WHITE" />
       <Label id="feilmeldingTakseringsSkade" fx:id="feilmeldingTakseringsSkade" layoutX="482.0" layoutY="342.0" prefHeight="39.0" prefWidth="340.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingUtbetalteErstatninger" fx:id="feilmeldingUtbetalteErstatninger" layoutX="482.0" layoutY="390.0" prefHeight="39.0" prefWidth="340.0" text="*" textFill="WHITE" />

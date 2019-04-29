@@ -2,8 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaFritidsboligForsikringController">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaFritidsboligForsikringController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="603.0" layoutX="12.0" layoutY="11.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="912.0" />
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
@@ -59,16 +57,6 @@
       <Label id="feilmeldingForsikringsbeløpBygning" fx:id="feilmeldingForsikringsbeløpBygning" layoutX="467.0" layoutY="497.0" prefHeight="17.0" prefWidth="260.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringsbeløpInnbo" fx:id="feilmeldingForsikringsbeløpInnbo" layoutX="467.0" layoutY="546.0" prefHeight="17.0" prefWidth="267.0" text="*" textFill="WHITE" />
       <Button layoutX="424.0" layoutY="588.0" mnemonicParsing="false" onAction="#visVilkår" text="Vis betingelser" textFill="WHITE" />
-      <Label layoutX="607.0" layoutY="20.0" text="Velg kunde:" textFill="WHITE">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <MenuButton layoutX="712.0" layoutY="21.0" mnemonicParsing="false" text="Velg">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-      </MenuButton>
+      <Button layoutX="654.0" layoutY="21.0" mnemonicParsing="false" onAction="#visVilkår" text="Velg kunde" textFill="WHITE" />
    </children>
 </AnchorPane>

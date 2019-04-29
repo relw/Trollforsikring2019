@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaBåtforsikringController">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaBåtforsikringController">
    <children>
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -35,9 +35,9 @@
       <TextField id="innForsikringsbeløp" fx:id="innForsikringsbeløp" layoutX="232.0" layoutY="196.0" promptText="Eks: &quot;100000&quot;" />
       <TextField id="innEier" fx:id="innEier" layoutX="232.0" layoutY="245.0" promptText="Eks: &quot;Ola Nordmann&quot;" />
       <TextField id="innRegistreringsnummer" fx:id="innRegistreringsnummer" layoutX="232.0" layoutY="294.0" promptText="Eks: &quot;12345678&quot;" />
+      <TextField id="innBåttypeogModell" fx:id="innBåttypeogModell" layoutX="232.0" layoutY="343.0" promptText="Eks: &quot;Ibiza 770&quot;" />
       <TextField id="innLengde" fx:id="innLengde" layoutX="232.0" layoutY="392.0" promptText="Eks: &quot;40&quot;" />
       <TextField id="innÅrsmodell" fx:id="innÅrsmodell" layoutX="232.0" layoutY="441.0" promptText="Eks: &quot;1999&quot;" />
-      <TextField id="innBåttypeogModell" fx:id="innBåttypeogModell" layoutX="232.0" layoutY="343.0" promptText="Eks: &quot;Ibiza 770&quot;" />
       <TextField id="innMotortypeogMotorstyrke" fx:id="innMotortypeogMotorstyrke" layoutX="232.0" layoutY="491.0" promptText="Eks: &quot;Yamaha 2,5&quot;" />
       <Button layoutX="232.0" layoutY="546.0" mnemonicParsing="false" onAction="#registrerBåtForsikring" text="Opprett forsikring" textFill="WHITE" />
       <Button layoutX="79.0" layoutY="546.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />

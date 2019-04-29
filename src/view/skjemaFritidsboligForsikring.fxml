@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaFritidsboligForsikringController">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaFritidsboligForsikringController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="603.0" layoutX="12.0" layoutY="11.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="912.0" />
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
@@ -25,19 +25,19 @@
       <Label layoutX="32.0" layoutY="111.0" text="Dato for ønsket oppstart:" textFill="WHITE" />
       <TextField id="innForsikringspremie" fx:id="innForsikringspremie" layoutX="235.0" layoutY="56.0" promptText="Eks: &quot;100000&quot;" />
       <TextField id="innØnsketOppstart" fx:id="innØnsketOppstart" layoutX="235.0" layoutY="105.0" promptText="DD-MM-ÅÅÅÅ" />
-      <TextField id="innAdresse" fx:id="innAdresse" layoutX="235.0" layoutY="203.0" promptText="Eks: &quot;Osloveien 6&quot;" />
       <TextField id="innForsikringsbeløp" fx:id="innForsikringsbeløp" layoutX="235.0" layoutY="154.0" promptText="Eks: &quot;1000000&quot;" />
+      <TextField id="innAdresse" fx:id="innAdresse" layoutX="235.0" layoutY="203.0" promptText="Eks: &quot;Osloveien 6&quot;" />
       <Label layoutX="32.0" layoutY="209.0" text="Boligens adresse:" textFill="WHITE" />
       <Label layoutX="32.0" layoutY="160.0" text="Forsikringsbeløp:" textFill="WHITE" />
       <Label layoutX="32.0" layoutY="356.0" prefHeight="27.0" prefWidth="161.0" text="Byggemateriale:" textFill="WHITE" />
       <Label layoutX="32.0" layoutY="405.0" text="Standard:" textFill="WHITE" />
+      <TextField id="innByggeår" fx:id="innByggeår" layoutX="235.0" layoutY="252.0" promptText="Eks: &quot;1998&quot;" />
+      <TextField id="innBoligtype" fx:id="innBoligtype" layoutX="235.0" layoutY="301.0" promptText="Eks: &quot;Enebolig&quot;" />
       <TextField id="innByggemateriale" fx:id="innByggemateriale" layoutX="235.0" layoutY="350.0" promptText="Eks: &quot;Murhus&quot;" />
       <TextField id="innStandard" fx:id="innStandard" layoutX="235.0" layoutY="399.0" promptText="Eks: &quot;Oppussingsobjekt&quot;" />
-      <TextField id="innBoligtype" fx:id="innBoligtype" layoutX="235.0" layoutY="301.0" promptText="Eks: &quot;Enebolig&quot;" />
-      <TextField id="innByggeår" fx:id="innByggeår" layoutX="235.0" layoutY="252.0" promptText="Eks: &quot;1998&quot;" />
+      <TextField id="innKvm" fx:id="innKvm" layoutX="235.0" layoutY="449.0" promptText="Eks: &quot;47&quot;" />
       <Label layoutX="32.0" layoutY="307.0" text="Boligtype:" textFill="WHITE" />
       <Label layoutX="32.0" layoutY="258.0" text="Byggeår:" textFill="WHITE" />
-      <TextField id="innKvm" fx:id="innKvm" layoutX="235.0" layoutY="449.0" promptText="Eks: &quot;47&quot;" />
       <Label layoutX="27.0" layoutY="455.0" text="Antall kvadratmeter:" textFill="WHITE" />
       <Button layoutX="253.0" layoutY="588.0" mnemonicParsing="false" onAction="#registrerFritidsboligForsikring" text="Opprett forsikring" textFill="WHITE" />
       <Button layoutX="14.0" layoutY="588.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -9,7 +15,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaBåtforsikringController">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkjemaBåtforsikringController">
    <children>
       <ImageView fitHeight="182.0" fitWidth="936.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -39,7 +45,7 @@
       <TextField id="innLengde" fx:id="innLengde" layoutX="232.0" layoutY="392.0" promptText="Eks: &quot;40&quot;" />
       <TextField id="innÅrsmodell" fx:id="innÅrsmodell" layoutX="232.0" layoutY="441.0" promptText="Eks: &quot;1999&quot;" />
       <TextField id="innMotortypeogMotorstyrke" fx:id="innMotortypeogMotorstyrke" layoutX="232.0" layoutY="491.0" promptText="Eks: &quot;Yamaha 2,5&quot;" />
-      <Button layoutX="232.0" layoutY="546.0" mnemonicParsing="false" onAction="#registrerBåtForsikring" text="Opprett forsikring" textFill="WHITE" />
+      <Button fx:id="btnFortsett" layoutX="304.0" layoutY="546.0" mnemonicParsing="false" onAction="#registrerBåtForsikring" text="Fortsett" textFill="WHITE" />
       <Button layoutX="79.0" layoutY="546.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
       <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="456.0" layoutY="99.0" prefHeight="39.0" prefWidth="270.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingØnsketOppstart" fx:id="feilmeldingØnsketOppstart" layoutX="456.0" layoutY="147.0" prefHeight="39.0" prefWidth="270.0" text="*" textFill="WHITE" />
@@ -50,6 +56,13 @@
       <Label id="feilmeldingLengde" fx:id="feilmeldingLengde" layoutX="458.0" layoutY="392.0" prefHeight="39.0" prefWidth="270.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingÅrsmodell" fx:id="feilmeldingÅrsmodell" layoutX="455.0" layoutY="441.0" prefHeight="39.0" prefWidth="270.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingMotortypeStyrke" fx:id="feilmeldingMotortypeStyrke" layoutX="458.0" layoutY="491.0" prefHeight="39.0" prefWidth="270.0" text="*" textFill="WHITE" />
-      <Button layoutX="426.0" layoutY="546.0" mnemonicParsing="false" onAction="#visVilkår" text="Vis betingelser" textFill="WHITE" />
+      <Button layoutX="735.0" layoutY="546.0" mnemonicParsing="false" onAction="#visVilkår" text="Vis betingelser" textFill="WHITE" />
+      <ChoiceBox fx:id="box" layoutX="645.0" layoutY="269.0" prefWidth="150.0" visible="false" />
+      <Label fx:id="bes" layoutX="582.0" layoutY="239.0" text="Velg kunde som skal ha forsikringen:" textFill="WHITE" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnReg" layoutX="632.0" layoutY="314.0" mnemonicParsing="false" onAction="#fullfør" text="Registrer forsikring" textFill="WHITE" visible="false" />
    </children>
 </AnchorPane>

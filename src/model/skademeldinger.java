@@ -7,10 +7,10 @@ package model;
 public class skademeldinger {
     
     private String dato, typeSkade, beskrivelse, kontaktInfo;
-    private int skadenummer, takseringsbeløp, ubetaltErstatningsbeløp;
+    private String skadenummer, takseringsbeløp, ubetaltErstatningsbeløp;
     
-    public skademeldinger(String inndato, String inntype, String innbeskrivelse, String innkontaktInfo, int innskadenummer
-    , int inntakseringsbeløp, int innubetaltErstatningsbeløp)
+    public skademeldinger(String inndato, String inntype, String innbeskrivelse, String innkontaktInfo, String innskadenummer
+    , String inntakseringsbeløp, String innubetaltErstatningsbeløp)
     {
         this.dato = inndato;
         this.typeSkade = inntype; 
@@ -32,13 +32,13 @@ public class skademeldinger {
     public String getKontaktInfo(){
         return kontaktInfo; 
     }
-    public int getSkadenummer(){
+    public String getSkadenummer(){
         return skadenummer; 
     }
-    public int getTakseringsbeløp(){
+    public String getTakseringsbeløp(){
         return takseringsbeløp; 
     }
-    public int getUbetaltErstatningsbeløp(){
+    public String getUbetaltErstatningsbeløp(){
         return ubetaltErstatningsbeløp; 
     }
 }

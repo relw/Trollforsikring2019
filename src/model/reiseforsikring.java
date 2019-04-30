@@ -19,4 +19,10 @@ public class reiseforsikring extends forsikringer{
      this.forsikringsområde = innforsikringsområde;
      this.forsikringssum = innforsikringssum; 
    } 
+   public String getForsikringsområde(){
+       return forsikringsområde;
+   }
+   public String getForsikringssum(){
+       return forsikringssum;
+   }
 }

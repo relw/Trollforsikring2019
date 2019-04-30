@@ -7,6 +7,7 @@ package controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,10 +16,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.feilmeldingSkademeldingSkjema;
+import model.kundeLagring;
+import model.kunder;
+import model.skademeldinger;
+import model.skrivKundeFil;
 
 /**
  * FXML Controller class
@@ -68,6 +75,17 @@ public class SkademeldingSkjemaController implements Initializable {
     
     @FXML
     private TextField innUtbetalteErstatninger;
+    
+     @FXML
+    private ChoiceBox box;
+      
+    @FXML
+    private Label bes;
+            
+    @FXML
+    private Button btnFortsett;
+    @FXML
+    private Button btnReg;
     
      @FXML 
     private void registrerSkademelding(ActionEvent event){
@@ -147,11 +165,54 @@ public class SkademeldingSkjemaController implements Initializable {
      }
      
      if(godkjentTeller==7){
-         System.out.print("du har nå registrert forsikring");
-         //FUNKSJON FOR Å LAGE FORSIKRING HER?
+         System.out.print("GODKJENT");
+             kundeLagring kundeListe = new kundeLagring();
+            kundeListe = skrivKundeFil.hentObjekt();
+            ArrayList<kunder> array = new ArrayList<>();
+            array = kundeListe.putKunderIListe(); // Har nå et array med kunder
+          
+            for(kunder k:array)
+            {
+                String navn = k.getNavn();
+                box.getItems().add(navn);  
+            }
+            box.setVisible(true); 
+            bes.setVisible(true); 
+            btnReg.setVisible(true);
+            btnFortsett.setVisible(false); 
      }
     }
- 
+ @FXML
+    private void fullfør(ActionEvent event) throws IOException {
+        String valgtNavn = (String)box.getValue();
+        //System.out.print(valgtNavn);
+        
+        kundeLagring kundeListe = new kundeLagring();
+        kundeListe = skrivKundeFil.hentObjekt();
+        ArrayList<kunder> array = new ArrayList<>();
+        array = kundeListe.putKunderIListe(); // Har nå et array med kunder
+        
+            String DatoSkade=innDatoSkade.getText();
+       String Skadenummer=innSkadenummer.getText();
+       String TypeSkade=innTypeSkade.getText();
+       String BeskrivelseSkade=innBeskrivelseSkade.getText();
+       String KontaktinfoVitner=innKontaktinfoVitner.getText();
+       String TakseringSkade=innTakseringSkade.getText();
+       String UtbetalteErstatninger=innUtbetalteErstatninger.getText();
+        
+       skademeldinger skademelding=new skademeldinger(DatoSkade, TypeSkade, BeskrivelseSkade, KontaktinfoVitner, Skadenummer
+    ,TakseringSkade, UtbetalteErstatninger);
+        
+        for(kunder k : array)
+        {
+            if(valgtNavn.equals(k.getNavn()))
+            {
+                //SETT SKADEMELDING INN I ARRAY TIL KUNDE SKADEMELDING ARRAY
+                k.setSkademelding(skademelding);
+                System.out.print(k.toString());
+            }
+        }
+    }
     
     
     @FXML 

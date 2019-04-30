@@ -28,5 +28,29 @@ public class fritidsboligforsikring extends forsikringer{
      this.forsikringsbeløpInnbo = innForsikringsbeløpInnbo; 
              
    }
+   public String getAdresse(){
+       return adresse;
+   }
+   public String getBoligtype(){
+       return boligtype;
+   }
+   public String getByggemateriale(){
+       return byggemateriale;
+   }
+   public String getStandard(){
+       return standard;
+   }
+   public String getByggeår(){
+       return byggeår;
+   }
+   public String getAntallKvm(){
+       return antallKvadratmeter;
+   }
+   public String getForsikringsbeløpBygning(){
+       return forsikringsbeløpBygning;
+   }
+   public String getForsikringsbeløpInnbo(){
+       return forsikringsbeløpInnbo;
+   }
 
 }

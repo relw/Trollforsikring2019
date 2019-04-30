@@ -11,9 +11,9 @@ package model;
  */
 public class reiseforsikring extends forsikringer{
    private String forsikringsområde;
-   private int forsikringssum;  
+   private String forsikringssum;  
     
-   public reiseforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String innforsikringsområde, int innforsikringssum)
+   public reiseforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String innforsikringsområde, String innforsikringssum)
    {
      super(forsikringPremie, opprettetForsikring, forsikringsBeloop);
      this.forsikringsområde = innforsikringsområde;

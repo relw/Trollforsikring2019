@@ -68,7 +68,7 @@ public class kunder implements Serializable{
         {
            ut += " Forsikringer:\n"; 
             for(forsikringer forsikringer: kundeForsikringer){
-            ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+" Opprettet: "+forsikringer.getOpprettetForsikring()+" Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+ "Betingelser: "+forsikringer.getForsikringsBetingelser()+"\n";
+            ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+" Opprettet: "+forsikringer.getOpprettetForsikring()+" Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+ " Betingelser: "+forsikringer.getForsikringsBetingelser()+"\n";
             } 
         }
         if(!kundeSkademeldinger.isEmpty())

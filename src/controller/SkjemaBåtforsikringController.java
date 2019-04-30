@@ -7,6 +7,7 @@ package controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,11 +16,17 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import model.feilhåndteringBåtforsikringSkjema;
+import model.baatforsikring;
+import model.kundeLagring;
+import model.kunder;
+import model.skrivKundeFil;
 
 /**
  * FXML Controller class
@@ -83,6 +90,18 @@ public class SkjemaBåtforsikringController implements Initializable {
     
     @FXML
     private TextField innMotortypeogMotorstyrke;
+    
+    @FXML
+    private ChoiceBox box;
+    
+    @FXML
+    private Label bes;
+            
+    @FXML
+    private Button btnFortsett;
+    
+    @FXML
+    private Button btnReg;
    
     
     @FXML 
@@ -184,8 +203,52 @@ public class SkjemaBåtforsikringController implements Initializable {
      }
      if(godkjentTeller==9){
          System.out.print("du har nå registrert forsikring");
-         //FUNKSJON FOR Å LAGE FORSIKRING HER?
+         kundeLagring kundeListe = new kundeLagring();
+            kundeListe = skrivKundeFil.hentObjekt();
+            ArrayList<kunder> array = new ArrayList<>();
+            array = kundeListe.putKunderIListe(); // Har nå et array med kunder
+          
+            for(kunder k:array)
+            {
+                String navn = k.getNavn();
+                box.getItems().add(navn);  
+            }
+            box.setVisible(true); 
+            bes.setVisible(true); 
+            btnReg.setVisible(true);
+            btnFortsett.setVisible(false); 
      }
+    }
+    @FXML
+    private void fullfør(ActionEvent event) throws IOException {
+        String valgtNavn = (String)box.getValue();
+        //System.out.print(valgtNavn);
+        
+        kundeLagring kundeListe = new kundeLagring();
+        kundeListe = skrivKundeFil.hentObjekt();
+        ArrayList<kunder> array = new ArrayList<>();
+        array = kundeListe.putKunderIListe(); // Har nå et array med kunder
+        
+       String Forsikringspremie=innForsikringspremie.getText();
+       String ØnsketOppstart=innØnsketOppstart.getText();
+       String ForsikringsBeløp=innForsikringsbeløp.getText();
+       String Eier= innEier.getText();
+       String Registreringsnummer=innRegistreringsnummer.getText();
+       String BåttypeogModell=innBåttypeogModell.getText();
+       String Lengde=innLengde.getText();
+       String Årsmodell=innÅrsmodell.getText();
+       String MotortypeOgStyrke=innMotortypeogMotorstyrke.getText(); 
+      
+       
+       baatforsikring båtforsikring= new baatforsikring(Forsikringspremie, ØnsketOppstart, ForsikringsBeløp, Eier, BåttypeogModell , MotortypeOgStyrke, Registreringsnummer, Lengde, Årsmodell);
+        for(kunder k : array)
+        {
+            if(valgtNavn.equals(k.getNavn()))
+            {
+                k.setForsikring(båtforsikring);
+                System.out.print(k.toString());
+            }
+        }
     }
      @FXML
     private void avbryt(ActionEvent event) throws IOException {

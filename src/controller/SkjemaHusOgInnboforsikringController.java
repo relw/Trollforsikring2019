@@ -273,7 +273,7 @@ public class SkjemaHusOgInnboforsikringController implements Initializable {
         {
             if(valgtNavn.equals(k.getNavn()))
             {
-                k.setForsikring(husoginnboforsikring);
+                k.setHusoginnboforsikring(husoginnboforsikring);
                 System.out.print(k.toString());
             }
         }

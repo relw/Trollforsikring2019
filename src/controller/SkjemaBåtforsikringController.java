@@ -245,7 +245,7 @@ public class SkjemaBåtforsikringController implements Initializable {
         {
             if(valgtNavn.equals(k.getNavn()))
             {
-                k.setForsikring(båtforsikring);
+                k.setBaatforsikring(båtforsikring);
                 System.out.print(k.toString());
             }
         }

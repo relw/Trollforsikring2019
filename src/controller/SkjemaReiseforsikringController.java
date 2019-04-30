@@ -164,7 +164,7 @@ public class SkjemaReiseforsikringController implements Initializable {
         {
             if(valgtNavn.equals(k.getNavn()))
             {
-                k.setForsikring(reiseforsikring);
+                k.setReiseforsikring(reiseforsikring);
                 System.out.print(k.toString());
             }
         }

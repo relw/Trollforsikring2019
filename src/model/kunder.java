@@ -13,7 +13,11 @@ public class kunder implements Serializable{
     private String datoforhold, navn, fakturaadresse; 
     private int forsikringsnummer;
     
-    public ArrayList<forsikringer> kundeForsikringer = new ArrayList<>(); 
+    public ArrayList<baatforsikring> kundeBaatforsikring = new ArrayList<>(); 
+    public ArrayList<fritidsboligforsikring> kundeFritidsboligforsikring = new ArrayList<>(); 
+    public ArrayList<husoginnboforsikring> kundeHusoginnboforsikring = new ArrayList<>(); 
+    public ArrayList<reiseforsikring> kundeReiseforsikring = new ArrayList<>(); 
+    
     public ArrayList<skademeldinger> kundeSkademeldinger = new ArrayList<>(); 
     
     public kunder(String innNavn, String dato, String fakturaadresse, int forsknummer)
@@ -24,11 +28,21 @@ public class kunder implements Serializable{
         this.forsikringsnummer = forsknummer; 
     }
     
-    public void setForsikring(forsikringer f)
+    public void setBaatforsikring(baatforsikring f)
     {
-        kundeForsikringer.add(f); 
+        kundeBaatforsikring.add(f); 
     }
-    
+    public void setFritids(fritidsboligforsikring f)
+    {
+        kundeFritidsboligforsikring.add(f); 
+    }
+    public void setReiseforsikring(reiseforsikring f)
+    {
+        kundeReiseforsikring.add(f); 
+    }
+    public void setHusoginnboforsikring(husoginnboforsikring f){
+        kundeHusoginnboforsikring.add(f); 
+    }
     public void setSkademelding(skademeldinger s)
     {
         kundeSkademeldinger.add(s); 
@@ -68,7 +82,11 @@ public class kunder implements Serializable{
         {
            ut += " Forsikringer:\n"; 
             for(forsikringer forsikringer: kundeForsikringer){
-            ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+" Opprettet: "+forsikringer.getOpprettetForsikring()+" Forsikringsbeløp: "+forsikringer.getForsikringsBeloop();
+                if(forsikringer instanceof baatforsikring){
+                  ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+" Opprettet: "+forsikringer.getOpprettetForsikring()+" Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+forsikringer.getEier()+"\n";  
+                }
+                
+            
             } 
         }
         if(!kundeSkademeldinger.isEmpty())

@@ -10,18 +10,30 @@ package model;
  * @author Aleksander
  */
 public class baatforsikring extends forsikringer{
-    private String eier, båttype, model, motortype;
-   private String regnummer, lendgeAntallFot, årsmodell; 
+    private String eier, båttype, regnummer, lengdeAntallFot, årsmodell; 
     
     public baatforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String inneier, String innbåttype, String innmotortype, String innregnummer, String innlengde, String innårsmodell)
    {
      super(forsikringPremie, opprettetForsikring, forsikringsBeloop);
      this.eier = inneier; 
      this.båttype = innbåttype; 
-     
-     
      this.regnummer = innregnummer;
-     this.lendgeAntallFot = innlengde; 
+     this.lengdeAntallFot = innlengde; 
      this.årsmodell = innårsmodell; 
    } 
+    public String getEier(){
+        return eier; 
+    }
+    public String getBåttype(){
+        return båttype; 
+    }
+    public String getRegnummer(){
+        return regnummer; 
+    }
+    public String getAntallFot(){
+        return lengdeAntallFot; 
+    }
+    public String getÅrsmodell(){
+        return årsmodell; 
+    }
 }

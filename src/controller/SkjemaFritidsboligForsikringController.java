@@ -273,14 +273,14 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         String forsikringsbeløpBygning=innForsikringsbeløpBygning.getText();
         String forsikringsbeløpInnbo=innForsikringsbeløpInnbo.getText(); 
         
-        fritidsboligforsikring forsikring = new fritidsboligforsikring(forsikringspremie, ønsketOppstart, adresse, forsikringsbeløp, byggemateriale, 
-            standard, boligtype, byggeår, kvm, forsikringsbeløpBygning, forsikringsbeløpInnbo);
+        fritidsboligforsikring forsikring = new fritidsboligforsikring(forsikringspremie, ønsketOppstart, forsikringsbeløp, adresse, 
+            boligtype,byggemateriale, standard, byggeår, kvm, forsikringsbeløpBygning, forsikringsbeløpInnbo);
         
         for(kunder k : array)
         {
             if(valgtNavn.equals(k.getNavn()))
             {
-                k.setForsikring(forsikring);
+                k.setFritids(forsikring);
                 System.out.print(k.toString());
             }
         }

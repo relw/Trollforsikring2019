@@ -78,7 +78,43 @@ public class kunder implements Serializable{
         + "Forsikringsnummer: "+ getForsikringsNummer() + newline 
         + "____________________________" + newline+"\n"; 
 
-        if(!kundeForsikringer.isEmpty())
+        if(!kundeFritidsboligforsikring.isEmpty())
+        {
+           ut += " Fritidsboligforsikringer:\n"; 
+            for(fritidsboligforsikring forsikringer: kundeFritidsboligforsikring){ 
+                ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+" Opprettet: "+forsikringer.getOpprettetForsikring()+" Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+forsikringer.getEier()+"\n";  
+            } 
+        }
+        if(!kundeHusoginnboforsikring.isEmpty())
+        {
+           ut += " Forsikringer:\n"; 
+            for(husoginnboforsikring forsikringer: kundeHusoginnboforsikring){
+                  ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+" Opprettet: "+forsikringer.getOpprettetForsikring()+" Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+forsikringer.getEier()+"\n";  
+            } 
+        }
+        if(!kundeHusoginnboforsikring.isEmpty())
+        {
+           ut += " Forsikringer:\n"; 
+            for(forsikringer forsikringer: kundeForsikringer){
+                if(forsikringer instanceof baatforsikring){
+                  ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+" Opprettet: "+forsikringer.getOpprettetForsikring()+" Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+forsikringer.getEier()+"\n";  
+                }
+                
+            
+            } 
+        }
+        if(!kundeBaatforsikring.isEmpty())
+        {
+           ut += " Forsikringer:\n"; 
+            for(forsikringer forsikringer: kundeForsikringer){
+                if(forsikringer instanceof baatforsikring){
+                  ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+" Opprettet: "+forsikringer.getOpprettetForsikring()+" Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+forsikringer.getEier()+"\n";  
+                }
+                
+            
+            } 
+        }
+        if(!kundeReiseforsikring.isEmpty())
         {
            ut += " Forsikringer:\n"; 
             for(forsikringer forsikringer: kundeForsikringer){

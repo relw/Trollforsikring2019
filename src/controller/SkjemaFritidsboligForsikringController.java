@@ -225,8 +225,7 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         }
         if(godkjentTeller == 11)
         {
-            fritidsboligforsikring forsikring = new fritidsboligforsikring(forsikringspremie, ønsketOppstart, adresse, forsikringsbeløp, byggemateriale, 
-            standard, boligtype, byggeår, kvm, forsikringsbeløpBygning, forsikringsbeløpInnbo);
+            
             
             // FORTSETT HER!!! TO DO: PUT ARRAYET I DROPDOWNBUTTON!!!
             // menuButton.getItems().addAll(new MenuItem(""));
@@ -238,8 +237,7 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
             for(kunder k:array)
             {
                 String navn = k.getNavn();
-                box.getItems().add(navn);
-                
+                box.getItems().add(navn);  
             }
             box.setVisible(true); 
             bes.setVisible(true); 
@@ -256,7 +254,36 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
     @FXML
     private void fullfør(ActionEvent event) throws IOException {
         String valgtNavn = (String)box.getValue();
-        System.out.print(valgtNavn);
+        //System.out.print(valgtNavn);
+        
+        kundeLagring kundeListe = new kundeLagring();
+        kundeListe = skrivKundeFil.hentObjekt();
+        ArrayList<kunder> array = new ArrayList<>();
+        array = kundeListe.putKunderIListe(); // Har nå et array med kunder
+        
+        String forsikringspremie=innForsikringspremie.getText();
+        String ønsketOppstart=innØnsketOppstart.getText();
+        String adresse=innAdresse.getText();
+        String forsikringsbeløp=innForsikringsbeløp.getText();
+        String byggemateriale=innByggemateriale.getText();
+        String standard=innStandard.getText();
+        String boligtype=innBoligtype.getText();
+        String byggeår=innByggeår.getText();
+        String kvm=innKvm.getText();
+        String forsikringsbeløpBygning=innForsikringsbeløpBygning.getText();
+        String forsikringsbeløpInnbo=innForsikringsbeløpInnbo.getText(); 
+        
+        fritidsboligforsikring forsikring = new fritidsboligforsikring(forsikringspremie, ønsketOppstart, adresse, forsikringsbeløp, byggemateriale, 
+            standard, boligtype, byggeår, kvm, forsikringsbeløpBygning, forsikringsbeløpInnbo);
+        
+        for(kunder k : array)
+        {
+            if(valgtNavn.equals(k.getNavn()))
+            {
+                k.setForsikring(forsikring);
+                System.out.print(k.toString());
+            }
+        }
     }
      @FXML
     private void avbryt(ActionEvent event) throws IOException {

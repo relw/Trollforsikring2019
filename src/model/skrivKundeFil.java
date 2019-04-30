@@ -68,27 +68,27 @@ public class skrivKundeFil {
         }
         return loadedKunde; 
     }
-    public static ArrayList<Object> leseAlle(){
-        
-        ArrayList<Object> objektListe = new ArrayList<Object>();
-        boolean fortsett = true;
-        try{
-            FileInputStream fis = new FileInputStream("kunder.jobj");
-           ObjectInputStream inn = new ObjectInputStream(fis);
-           while(fortsett)
-           {
-              Object obj = inn.readObject();
-              if(obj != null)
-                 objektListe.add(obj);
-              else
-                 fortsett = false;
-           }
-        }catch(Exception e)
-        {
-           //System.out.println(e.printStackTrace());
-        }
-        return objektListe; 
-    }
+//    public static ArrayList<Object> leseAlle(){
+//        
+//        ArrayList<Object> objektListe = new ArrayList<Object>();
+//        boolean fortsett = true;
+//        try{
+//            FileInputStream fis = new FileInputStream("kunder.jobj");
+//           ObjectInputStream inn = new ObjectInputStream(fis);
+//           while(fortsett)
+//           {
+//              Object obj = inn.readObject();
+//              if(obj != null)
+//                 objektListe.add(obj);
+//              else
+//                 fortsett = false;
+//           }
+//        }catch(Exception e)
+//        {
+//           //System.out.println(e.printStackTrace());
+//        }
+//        return objektListe; 
+//    }
         
 }
 

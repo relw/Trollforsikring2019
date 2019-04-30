@@ -13,7 +13,7 @@ public class husoginnboforsikring extends forsikringer{
    private String boligadresse, boligtype, standard, byggemateriale;
    private String byggeår, antallKvadratmeter, beløpForByggning, beløpForInnbo; 
     
-    public husoginnboforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String forsikringBetingelser, String innboligadresse, String innboligtype, String innstandard, String innbyggemateriale, String innbyggeår, String innantallkvadratmeter, String innbeløpforbyggning, String innbeløpforinnbo)
+    public husoginnboforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String innboligadresse, String innboligtype, String innstandard, String innbyggemateriale, String innbyggeår, String innantallkvadratmeter, String innbeløpforbyggning, String innbeløpforinnbo)
    {
      super(forsikringPremie, opprettetForsikring, forsikringsBeloop);
      this.boligadresse = innboligadresse;

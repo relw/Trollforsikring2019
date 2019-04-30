@@ -13,7 +13,7 @@ public class baatforsikring extends forsikringer{
     private String eier, båttype, model, motortype;
    private String regnummer, lendgeAntallFot, årsmodell; 
     
-    public baatforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String forsikringBetingelser, String inneier, String innbåttype, String innmotortype, String innregnummer, String innlengde, String innårsmodell)
+    public baatforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String inneier, String innbåttype, String innmotortype, String innregnummer, String innlengde, String innårsmodell)
    {
      super(forsikringPremie, opprettetForsikring, forsikringsBeloop);
      this.eier = inneier; 

@@ -13,7 +13,7 @@ public class reiseforsikring extends forsikringer{
    private String forsikringsområde;
    private int forsikringssum;  
     
-   public reiseforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String forsikringBetingelser, String innforsikringsområde, int innforsikringssum)
+   public reiseforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String innforsikringsområde, int innforsikringssum)
    {
      super(forsikringPremie, opprettetForsikring, forsikringsBeloop);
      this.forsikringsområde = innforsikringsområde;

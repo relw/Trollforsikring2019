@@ -25,4 +25,28 @@ public class husoginnboforsikring extends forsikringer{
      this.standard = innstandard; 
      this.byggemateriale = innbyggemateriale; 
    } 
+   public String getBoligAdresse(){
+       return boligadresse;
+   }
+   public String getAntallKvm(){
+       return antallKvadratmeter;
+   }
+   public String getBeløpForByggning(){
+       return beløpForByggning;
+   }
+   public String getBeløpForInnbo(){
+       return beløpForInnbo;
+   }
+   public String getByggeår(){
+       return byggeår;
+   }
+   public String getBoligtype(){
+       return boligtype;
+   }
+   public String getStandard(){
+       return standard;
+   }
+   public String getByggemateriale(){
+       return byggemateriale;
+   }
 }

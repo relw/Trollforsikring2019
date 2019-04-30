@@ -12,10 +12,10 @@ package model;
 public class fritidsboligforsikring extends forsikringer{
     
 
-   private String adresse, boligtype, byggemateriale, standard, byggeår, antallKvadratmeter, forsikringsbeløpInnbo;  
+   private String adresse, boligtype, byggemateriale, standard, byggeår, antallKvadratmeter, forsikringsbeløpBygning, forsikringsbeløpInnbo;  
    
    
-   public fritidsboligforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String innadresse, String innboligtype, String innByggemateriale, String innStandard, String innByggeår, String antallKvadratmeter, String innForsikringsbeløpInnbo)
+   public fritidsboligforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String innadresse, String innboligtype, String innByggemateriale, String innStandard, String innByggeår, String antallKvadratmeter,String innForsikringsbeløpBygning, String innForsikringsbeløpInnbo)
    {
      super(forsikringPremie, opprettetForsikring, forsikringsBeloop);
      this.adresse = innadresse; 
@@ -24,6 +24,7 @@ public class fritidsboligforsikring extends forsikringer{
      this.standard = innStandard; 
      this.byggeår = innByggeår;
      this.antallKvadratmeter = antallKvadratmeter; 
+     this.forsikringsbeløpBygning = innForsikringsbeløpBygning;
      this.forsikringsbeløpInnbo = innForsikringsbeløpInnbo; 
              
    }

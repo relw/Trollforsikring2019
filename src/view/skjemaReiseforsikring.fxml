@@ -45,12 +45,12 @@
       <Label id="feilmeldingOmråde" fx:id="feilmeldingOmråde" layoutX="476.0" layoutY="245.0" prefHeight="39.0" prefWidth="261.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringssum" fx:id="feilmeldingForsikringssum" layoutX="476.0" layoutY="294.0" prefHeight="39.0" prefWidth="261.0" text="*" textFill="WHITE" />
       <Button layoutX="751.0" layoutY="333.0" mnemonicParsing="false" onAction="#visVilkår" text="Vis betingelser" textFill="WHITE" />
-      <ChoiceBox fx:id="box" layoutX="665.0" layoutY="289.0" prefWidth="150.0" visible="false" />
-      <Label fx:id="bes" layoutX="612.0" layoutY="273.0" text="Velg kunde som skal ha forsikringen:" textFill="WHITE" visible="false">
+      <ChoiceBox fx:id="box" layoutX="662.0" layoutY="167.0" prefWidth="150.0" visible="false" />
+      <Label fx:id="bes" layoutX="607.0" layoutY="134.0" text="Velg kunde som skal ha forsikringen:" textFill="WHITE" visible="false">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Button fx:id="btnReg" layoutX="640.0" layoutY="99.0" mnemonicParsing="false" onAction="#fullfør" text="Registrer forsikring" textFill="WHITE" visible="false" />
+      <Button fx:id="btnReg" layoutX="647.0" layoutY="216.0" mnemonicParsing="false" onAction="#fullfør" text="Registrer forsikring" textFill="WHITE" visible="false" />
    </children>
 </AnchorPane>

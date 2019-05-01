@@ -115,7 +115,7 @@ public class SkjemaBåtforsikringController implements Initializable {
        String Lengde=innLengde.getText();
        String Årsmodell=innÅrsmodell.getText();
        String MotortypeOgStyrke=innMotortypeogMotorstyrke.getText(); 
-       String MotortypeogMotorstyke=innMotortypeogMotorstyrke.getText();
+
        
        int godkjentTeller=0;
        //SJEKKER FORSIKRINGSPREMIE INNPUT (INNPUT NR 1)

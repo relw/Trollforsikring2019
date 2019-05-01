@@ -51,7 +51,7 @@
       <Label id="feilmeldingTakseringsSkade" fx:id="feilmeldingTakseringsSkade" layoutX="482.0" layoutY="342.0" prefHeight="39.0" prefWidth="340.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingUtbetalteErstatninger" fx:id="feilmeldingUtbetalteErstatninger" layoutX="482.0" layoutY="390.0" prefHeight="39.0" prefWidth="340.0" text="*" textFill="WHITE" />
       <ChoiceBox fx:id="box" layoutX="655.0" layoutY="279.0" prefWidth="150.0" visible="false" />
-      <Label fx:id="bes" layoutX="602.0" layoutY="259.0" text="Velg kunde som skal ha forsikringen:" textFill="WHITE" visible="false">
+      <Label fx:id="bes" layoutX="602.0" layoutY="259.0" text="Velg kunde som skal ha skademeldingen:" textFill="WHITE" visible="false">
          <font>
             <Font size="17.0" />
          </font>

@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Forsikringnivaa1Controller">
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.registerController">
    <children>
       <ImageView fitHeight="168.0" fitWidth="948.0" layoutX="-13.0" layoutY="457.0">
          <image>
@@ -19,11 +19,11 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="492.0" layoutX="14.0" layoutY="14.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="909.0" />
-      <Button layoutX="361.0" layoutY="541.0" mnemonicParsing="false" onAction="#nyReiseforsikringSkjema" prefHeight="42.0" prefWidth="213.0" stylesheets="@../trollforsikring2019/stilark.css" text="Last inn elementer fra fil" textFill="WHITE">
+      <Button layoutX="361.0" layoutY="541.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" stylesheets="@../trollforsikring2019/stilark.css" text="Last inn elementer fra fil" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>
-      <Button layoutX="14.0" layoutY="572.0" mnemonicParsing="false" onAction="#tilbake" prefHeight="32.0" prefWidth="94.0" stylesheets="@../trollforsikring2019/stilark.css" text="Tilbake" textFill="WHITE">
+      <Button fx:id="tilbake" layoutX="14.0" layoutY="572.0" mnemonicParsing="false" onAction="#tilbake" prefHeight="32.0" prefWidth="94.0" stylesheets="@../trollforsikring2019/stilark.css" text="Tilbake" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -33,7 +33,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <ScrollPane fx:id="scrollElem" layoutX="22.0" layoutY="60.0" prefHeight="434.0" prefWidth="894.0">
+      <ScrollPane fx:id="scrollElem" layoutX="22.0" layoutY="60.0" onMouseEntered="#hentElementer" prefHeight="434.0" prefWidth="894.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
         </content>

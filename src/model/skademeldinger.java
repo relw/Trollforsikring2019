@@ -1,10 +1,12 @@
 package model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Aleksander
  */
-public class skademeldinger {
+public class skademeldinger implements Serializable{
     
     private String dato, typeSkade, beskrivelse, kontaktInfo;
     private String skadenummer, takseringsbeløp, ubetaltErstatningsbeløp;

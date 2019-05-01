@@ -13,16 +13,16 @@ import java.io.ObjectInputStream;
  *
  * @author Aleksander
  */
-public class skrivExcelFil implements skriveFil{
-    @Override
+public class skrivExcelFil{
+    
     public boolean skrive(kundeLagring obj){
         return true; 
     }
-    @Override
+    
     public String lese(){
         return "";
     }
-    @Override
+    
     public kundeLagring hentObjekt(){
         kundeLagring loadedKunde = null; 
         try (FileInputStream fin = new FileInputStream("kunder.jobj");

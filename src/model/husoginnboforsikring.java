@@ -5,11 +5,13 @@
  */
 package model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Aleksander
  */
-public class husoginnboforsikring extends forsikringer{
+public class husoginnboforsikring extends forsikringer implements Serializable{
    private String boligadresse, boligtype, standard, byggemateriale;
    private String byggeår, antallKvadratmeter, beløpForByggning, beløpForInnbo; 
     

@@ -1,7 +1,9 @@
 package model;
 
+import java.io.Serializable;
 
-public class forsikringer {
+
+public class forsikringer implements Serializable{
     
     public String forsikringPremie, opprettetForsikring, forsikringsBeloop, forsikringBetingelser;
 

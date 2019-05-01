@@ -5,11 +5,13 @@
  */
 package model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Aleksander
  */
-public class reiseforsikring extends forsikringer{
+public class reiseforsikring extends forsikringer implements Serializable{
    private String forsikringsområde;
    private String forsikringssum;  
     

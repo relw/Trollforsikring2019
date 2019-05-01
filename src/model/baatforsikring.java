@@ -5,11 +5,13 @@
  */
 package model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Aleksander
  */
-public class baatforsikring extends forsikringer{
+public class baatforsikring extends forsikringer implements Serializable{
     private String eier, båttype, regnummer, lengdeAntallFot, årsmodell; 
     
     public baatforsikring(String forsikringPremie, String opprettetForsikring, String forsikringsBeloop, String inneier, String innbåttype, String innmotortype, String innregnummer, String innlengde, String innårsmodell)

@@ -122,12 +122,12 @@ public class SkjemaKundeController implements Initializable {
             
             
             lagring.pluss(nyKunde);
-            skrivKundeFil skrive = new skrivKundeFil(); 
-            skrive.skrive(lagring); 
-            skrive.lese(); 
+            //skrivKundeFil skrive = new skrivKundeFil(); 
+            skrivKundeFil.skrive(lagring); 
+            //skrive.lese(); 
             
             Label scrollContent = new Label();
-            scrollContent.setText(skrive.lese()); 
+            scrollContent.setText(skrivKundeFil.lese()); 
             scrollPane.setContent(scrollContent); 
             
         }

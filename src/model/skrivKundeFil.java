@@ -10,14 +10,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 
 
 // Serialisering
-public class skrivKundeFil implements skriveFil{
+public class skrivKundeFil{
     
-    @Override
-    public boolean skrive(kundeLagring obj){
+    
+    public static boolean skrive(kundeLagring obj){
      
         
         String fp2 = "kunder.jobj";
@@ -27,11 +28,34 @@ public class skrivKundeFil implements skriveFil{
             FileOutputStream fos = new FileOutputStream(filepath);
             ObjectOutputStream out = new ObjectOutputStream(fos);
         ) {
+//           kundeLagring kundeListe = new kundeLagring();
+//           skrivKundeFil skf = new skrivKundeFil(); 
+//           kundeLagring kl = new kundeLagring(); 
+//           
+//           kl = skf.hentObjekt(); // Henter gamle objekt
+//           if(kl != null){
+//                ArrayList<kunder> array = new ArrayList<>();
+//                ArrayList<kunder> arrayInn = new ArrayList<>();
+//                array = kl.putKunderIListe(); // Gamle array med kunder
+//                arrayInn = obj.putKunderIListe(); // Innarray med nye kunder
+//
+//                for(kunder k : arrayInn){
+//                    array.add(k); 
+//                }
+//                for(kunder k: array){
+//                    kundeListe.pluss(k); 
+//                }
+
+
+//                out.writeObject(kundeListe);
+//           }
+//           else{
+//               out.writeObject(obj);
+//           }
            
-               out.writeObject(obj);
-           
+           out.writeObject(obj);
             
-            out.close(); 
+           out.close(); 
             
             return true; 
         }
@@ -40,8 +64,8 @@ public class skrivKundeFil implements skriveFil{
             return false; 
         } 
     }
-    @Override
-    public String lese()
+    
+    public static String lese()
     {
         String res = ""; 
         try (FileInputStream fin = new FileInputStream("kunder.jobj");
@@ -58,8 +82,8 @@ public class skrivKundeFil implements skriveFil{
         
         
    }
-    @Override
-    public kundeLagring hentObjekt(){
+    
+    public static kundeLagring hentObjekt(){
         kundeLagring loadedKunde = null; 
         try (FileInputStream fin = new FileInputStream("kunder.jobj");
         ObjectInputStream oin = new ObjectInputStream(fin)) {
@@ -67,7 +91,7 @@ public class skrivKundeFil implements skriveFil{
             
             return loadedKunde; 
         } catch(IOException e) {
-            System.err.println("Could not read file. Cause: " + e.getCause());
+            System.err.println("Hent objekt: Could not read file. Cause: " + e.getCause());
         } catch(ClassNotFoundException e) {
             System.err.println("Could not convert Object");
         }

@@ -2,6 +2,7 @@ package model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import javafx.scene.control.Button;
 
 /**
  *
@@ -12,6 +13,7 @@ public class kunder implements Serializable{
 
     private String datoforhold, navn, fakturaadresse; 
     private int forsikringsnummer;
+    
     
     public ArrayList<baatforsikring> kundeBaatforsikring = new ArrayList<>(); 
     public ArrayList<fritidsboligforsikring> kundeFritidsboligforsikring = new ArrayList<>(); 
@@ -26,8 +28,10 @@ public class kunder implements Serializable{
         this.datoforhold = dato; 
         this.fakturaadresse = fakturaadresse;
         this.forsikringsnummer = forsknummer; 
+        
     }
     
+   
     public void setBaatforsikring(baatforsikring f)
     {
         kundeBaatforsikring.add(f); 

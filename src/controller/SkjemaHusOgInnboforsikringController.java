@@ -279,6 +279,12 @@ public class SkjemaHusOgInnboforsikringController implements Initializable {
                 System.out.print(k.toString());
             }
         }
+        kundeLagring nyListe = new kundeLagring(); 
+        for(kunder k : array)
+        {
+            nyListe.pluss(k); 
+        }
+        skrivKundeFil.skrive(nyListe); 
     }
     @FXML
     private void avbryt(ActionEvent event) throws IOException {

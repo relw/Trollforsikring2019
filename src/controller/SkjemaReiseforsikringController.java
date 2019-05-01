@@ -170,6 +170,12 @@ public class SkjemaReiseforsikringController implements Initializable {
                 System.out.print(k.toString());
             }
         }
+        kundeLagring nyListe = new kundeLagring(); 
+        for(kunder k : array)
+        {
+            nyListe.pluss(k); 
+        }
+        skrivKundeFil.skrive(nyListe); 
     }
      
      @FXML

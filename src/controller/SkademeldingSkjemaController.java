@@ -214,6 +214,12 @@ public class SkademeldingSkjemaController implements Initializable {
                 System.out.print(k.toString());
             }
         }
+        kundeLagring nyListe = new kundeLagring(); 
+        for(kunder k : array)
+        {
+            nyListe.pluss(k); 
+        }
+        skrivKundeFil.skrive(nyListe); 
     }
     
     

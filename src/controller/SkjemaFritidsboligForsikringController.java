@@ -230,7 +230,8 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
             // FORTSETT HER!!! TO DO: PUT ARRAYET I DROPDOWNBUTTON!!!
             // menuButton.getItems().addAll(new MenuItem(""));
             kundeLagring kundeListe = new kundeLagring();
-            kundeListe = skrivKundeFil.hentObjekt();
+            skrivKundeFil skf = new skrivKundeFil();
+            kundeListe = skf.hentObjekt();
             ArrayList<kunder> array = new ArrayList<>();
             array = kundeListe.putKunderIListe(); // Har nå et array med kunder
           
@@ -256,8 +257,9 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         String valgtNavn = (String)box.getValue();
         //System.out.print(valgtNavn);
         
+        skrivKundeFil skf = new skrivKundeFil();
         kundeLagring kundeListe = new kundeLagring();
-        kundeListe = skrivKundeFil.hentObjekt();
+        kundeListe = skf.hentObjekt();
         ArrayList<kunder> array = new ArrayList<>();
         array = kundeListe.putKunderIListe(); // Har nå et array med kunder
         

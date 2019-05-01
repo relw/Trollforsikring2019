@@ -121,12 +121,13 @@ public class SkjemaKundeController implements Initializable {
             kunder nyKunde = new kunder(navn, opprettetKundeforhold, fakturaAdresse, intForsikringsnummer);
             
             
-            lagring.pluss(nyKunde); 
-            skrivKundeFil.skrive(lagring); 
-            skrivKundeFil.lese(); 
+            lagring.pluss(nyKunde);
+            skrivKundeFil skrive = new skrivKundeFil(); 
+            skrive.skrive(lagring); 
+            skrive.lese(); 
             
             Label scrollContent = new Label();
-            scrollContent.setText(skrivKundeFil.lese()); 
+            scrollContent.setText(skrive.lese()); 
             scrollPane.setContent(scrollContent); 
             
         }

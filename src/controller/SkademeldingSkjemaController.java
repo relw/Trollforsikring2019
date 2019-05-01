@@ -167,7 +167,8 @@ public class SkademeldingSkjemaController implements Initializable {
      if(godkjentTeller==7){
          System.out.print("GODKJENT");
              kundeLagring kundeListe = new kundeLagring();
-            kundeListe = skrivKundeFil.hentObjekt();
+             skrivKundeFil skf = new skrivKundeFil();
+            kundeListe = skf.hentObjekt();
             ArrayList<kunder> array = new ArrayList<>();
             array = kundeListe.putKunderIListe(); // Har nå et array med kunder
           
@@ -187,8 +188,9 @@ public class SkademeldingSkjemaController implements Initializable {
         String valgtNavn = (String)box.getValue();
         //System.out.print(valgtNavn);
         
+        skrivKundeFil skf = new skrivKundeFil();
         kundeLagring kundeListe = new kundeLagring();
-        kundeListe = skrivKundeFil.hentObjekt();
+        kundeListe = skf.hentObjekt();
         ArrayList<kunder> array = new ArrayList<>();
         array = kundeListe.putKunderIListe(); // Har nå et array med kunder
         

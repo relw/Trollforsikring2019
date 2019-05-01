@@ -10,11 +10,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
 
-public class skrivKundeFil {
+
+
+// Serialisering
+public class skrivKundeFil implements skriveFil{
     
-    public static boolean skrive(kundeLagring obj){
+    @Override
+    public boolean skrive(kundeLagring obj){
      
         
         String fp2 = "kunder.jobj";
@@ -37,7 +40,8 @@ public class skrivKundeFil {
             return false; 
         } 
     }
-    public static String lese()
+    @Override
+    public String lese()
     {
         String res = ""; 
         try (FileInputStream fin = new FileInputStream("kunder.jobj");
@@ -54,7 +58,8 @@ public class skrivKundeFil {
         
         
    }
-    public static kundeLagring hentObjekt(){
+    @Override
+    public kundeLagring hentObjekt(){
         kundeLagring loadedKunde = null; 
         try (FileInputStream fin = new FileInputStream("kunder.jobj");
         ObjectInputStream oin = new ObjectInputStream(fin)) {
@@ -68,27 +73,7 @@ public class skrivKundeFil {
         }
         return loadedKunde; 
     }
-//    public static ArrayList<Object> leseAlle(){
-//        
-//        ArrayList<Object> objektListe = new ArrayList<Object>();
-//        boolean fortsett = true;
-//        try{
-//            FileInputStream fis = new FileInputStream("kunder.jobj");
-//           ObjectInputStream inn = new ObjectInputStream(fis);
-//           while(fortsett)
-//           {
-//              Object obj = inn.readObject();
-//              if(obj != null)
-//                 objektListe.add(obj);
-//              else
-//                 fortsett = false;
-//           }
-//        }catch(Exception e)
-//        {
-//           //System.out.println(e.printStackTrace());
-//        }
-//        return objektListe; 
-//    }
+
         
 }
 

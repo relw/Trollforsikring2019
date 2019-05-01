@@ -82,7 +82,7 @@ public class kunder implements Serializable{
         {
            ut += " Fritidsboligforsikringer:\n"; 
             for(fritidsboligforsikring forsikringer: kundeFritidsboligforsikring){ 
-                ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+" Opprettet: "+forsikringer.getOpprettetForsikring()+" Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+" Adresse: "+forsikringer.getAdresse()+" Boligtype: "+forsikringer.getBoligtype()+" Byggemateriale: "+forsikringer.getByggemateriale()+" Standard: "+forsikringer.getStandard()+" Byggeår: "+forsikringer.getByggeår()+" Kvadratmeter: "+forsikringer.getAntallKvm()+" Forsikringsbeløp byggning: "+forsikringer.getForsikringsbeløpBygning()+" Forsikringsbeløp innbo: "+forsikringer.getForsikringsbeløpInnbo()+"\n";  
+                ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+"\nOpprettet: "+forsikringer.getOpprettetForsikring()+"\nForsikringsbeløp: "+forsikringer.getForsikringsBeloop()+"\nAdresse: "+forsikringer.getAdresse()+"\nBoligtype: "+forsikringer.getBoligtype()+"\nByggemateriale: "+forsikringer.getByggemateriale()+"\nStandard: "+forsikringer.getStandard()+"\nByggeår: "+forsikringer.getByggeår()+"\nKvadratmeter: "+forsikringer.getAntallKvm()+"\nForsikringsbeløp byggning: "+forsikringer.getForsikringsbeløpBygning()+"\nForsikringsbeløp innbo: "+forsikringer.getForsikringsbeløpInnbo()+"\n";  
             } 
         }
         // Skriver ut info om husoginnboforsikring hvis det er registrert. 
@@ -90,7 +90,7 @@ public class kunder implements Serializable{
         {
            ut += " Husoginnboforsikringer:\n"; 
             for(husoginnboforsikring forsikringer: kundeHusoginnboforsikring){
-                  ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+"\nOpprettet: "+forsikringer.getOpprettetForsikring()+"\nForsikringsbeløp: "+forsikringer.getForsikringsBeloop()+"\nBoligadresse: "+forsikringer.getBoligAdresse()+"\nAntall kvadratmeter: "+forsikringer.getAntallKvm()+"\nBeløp for byggning: "+forsikringer.getBeløpForByggning()+"\nBeløp for innbo: "+forsikringer.getBeløpForInnbo()+"\n";  
+                  ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+"\nOpprettet: "+forsikringer.getOpprettetForsikring()+"\nForsikringsbeløp: "+forsikringer.getForsikringsBeloop()+"\nBoligadresse: "+forsikringer.getBoligAdresse()+"\n Byggeår: "+forsikringer.getByggeår()+"\nBoligtype: "+forsikringer.getBoligtype()+"\nStandard: "+forsikringer.getStandard()+"\nByggemateriale: "+forsikringer.getByggemateriale()+"\nAntall kvadratmeter: "+forsikringer.getAntallKvm()+"\nBeløp for byggning: "+forsikringer.getBeløpForByggning()+"\nBeløp for innbo: "+forsikringer.getBeløpForInnbo()+"\n";  
             } 
         }
         // Skriver ut info om båtforsikring hvis det er registrert. 
@@ -104,7 +104,7 @@ public class kunder implements Serializable{
         // Skriver ut info om reiseforsikring hvis registrert. 
         if(!kundeReiseforsikring.isEmpty())
         {
-           ut += " Forsikringer:\n"; 
+           ut += " Reiseforsikringer:\n"; 
             for(reiseforsikring forsikringer: kundeReiseforsikring){
                 
                   ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+"\nOpprettet: "+forsikringer.getOpprettetForsikring()+"\nForsikringsbeløp: "+forsikringer.getForsikringsBeloop()+"\nForsikringsområde: "+forsikringer.getForsikringsområde()+"\nForsikringssum: "+forsikringer.getForsikringssum()+"\n";  

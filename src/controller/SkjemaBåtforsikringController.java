@@ -204,7 +204,8 @@ public class SkjemaBåtforsikringController implements Initializable {
      if(godkjentTeller==9){
          System.out.print("du har nå registrert forsikring");
          kundeLagring kundeListe = new kundeLagring();
-            kundeListe = skrivKundeFil.hentObjekt();
+         skrivKundeFil skf = new skrivKundeFil();
+            kundeListe = skf.hentObjekt();
             ArrayList<kunder> array = new ArrayList<>();
             array = kundeListe.putKunderIListe(); // Har nå et array med kunder
           
@@ -224,8 +225,9 @@ public class SkjemaBåtforsikringController implements Initializable {
         String valgtNavn = (String)box.getValue();
         //System.out.print(valgtNavn);
         
+        skrivKundeFil skf = new skrivKundeFil();
         kundeLagring kundeListe = new kundeLagring();
-        kundeListe = skrivKundeFil.hentObjekt();
+        kundeListe = skf.hentObjekt();
         ArrayList<kunder> array = new ArrayList<>();
         array = kundeListe.putKunderIListe(); // Har nå et array med kunder
         

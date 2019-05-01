@@ -121,8 +121,7 @@ public class SkjemaKundeController implements Initializable {
             kunder nyKunde = new kunder(navn, opprettetKundeforhold, fakturaAdresse, intForsikringsnummer);
             
             
-            lagring.pluss(nyKunde);
-            //skrivKundeFil skrive = new skrivKundeFil(); 
+            lagring.pluss(nyKunde); 
             skrivKundeFil.skrive(lagring); 
             //skrive.lese(); 
             

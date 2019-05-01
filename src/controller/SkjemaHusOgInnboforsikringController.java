@@ -228,8 +228,8 @@ public class SkjemaHusOgInnboforsikringController implements Initializable {
         }
         if(godkjentteller==11){
              kundeLagring kundeListe = new kundeLagring();
-             skrivKundeFil skf = new skrivKundeFil();
-            kundeListe = skf.hentObjekt();
+             
+            kundeListe = skrivKundeFil.hentObjekt();
             ArrayList<kunder> array = new ArrayList<>();
             array = kundeListe.putKunderIListe(); // Har nå et array med kunder
           

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.io.IOException;
@@ -27,11 +22,6 @@ import model.kunder;
 import model.skademeldinger;
 import model.skrivKundeFil;
 
-/**
- * FXML Controller class
- *
- * @author Rasmus
- */
 public class SkademeldingSkjemaController implements Initializable {
     
     @FXML
@@ -76,7 +66,7 @@ public class SkademeldingSkjemaController implements Initializable {
     @FXML
     private TextField innUtbetalteErstatninger;
     
-     @FXML
+    @FXML
     private ChoiceBox box;
       
     @FXML
@@ -84,10 +74,11 @@ public class SkademeldingSkjemaController implements Initializable {
             
     @FXML
     private Button btnFortsett;
+    
     @FXML
     private Button btnReg;
     
-     @FXML 
+    @FXML 
     private void registrerSkademelding(ActionEvent event){
        String DatoSkade=innDatoSkade.getText();
        String Skadenummer=innSkadenummer.getText();
@@ -136,7 +127,7 @@ public class SkademeldingSkjemaController implements Initializable {
      catch(feilmeldingSkademeldingSkjema.feilTekstInnput ex){
           feilmeldingTypeSkade.setText(ex.getMessage());
      }
-//     //SJEKKER KONTAKTINFO FRA VITNER (INNPUT 5)
+    //SJEKKER KONTAKTINFO FRA VITNER (INNPUT 5)
      try{
          feilmeldingSkademeldingSkjema.sjekkKontaktinformasjonVitner(KontaktinfoVitner);
          feilmeldingKontaktinfoVitner.setText("OK");
@@ -163,12 +154,12 @@ public class SkademeldingSkjemaController implements Initializable {
      catch(feilmeldingSkademeldingSkjema.feilTallInnput ex){
          feilmeldingUtbetalteErstatninger.setText(ex.getMessage());
      }
-     
+     //om alle innputfeltene er godkjent fortsetter metoden for å skrive 
      if(godkjentTeller==7){
-         System.out.print("GODKJENT");
+         //System.out.print("GODKJENT");
              kundeLagring kundeListe = new kundeLagring();
-             skrivKundeFil skf = new skrivKundeFil();
-            kundeListe = skf.hentObjekt();
+             
+            kundeListe = skrivKundeFil.hentObjekt();
             ArrayList<kunder> array = new ArrayList<>();
             array = kundeListe.putKunderIListe(); // Har nå et array med kunder
           
@@ -183,24 +174,23 @@ public class SkademeldingSkjemaController implements Initializable {
             btnFortsett.setVisible(false); 
      }
     }
- @FXML
+    //metode som fullfører registrereringen av skademelding
+    @FXML
     private void fullfør(ActionEvent event) throws IOException {
         String valgtNavn = (String)box.getValue();
-        //System.out.print(valgtNavn);
-        
-        
+   
         kundeLagring kundeListe = new kundeLagring();
         kundeListe = skrivKundeFil.hentObjekt();
         ArrayList<kunder> array = new ArrayList<>();
         array = kundeListe.putKunderIListe(); // Har nå et array med kunder
         
-            String DatoSkade=innDatoSkade.getText();
-       String Skadenummer=innSkadenummer.getText();
-       String TypeSkade=innTypeSkade.getText();
-       String BeskrivelseSkade=innBeskrivelseSkade.getText();
-       String KontaktinfoVitner=innKontaktinfoVitner.getText();
-       String TakseringSkade=innTakseringSkade.getText();
-       String UtbetalteErstatninger=innUtbetalteErstatninger.getText();
+        String DatoSkade=innDatoSkade.getText();
+        String Skadenummer=innSkadenummer.getText();
+        String TypeSkade=innTypeSkade.getText();
+        String BeskrivelseSkade=innBeskrivelseSkade.getText();
+        String KontaktinfoVitner=innKontaktinfoVitner.getText();
+        String TakseringSkade=innTakseringSkade.getText();
+        String UtbetalteErstatninger=innUtbetalteErstatninger.getText();
         
        skademeldinger skademelding=new skademeldinger(DatoSkade, TypeSkade, BeskrivelseSkade, KontaktinfoVitner, Skadenummer
     ,TakseringSkade, UtbetalteErstatninger);
@@ -222,7 +212,7 @@ public class SkademeldingSkjemaController implements Initializable {
         skrivKundeFil.skrive(nyListe); 
     }
     
-    
+    //metoden som går tilbake til førstesiden
     @FXML 
     public void avbryt(ActionEvent event) throws IOException{
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/trollforsikring2019/FXMLDocument.fxml"));

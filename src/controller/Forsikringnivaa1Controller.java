@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.io.IOException;
@@ -18,16 +13,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Rasmus
- */
 public class Forsikringnivaa1Controller implements Initializable {
 
     @FXML
     private Button btnTilbake; 
     
+    //metode som går til båtforsikrings skjema
+    @FXML
     public void nyBåtforsikringSkjema(ActionEvent event) throws IOException{
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/skjemaBaatforsikring.fxml"));
         Scene home_page_scene=new Scene(home_page_parent);
@@ -36,6 +28,8 @@ public class Forsikringnivaa1Controller implements Initializable {
         app_stage.show();
 
     }
+    //metode som går til fritidsboligforsikring skjema
+    @FXML
     public void NyFritidsboligforsikringSkjema(ActionEvent event) throws IOException{
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/skjemaFritidsboligForsikring.fxml"));
         Scene home_page_scene=new Scene(home_page_parent);
@@ -43,6 +37,8 @@ public class Forsikringnivaa1Controller implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
+    //metode som går til hus- og innnboforsikring skjema
+    @FXML
     public void nyHusogInnboforsikringSkjema(ActionEvent event) throws IOException{
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/skjemaHusOgInnboforsikring.fxml"));
         Scene home_page_scene=new Scene(home_page_parent);
@@ -50,6 +46,8 @@ public class Forsikringnivaa1Controller implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
+    //metode som går til reiseforsikring skjema
+    @FXML
     public void nyReiseforsikringSkjema(ActionEvent event) throws IOException{
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/skjemaReiseforsikring.fxml"));
         Scene home_page_scene=new Scene(home_page_parent);
@@ -57,7 +55,7 @@ public class Forsikringnivaa1Controller implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
-    
+    //metode som går tilbake til førstesiden
     @FXML 
     public void tilbake(ActionEvent event) throws IOException{
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/trollforsikring2019/FXMLDocument.fxml"));

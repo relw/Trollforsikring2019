@@ -76,12 +76,14 @@ public class registerController implements Initializable {
         FileChooser fc = new FileChooser(); 
         File fil = fc.showOpenDialog(null);
         
-        //FileChooser.ExtensionFilter fileExtensions = new FileChooser.ExtensionFilter("PNG","*.png"); 
-        //fc.getExtensionFilters().add(fileExtensions);
+        FileChooser.ExtensionFilter fileExtensions = new FileChooser.ExtensionFilter("PNG","*.png"); 
+        fc.getExtensionFilters().add(fileExtensions);
         
         String filepath = null; 
         if(fil != null){
             filepath = fil.toString();
+        
+            
             System.out.print(skrivKundeFil.leseValgtFil(filepath));
         }
         else

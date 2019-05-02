@@ -82,6 +82,23 @@ public class skrivKundeFil{
         
         
    }
+    public static String leseValgtFil(String filbane)
+    {
+        String res = ""; 
+        try (FileInputStream fin = new FileInputStream(filbane);
+        ObjectInputStream oin = new ObjectInputStream(fin)) {
+            Object loadedKunde = oin.readObject();
+            res = loadedKunde.toString();
+            
+        } catch(IOException e) {
+            System.err.println("Could not read file. Cause: " + e.getCause());
+        } catch(ClassNotFoundException e) {
+            System.err.println("Could not convert Object");
+        }
+        return res;
+        
+        
+   }
     
     public static kundeLagring hentObjekt(){
         kundeLagring loadedKunde = null; 

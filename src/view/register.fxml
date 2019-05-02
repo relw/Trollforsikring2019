@@ -19,7 +19,7 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="492.0" layoutX="14.0" layoutY="14.0" opacity="0.69" stroke="BLACK" strokeType="INSIDE" width="909.0" />
-      <Button layoutX="361.0" layoutY="541.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" stylesheets="@../trollforsikring2019/stilark.css" text="Last inn elementer fra fil" textFill="WHITE">
+      <Button layoutX="361.0" fx:id="lastInn" layoutY="541.0" onAction="#lastInnFil" mnemonicParsing="false" prefHeight="42.0" prefWidth="213.0" stylesheets="@../trollforsikring2019/stilark.css" text="Last inn elementer fra fil" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>

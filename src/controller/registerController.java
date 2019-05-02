@@ -5,12 +5,11 @@
  */
 package controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,12 +18,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.kundeLagring;
 import model.kunder;
@@ -38,6 +34,9 @@ public class registerController implements Initializable {
 
      @FXML
      private Button tilbake; 
+     
+     @FXML
+     private Button lastInn;
      
      @FXML
      private ScrollPane scrollElem; 
@@ -69,6 +68,21 @@ public class registerController implements Initializable {
         Stage app_stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(home_page_scene);
         app_stage.show();
+    }
+    @FXML
+    private void lastInnFil(ActionEvent event) throws IOException {
+        FileChooser fc = new FileChooser(); 
+        File fil = fc.showOpenDialog(null);
+        
+        String filepath = null; 
+        if(fil != null){
+            filepath = fil.toString();
+            System.out.print(skrivKundeFil.leseValgtFil(filepath));
+        }
+        //System.out.print(filepath);
+        
+        
+        
     }
  
     @Override

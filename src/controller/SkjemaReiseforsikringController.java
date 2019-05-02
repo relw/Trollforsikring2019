@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.io.IOException;
@@ -28,43 +23,38 @@ import model.kundeLagring;
 import model.kunder;
 import model.skrivKundeFil;
 
-/**
- * FXML Controller class
- *
- * @author Rasmus
- */
 public class SkjemaReiseforsikringController implements Initializable {
-     @FXML
-     private TextField innForsikringspremie;
+    @FXML
+    private TextField innForsikringspremie;
      
-     @FXML
-     private TextField innØnsketOppstart;
+    @FXML
+    private TextField innØnsketOppstart;
      
-     @FXML
-     private TextField innForsikringsområde;
+    @FXML
+    private TextField innForsikringsområde;
      
-     @FXML
-     private TextField innForsikringsbeløp;
+    @FXML
+    private TextField innForsikringsbeløp;
      
-     @FXML
-     private TextField innForsikringssum;
+    @FXML
+    private TextField innForsikringssum;
      
-     @FXML
-     private Label feilmeldingForsikringspremie;
+    @FXML
+    private Label feilmeldingForsikringspremie;
      
-      @FXML
-     private Label feilmeldingØnsketOppstart;
+    @FXML
+    private Label feilmeldingØnsketOppstart;
       
-       @FXML
-     private Label feilmeldingForsikringsbeløp;
+    @FXML
+    private Label feilmeldingForsikringsbeløp;
        
-     @FXML
-     private Label feilmeldingOmråde;
+    @FXML
+    private Label feilmeldingOmråde;
      
-     @FXML
-     private Label feilmeldingForsikringssum;
+    @FXML
+    private Label feilmeldingForsikringssum;
      
-      @FXML
+    @FXML
     private ChoiceBox box;
       
     @FXML
@@ -72,12 +62,13 @@ public class SkjemaReiseforsikringController implements Initializable {
             
     @FXML
     private Button btnFortsett;
+    
     @FXML
     private Button btnReg;
      
-     
-     @FXML
-     private void registrerReiseforsikring(ActionEvent event){
+    //metode som sjekker innputfeltene
+    @FXML
+    private void registrerReiseforsikring(ActionEvent event){
          String forsikringspremie=innForsikringspremie.getText();
          String ønsketOppstart=innØnsketOppstart.getText();
          String forsikringsOmråde=innForsikringsområde.getText();
@@ -115,7 +106,7 @@ public class SkjemaReiseforsikringController implements Initializable {
          }
           catch(feilhåndteringReiseforsikringSkjema.feilOmrådeInnput ex){
              feilmeldingOmråde.setText(ex.getMessage());
-     }
+          }
          try{
              feilhåndteringReiseforsikringSkjema.sjekkForsikringsSum(forsikringssum);
              feilmeldingForsikringssum.setText("OK");
@@ -123,7 +114,8 @@ public class SkjemaReiseforsikringController implements Initializable {
          }
          catch(feilhåndteringReiseforsikringSkjema.feilTallInnput ex){
              feilmeldingForsikringssum.setText(ex.getMessage());
-     }
+        }
+         //om alle innputfeltene er godkjent forsetter registreringen
          if(godkjentteller==5){
              System.out.print("GODKJENT");
              kundeLagring kundeListe = new kundeLagring();
@@ -142,13 +134,12 @@ public class SkjemaReiseforsikringController implements Initializable {
             btnReg.setVisible(true);
             btnFortsett.setVisible(false); 
          }
-  }
-     @FXML
+    }
+    //metode som fullfører registreringen av reiseforsikring
+    @FXML
     private void fullfør(ActionEvent event) throws IOException {
         String valgtNavn = (String)box.getValue();
-        //System.out.print(valgtNavn);
-        
-        
+    
         kundeLagring kundeListe = new kundeLagring();
         kundeListe = skrivKundeFil.hentObjekt();
         ArrayList<kunder> array = new ArrayList<>();
@@ -177,8 +168,8 @@ public class SkjemaReiseforsikringController implements Initializable {
         }
         skrivKundeFil.skrive(nyListe); 
     }
-     
-     @FXML
+    //metode går tilbake til forsikringsnivå 1
+    @FXML
     private void avbryt(ActionEvent event) throws IOException {
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/forsikringnivaa1.fxml"));
         Scene home_page_scene=new Scene(home_page_parent);
@@ -186,6 +177,7 @@ public class SkjemaReiseforsikringController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
+    //metode som lager ny skjerm med vilkår
      public void visVilkår(ActionEvent event) throws IOException{
         try {
         FXMLLoader fxmlLoader = new FXMLLoader();

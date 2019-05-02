@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.io.IOException;
@@ -28,11 +23,6 @@ import model.kundeLagring;
 import model.kunder;
 import model.skrivKundeFil;
 
-/**
- * FXML Controller class
- *
- * @author Rasmus
- */
 public class SkjemaHusOgInnboforsikringController implements Initializable {
     @FXML
     private TextField innForsikringspremie;
@@ -108,9 +98,11 @@ public class SkjemaHusOgInnboforsikringController implements Initializable {
             
     @FXML
     private Button btnFortsett;
+    
     @FXML
     private Button btnReg;
     
+    //metode som sjekker innputfeltene
     @FXML
     private void registrerHusOgInnboForsikring(ActionEvent event){
         String forsikringsPremie=innForsikringspremie.getText();
@@ -226,6 +218,7 @@ public class SkjemaHusOgInnboforsikringController implements Initializable {
         catch(feilhåndteringHusOgInnboforsikringSkjema.feilTallInnput ex){
               feilmeldingForsikringsbeløpInnbo.setText(ex.getMessage());
         }
+        //om alle innputfeltene er godkjent fortsetter registreringen
         if(godkjentteller==11){
              kundeLagring kundeListe = new kundeLagring();
              
@@ -243,9 +236,8 @@ public class SkjemaHusOgInnboforsikringController implements Initializable {
             btnReg.setVisible(true);
             btnFortsett.setVisible(false); 
         }
-        
-        
     }
+    //metoden som fullfører registreringen av forsikring hus og innbo
     @FXML
     private void fullfør(ActionEvent event) throws IOException {
         String valgtNavn = (String)box.getValue();

@@ -93,7 +93,7 @@ public class registerController implements Initializable {
                        obj2.pluss(k2);
                    }
                    skrivKundeFil.skrive(obj2);
-                   slettetInfo.setText("Kunden er slettet");
+                   slettetInfo.setText("Kunden er slettet!");
                 }
             }
            

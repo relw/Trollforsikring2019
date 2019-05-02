@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.io.IOException;
@@ -29,8 +24,7 @@ import model.skrivKundeFil;
 import model.kundeLagring; 
 
 public class SkjemaFritidsboligForsikringController implements Initializable {
-
-     
+  
     @FXML
     private Label feilmeldingForsikringspremie;
     
@@ -39,7 +33,6 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
     
     @FXML
     private Label feilmeldingForsikringsbeløp;
-   
     
     @FXML
     private Label feilmeldingAdresse;
@@ -76,7 +69,6 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
     
     @FXML
     private TextField innAdresse;
-   
     
     @FXML
     private TextField innForsikringsbeløp;
@@ -101,13 +93,17 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
     
     @FXML
     private TextField innForsikringsbeløpInnbo;
+    
     @FXML
     private Label bes;
             
     @FXML
     private Button btnFortsett;
+    
     @FXML
     private Button btnReg;
+    
+    //metode som sjekker innputfeltene
     @FXML 
     public void registrerFritidsboligForsikring(ActionEvent event){
         String forsikringspremie=innForsikringspremie.getText();
@@ -223,14 +219,10 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         catch(feilhåndteringFritidsboligforsikringSkjema.feilTallInnput ex){
            feilmeldingForsikringsbeløpInnbo.setText(ex.getMessage());
         }
+        //om alle innputfeltene er godkjent så fortsetter regitreringen
         if(godkjentTeller == 11)
         {
-            
-            
-            // FORTSETT HER!!! TO DO: PUT ARRAYET I DROPDOWNBUTTON!!!
-            // menuButton.getItems().addAll(new MenuItem(""));
             kundeLagring kundeListe = new kundeLagring();
-            //skrivKundeFil skf = new skrivKundeFil();
             kundeListe = skrivKundeFil.hentObjekt();
             ArrayList<kunder> array = new ArrayList<>();
             array = kundeListe.putKunderIListe(); // Har nå et array med kunder
@@ -245,19 +237,13 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
             btnReg.setVisible(true);
             btnFortsett.setVisible(false); 
             
-             
-            // Koble forsikring til kunde (value fra choicebox)
-            
-            
-            
         }
     }
+    //metode for fullføring av registrering 
     @FXML
     private void fullfør(ActionEvent event) throws IOException {
         String valgtNavn = (String)box.getValue();
-        //System.out.print(valgtNavn);
-        
-        //skrivKundeFil skf = new skrivKundeFil();
+       
         kundeLagring kundeListe = new kundeLagring();
         kundeListe = skrivKundeFil.hentObjekt();
         ArrayList<kunder> array = new ArrayList<>();
@@ -293,7 +279,8 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         }
         skrivKundeFil.skrive(nyListe); 
     }
-     @FXML
+    //metode som går tilbake til forsikringsnivå 1
+    @FXML
     private void avbryt(ActionEvent event) throws IOException {
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/forsikringnivaa1.fxml"));
         Scene home_page_scene=new Scene(home_page_parent);
@@ -301,7 +288,8 @@ public class SkjemaFritidsboligForsikringController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
-     public void visVilkår(ActionEvent event) throws IOException{
+    //metode som lager ny skjerm for vilkår
+    public void visVilkår(ActionEvent event) throws IOException{
         try {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/view/betingelserFritidsboligforsikring.fxml"));

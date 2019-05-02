@@ -15,7 +15,7 @@
       <Label layoutX="64.0" layoutY="128.0" prefHeight="17.0" prefWidth="151.0" text="* Verdigjenstander" />
       <Label layoutX="64.0" layoutY="182.0" text="* Forsinket bagasje" />
       <Label layoutX="64.0" layoutY="155.0" text="* Tyveri av penger" />
-      <Label layoutX="64.0" layoutY="209.0" prefHeight="17.0" prefWidth="231.0" text="*Forsinkelse" />
+      <Label layoutX="64.0" layoutY="209.0" prefHeight="17.0" prefWidth="231.0" text="* Forsinkelse" />
       <Label layoutX="64.0" layoutY="236.0" prefHeight="17.0" prefWidth="314.0" text="* Hjemtransport" />
    </children>
 </AnchorPane>

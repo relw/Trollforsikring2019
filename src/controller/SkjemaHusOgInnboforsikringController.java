@@ -241,11 +241,9 @@ public class SkjemaHusOgInnboforsikringController implements Initializable {
     @FXML
     private void fullfør(ActionEvent event) throws IOException {
         String valgtNavn = (String)box.getValue();
-        //System.out.print(valgtNavn);
-        
-        skrivKundeFil skf = new skrivKundeFil();
+      
         kundeLagring kundeListe = new kundeLagring();
-        kundeListe = skf.hentObjekt();
+        kundeListe = skrivKundeFil.hentObjekt();
         ArrayList<kunder> array = new ArrayList<>();
         array = kundeListe.putKunderIListe(); // Har nå et array med kunder
         

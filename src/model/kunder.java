@@ -84,42 +84,52 @@ public class kunder implements Serializable{
         // Skriver ut info om fritidsboligforsikring hvis registrert. 
         if(!kundeFritidsboligforsikring.isEmpty())
         {
-           ut += " Fritidsboligforsikringer:\n"; 
+           ut += "\nFritidsboligforsikringer:\n"; 
             for(fritidsboligforsikring forsikringer: kundeFritidsboligforsikring){ 
-                ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+"\nOpprettet: "+forsikringer.getOpprettetForsikring()+"\nForsikringsbeløp: "+forsikringer.getForsikringsBeloop()+"\nAdresse: "+forsikringer.getAdresse()+"\nBoligtype: "+forsikringer.getBoligtype()+"\nByggemateriale: "+forsikringer.getByggemateriale()+"\nStandard: "+forsikringer.getStandard()+"\nByggeår: "+forsikringer.getByggeår()+"\nKvadratmeter: "+forsikringer.getAntallKvm()+"\nForsikringsbeløp byggning: "+forsikringer.getForsikringsbeløpBygning()+"\nForsikringsbeløp innbo: "+forsikringer.getForsikringsbeløpInnbo()+"\n";  
+                ut+="- Forsikringspremie: "+forsikringer.getForsikringPremie()+"\n- Opprettet: "+forsikringer.getOpprettetForsikring()+"\n- Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+"\n- Adresse: "+forsikringer.getAdresse()+"\n- Boligtype: "+forsikringer.getBoligtype()+"\n- Byggemateriale: "+forsikringer.getByggemateriale()+"\n- Standard: "+forsikringer.getStandard()+"\n- Byggeår: "+forsikringer.getByggeår()+"\n- Kvadratmeter: "+forsikringer.getAntallKvm()+"\n- Forsikringsbeløp byggning: "+forsikringer.getForsikringsbeløpBygning()+"\n- Forsikringsbeløp innbo: "+forsikringer.getForsikringsbeløpInnbo()+"\n";  
             } 
         }
         // Skriver ut info om husoginnboforsikring hvis det er registrert. 
         if(!kundeHusoginnboforsikring.isEmpty())
         {
-           ut += " Husoginnboforsikringer:\n"; 
+            int teller = 0; 
+            for(husoginnboforsikring f : kundeHusoginnboforsikring){
+               teller++; 
+           }
+            String tellerS = Integer.toString(teller); 
+           ut += "\n"+tellerS+" Husoginnboforsikringer:\n"; 
             for(husoginnboforsikring forsikringer: kundeHusoginnboforsikring){
-                  ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+"\nOpprettet: "+forsikringer.getOpprettetForsikring()+"\nForsikringsbeløp: "+forsikringer.getForsikringsBeloop()+"\nBoligadresse: "+forsikringer.getBoligAdresse()+"\n Byggeår: "+forsikringer.getByggeår()+"\nBoligtype: "+forsikringer.getBoligtype()+"\nStandard: "+forsikringer.getStandard()+"\nByggemateriale: "+forsikringer.getByggemateriale()+"\nAntall kvadratmeter: "+forsikringer.getAntallKvm()+"\nBeløp for byggning: "+forsikringer.getBeløpForByggning()+"\nBeløp for innbo: "+forsikringer.getBeløpForInnbo()+"\n";  
+                  ut+="- Forsikringspremie: "+forsikringer.getForsikringPremie()+"\n- Opprettet: "+forsikringer.getOpprettetForsikring()+"\n- Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+"\n- Boligadresse: "+forsikringer.getBoligAdresse()+"\n- Byggeår: "+forsikringer.getByggeår()+"\n- Boligtype: "+forsikringer.getBoligtype()+"\n- Standard: "+forsikringer.getStandard()+"\n- Byggemateriale: "+forsikringer.getByggemateriale()+"\n- Antall kvadratmeter: "+forsikringer.getAntallKvm()+"\n- Beløp for byggning: "+forsikringer.getBeløpForByggning()+"\n- Beløp for innbo: "+forsikringer.getBeløpForInnbo()+"\n";  
             } 
         }
         // Skriver ut info om båtforsikring hvis det er registrert. 
         if(!kundeBaatforsikring.isEmpty())
         {
-           ut += " Båtforsikringer:\n"; 
+           int teller = 0; 
+            for(baatforsikring f : kundeBaatforsikring){
+               teller++; 
+           }
+            String tellerS = Integer.toString(teller); 
+            ut += "\n"+tellerS+" Båtforsikringer:\n"; 
             for(baatforsikring forsikringer: kundeBaatforsikring){
-                ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+"\nOpprettet: "+forsikringer.getOpprettetForsikring()+"\nForsikringsbeløp: "+forsikringer.getForsikringsBeloop()+"\nEier: "+forsikringer.getEier()+"\nBåttype: "+forsikringer.getBåttype()+"\nRegistreringsnummer: "+forsikringer.getRegnummer()+"\nAntall fot: "+forsikringer.getAntallFot()+"\nÅrsmodell: "+forsikringer.getÅrsmodell()+"\n";  
+                ut+="- Forsikringspremie: "+forsikringer.getForsikringPremie()+"\n- Opprettet: "+forsikringer.getOpprettetForsikring()+"\n- Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+"\n- Eier: "+forsikringer.getEier()+"\n- Båttype: "+forsikringer.getBåttype()+"\n- Registreringsnummer: "+forsikringer.getRegnummer()+"\n- Antall fot: "+forsikringer.getAntallFot()+"\n- Årsmodell: "+forsikringer.getÅrsmodell()+"\n\n";  
             } 
         }
         // Skriver ut info om reiseforsikring hvis registrert. 
         if(!kundeReiseforsikring.isEmpty())
         {
-           ut += " Reiseforsikringer:\n"; 
+           ut += "\nReiseforsikringer:\n"; 
             for(reiseforsikring forsikringer: kundeReiseforsikring){
                 
-                  ut+="Forsikringspremie: "+forsikringer.getForsikringPremie()+"\nOpprettet: "+forsikringer.getOpprettetForsikring()+"\nForsikringsbeløp: "+forsikringer.getForsikringsBeloop()+"\nForsikringsområde: "+forsikringer.getForsikringsområde()+"\nForsikringssum: "+forsikringer.getForsikringssum()+"\n";  
+                  ut+="- Forsikringspremie: "+forsikringer.getForsikringPremie()+"\n- Opprettet: "+forsikringer.getOpprettetForsikring()+"\n- Forsikringsbeløp: "+forsikringer.getForsikringsBeloop()+"\n- Forsikringsområde: "+forsikringer.getForsikringsområde()+"\n- Forsikringssum: "+forsikringer.getForsikringssum()+"\n";  
             } 
         }
         if(!kundeSkademeldinger.isEmpty())
         {
-            ut += "Skademeldinger: \n"; 
+            ut += "\nSkademeldinger: \n"; 
             for(skademeldinger skader : kundeSkademeldinger)
             {
-                ut += "Dato: "+skader.getDato()+"\nSkadebeskrivelse: "+skader.getBeskrivelse()+"\nType skade: "+skader.getType()+"\nKontaktinformasjon: "+skader.getKontaktInfo()+"\nSkadenummer: "+skader.getSkadenummer()+"\nTakseringsbeløp: "+skader.getTakseringsbeløp()+"\nUbetalt erstatningsbeløp: "+skader.getUbetaltErstatningsbeløp();  
+                ut += "     - Dato: "+skader.getDato()+"\n      - Skadebeskrivelse: "+skader.getBeskrivelse()+"\n       - Type skade: "+skader.getType()+"\n        - Kontaktinformasjon: "+skader.getKontaktInfo()+"\n     - Skadenummer: "+skader.getSkadenummer()+"\n        - Takseringsbeløp: "+skader.getTakseringsbeløp()+"\n        - Ubetalt erstatningsbeløp: "+skader.getUbetaltErstatningsbeløp();  
             }
         }
         

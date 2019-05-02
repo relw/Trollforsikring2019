@@ -117,10 +117,10 @@ public class SkjemaReiseforsikringController implements Initializable {
         }
          //om alle innputfeltene er godkjent forsetter registreringen
          if(godkjentteller==5){
-             System.out.print("GODKJENT");
-             kundeLagring kundeListe = new kundeLagring();
-             skrivKundeFil skf = new skrivKundeFil();
-            kundeListe = skf.hentObjekt();
+            System.out.print("GODKJENT");
+            kundeLagring kundeListe = new kundeLagring();
+             
+            kundeListe = skrivKundeFil.hentObjekt();
             ArrayList<kunder> array = new ArrayList<>();
             array = kundeListe.putKunderIListe(); // Har nå et array med kunder
           

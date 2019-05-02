@@ -64,12 +64,18 @@
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="btnSlett" layoutX="271.0" layoutY="307.0" mnemonicParsing="false" onAction="#slett" prefHeight="32.0" prefWidth="94.0" stylesheets="@../trollforsikring2019/stilark.css" text="Slett" textFill="WHITE">
+      <Button fx:id="btnSlettKunde" layoutY="313.0" mnemonicParsing="false" onAction="#slettKunde" prefHeight="38.0" prefWidth="132.0" stylesheets="@../trollforsikring2019/stilark.css" text="Slett kunde" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
       <Button fx:id="btnHent" layoutX="115.0" layoutY="115.0" mnemonicParsing="false" onAction="#lastInfo" prefHeight="38.0" prefWidth="162.0" stylesheets="@../trollforsikring2019/stilark.css" text="Hent informasjon" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="slettetInfo" layoutX="233.0" layoutY="356.0" textFill="WHITE" />
+      <Button fx:id="btnSlettForsikringerOgSkademelding" layoutX="138.0" layoutY="313.0" mnemonicParsing="false" onAction="#slettForsikringOgSkademelding" prefHeight="38.0" prefWidth="251.0" stylesheets="@../trollforsikring2019/stilark.css" text="Slett forsikring/skademelding" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>

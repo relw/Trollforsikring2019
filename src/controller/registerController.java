@@ -50,7 +50,8 @@ public class registerController implements Initializable {
      @FXML
      private ScrollPane scrollElem; 
       
-     
+     @FXML
+     private Label slettetInfo;
      
      int teller = 0; 
      @FXML
@@ -77,11 +78,34 @@ public class registerController implements Initializable {
      }
      
     @FXML
-    private void slett(ActionEvent event){
+    private void slettKunde(ActionEvent event) throws IOException{
+       String valgtNavn = (String)velgKunde.getValue();
+       kundeLagring obj = skrivKundeFil.hentObjekt();
+        ArrayList<kunder> array = obj.putKunderIListe();
         
+            for(kunder k : array)
+            {
+                if(k.getNavn().equals(valgtNavn))
+                {
+                   array.remove(k);
+                   kundeLagring obj2 = new kundeLagring();
+                   for(kunder k2: array){
+                       obj2.pluss(k2);
+                   }
+                   skrivKundeFil.skrive(obj2);
+                   slettetInfo.setText("Kunden er slettet");
+                }
+            }
+           
+            
     }
     @FXML
-    private void endre(ActionEvent event){
+    private void slettForsikringOgSkademelding(ActionEvent event) throws IOException{
+       
+            
+    }
+    @FXML
+    private void endre(ActionEvent event) throws IOException{
         
     }
     @FXML

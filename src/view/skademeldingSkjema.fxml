@@ -49,6 +49,6 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <Button fx:id="btnReg" layoutX="662.0" layoutY="344.0" mnemonicParsing="false" onAction="#fullfør" text="Registrer forsikring" textFill="WHITE" visible="false" />
+      <Button fx:id="btnReg" layoutX="681.0" layoutY="344.0" mnemonicParsing="false" onAction="#fullfør" text="Registrer forsikring" textFill="WHITE" visible="false" />
    </children>
 </AnchorPane>

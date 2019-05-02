@@ -78,6 +78,7 @@ public class registerController implements Initializable {
         
         FileChooser.ExtensionFilter fileExtensions = new FileChooser.ExtensionFilter("PNG","*.png"); 
         fc.getExtensionFilters().add(fileExtensions);
+
         
         String filepath = null; 
         if(fil != null){
@@ -92,7 +93,7 @@ public class registerController implements Initializable {
             JOptionPane.showMessageDialog(null,"Ingen fil ble valgt!","Advarsel",JOptionPane.WARNING_MESSAGE);
         }
         
-        
+     
     }
  
     @Override

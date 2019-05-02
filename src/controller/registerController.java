@@ -79,9 +79,11 @@ public class registerController implements Initializable {
      
     @FXML
     private void slettKunde(ActionEvent event) throws IOException{
-       String valgtNavn = (String)velgKunde.getValue();
-       kundeLagring obj = skrivKundeFil.hentObjekt();
-        ArrayList<kunder> array = obj.putKunderIListe();
+       
+       try{
+           String valgtNavn = (String)velgKunde.getValue();
+           kundeLagring obj = skrivKundeFil.hentObjekt();
+           ArrayList<kunder> array = obj.putKunderIListe();
         
             for(kunder k : array)
             {
@@ -96,6 +98,11 @@ public class registerController implements Initializable {
                    slettetInfo.setText("Kunden er slettet!");
                 }
             }
+       }
+       catch(Exception e){
+           
+       }
+        
            
             
     }

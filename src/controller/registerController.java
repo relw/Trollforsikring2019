@@ -18,11 +18,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import model.kundeLagring;
 import model.kunder;
@@ -35,7 +36,13 @@ import model.skrivKundeFil;
 public class registerController implements Initializable {
 
      @FXML
-     private Button tilbake; 
+     private Button tilbake;
+     
+     @FXML
+     private Button btnHent;
+     
+     @FXML
+     private ChoiceBox velgKunde;
      
      @FXML
      private Button lastInn;
@@ -54,11 +61,16 @@ public class registerController implements Initializable {
             kundeLagring obj = skrivKundeFil.hentObjekt();
             ArrayList<kunder> array = obj.putKunderIListe();
             
-             
+            
+            for(kunder k:array)
+            {
+                String navn = k.getNavn();
+                velgKunde.getItems().add(navn);  
+            } 
+            
             
            
-//            scrollContent.setText(skrivKundeFil.lese()); 
-//            scrollPane.setContent(scrollContent);
+
          }
      }
      
@@ -84,10 +96,26 @@ public class registerController implements Initializable {
         }
         else
         {
-            
-            JOptionPane.showMessageDialog(null,"Ingen fil ble valgt!","Advarsel",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Ingen fil ble valgt!","  Advarsel",JOptionPane.WARNING_MESSAGE);
         }
         
+     
+    }
+    @FXML
+    private void lastInfo(ActionEvent event) throws IOException {
+        kundeLagring obj = skrivKundeFil.hentObjekt();
+        ArrayList<kunder> array = obj.putKunderIListe();
+        Label tekst = new Label();
+        
+        String valgtNavn = (String)velgKunde.getValue();
+            for(kunder k : array)
+            {
+                if(k.getNavn().equals(valgtNavn))
+                {
+                    tekst.setText(k.toString());
+                    scrollElem.setContent(tekst); 
+                }
+            }
      
     }
  

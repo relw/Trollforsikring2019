@@ -51,9 +51,11 @@ public class registerController implements Initializable {
      private ScrollPane scrollElem; 
       
      
+     
      int teller = 0; 
      @FXML
      private void hentElementer(MouseEvent event){
+         
          
          teller++; 
          if(teller <= 1)
@@ -74,8 +76,15 @@ public class registerController implements Initializable {
          }
      }
      
-     
-     @FXML
+    @FXML
+    private void slett(ActionEvent event){
+        
+    }
+    @FXML
+    private void endre(ActionEvent event){
+        
+    }
+    @FXML
     private void tilbake(ActionEvent event) throws IOException {
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/trollforsikring2019/FXMLDocument.fxml"));
         Scene home_page_scene=new Scene(home_page_parent);

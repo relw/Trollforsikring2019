@@ -12,7 +12,7 @@ import javafx.scene.control.Button;
 public class kunder implements Serializable{
 
     private String datoforhold, navn, fakturaadresse; 
-    private int forsikringsnummer;
+    private String forsikringsnummer;
     
     
     public ArrayList<baatforsikring> kundeBaatforsikring = new ArrayList<>(); 
@@ -22,7 +22,7 @@ public class kunder implements Serializable{
     
     public ArrayList<skademeldinger> kundeSkademeldinger = new ArrayList<>(); 
     
-    public kunder(String innNavn, String dato, String fakturaadresse, int forsknummer)
+    public kunder(String innNavn, String dato, String fakturaadresse, String forsknummer)
     {
         this.navn = innNavn; 
         this.datoforhold = dato; 
@@ -64,7 +64,7 @@ public class kunder implements Serializable{
     {
         return fakturaadresse; 
     }
-    public int getForsikringsNummer()
+    public String getForsikringsNummer()
     {
         return forsikringsnummer; 
     }
@@ -74,12 +74,12 @@ public class kunder implements Serializable{
     {
         String ut="";
         ut+="Kunde: " + "\n" 
-        + "----------------------------" + "\n"
+        + "-----------------------------------" + "\n"
         + "Navn: "+ navn + "\n"
         + "Dato: "+ datoforhold + "\n"
         + "Fakturaadresse: "+ fakturaadresse + "\n" 
-        + "Forsikringsnummer: "+ getForsikringsNummer() + "\n" 
-        + "____________________________" + "\n"; 
+        + "Forsikringsnummer: "+ forsikringsnummer + "\n" 
+        + "__________________________________" + "\n"; 
         
         // Skriver ut info om fritidsboligforsikring hvis registrert. 
         if(!kundeFritidsboligforsikring.isEmpty())

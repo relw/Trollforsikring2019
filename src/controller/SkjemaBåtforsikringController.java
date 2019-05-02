@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.io.IOException;
@@ -27,13 +22,6 @@ import model.baatforsikring;
 import model.kundeLagring;
 import model.kunder;
 import model.skrivKundeFil;
-
-/**
- * FXML Controller class
- *
- * @author Rasmus
- */
-
 
 public class SkjemaBåtforsikringController implements Initializable {
     
@@ -103,7 +91,7 @@ public class SkjemaBåtforsikringController implements Initializable {
     @FXML
     private Button btnReg;
    
-    
+    //metode som sjekker innputfeltene
     @FXML 
     private void registrerBåtForsikring(ActionEvent event){
        String Forsikringspremie=innForsikringspremie.getText();
@@ -223,26 +211,24 @@ public class SkjemaBåtforsikringController implements Initializable {
     @FXML
     private void fullfør(ActionEvent event) throws IOException {
         String valgtNavn = (String)box.getValue();
-        //System.out.print(valgtNavn);
-        
         
         kundeLagring kundeListe = new kundeLagring();
         kundeListe = skrivKundeFil.hentObjekt();
         ArrayList<kunder> array = new ArrayList<>();
         array = kundeListe.putKunderIListe(); // Har nå et array med kunder
         
-       String Forsikringspremie=innForsikringspremie.getText();
-       String ØnsketOppstart=innØnsketOppstart.getText();
-       String ForsikringsBeløp=innForsikringsbeløp.getText();
-       String Eier= innEier.getText();
-       String Registreringsnummer=innRegistreringsnummer.getText();
-       String BåttypeogModell=innBåttypeogModell.getText();
-       String Lengde=innLengde.getText();
-       String Årsmodell=innÅrsmodell.getText();
-       String MotortypeOgStyrke=innMotortypeogMotorstyrke.getText(); 
+        String Forsikringspremie=innForsikringspremie.getText();
+        String ØnsketOppstart=innØnsketOppstart.getText();
+        String ForsikringsBeløp=innForsikringsbeløp.getText();
+        String Eier= innEier.getText();
+        String Registreringsnummer=innRegistreringsnummer.getText();
+        String BåttypeogModell=innBåttypeogModell.getText();
+        String Lengde=innLengde.getText();
+        String Årsmodell=innÅrsmodell.getText();
+        String MotortypeOgStyrke=innMotortypeogMotorstyrke.getText(); 
       
        
-       baatforsikring båtforsikring= new baatforsikring(Forsikringspremie, ØnsketOppstart, ForsikringsBeløp, Eier, BåttypeogModell , MotortypeOgStyrke, Registreringsnummer, Lengde, Årsmodell);
+        baatforsikring båtforsikring= new baatforsikring(Forsikringspremie, ØnsketOppstart, ForsikringsBeløp, Eier, BåttypeogModell , MotortypeOgStyrke, Registreringsnummer, Lengde, Årsmodell);
         for(kunder k : array)
         {
             if(valgtNavn.equals(k.getNavn()))
@@ -258,7 +244,8 @@ public class SkjemaBåtforsikringController implements Initializable {
         }
         skrivKundeFil.skrive(nyListe); 
     }
-     @FXML
+    //metode som går tilbake til forsikringsnivå 1
+    @FXML
     private void avbryt(ActionEvent event) throws IOException {
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/forsikringnivaa1.fxml"));
         Scene home_page_scene=new Scene(home_page_parent);
@@ -266,7 +253,8 @@ public class SkjemaBåtforsikringController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
-     public void visVilkår(ActionEvent event) throws IOException{
+    //metode som lager ny skjerm med vilkår
+    public void visVilkår(ActionEvent event) throws IOException{
         try {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/view/betingelserBåtforsikring.fxml"));

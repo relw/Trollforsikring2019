@@ -78,6 +78,7 @@ public class SkademeldingSkjemaController implements Initializable {
     @FXML
     private Button btnReg;
     
+    //metode som sjekker innput feltene
     @FXML 
     private void registrerSkademelding(ActionEvent event){
        String DatoSkade=innDatoSkade.getText();

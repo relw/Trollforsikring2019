@@ -18,7 +18,7 @@ public class Forsikringnivaa1Controller implements Initializable {
     @FXML
     private Button btnTilbake; 
     
-    //metode som går til båtforsikrings skjema
+    //metode som går til båtforsikring skjema
     @FXML
     public void nyBåtforsikringSkjema(ActionEvent event) throws IOException{
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/skjemaBaatforsikring.fxml"));

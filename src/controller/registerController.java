@@ -75,13 +75,20 @@ public class registerController implements Initializable {
     private void lastInnFil(ActionEvent event) throws IOException {
         FileChooser fc = new FileChooser(); 
         File fil = fc.showOpenDialog(null);
-       
+        
+        
         String filepath = null; 
         if(fil != null){
             filepath = fil.toString();
             System.out.print(skrivKundeFil.leseValgtFil(filepath));
         }
-      
+        else
+        {
+            
+            JOptionPane.showMessageDialog(null,"Ingen fil ble valgt!","Advarsel",JOptionPane.WARNING_MESSAGE);
+        }
+        
+     
     }
  
     @Override

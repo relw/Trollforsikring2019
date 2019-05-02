@@ -22,6 +22,8 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import model.kundeLagring;
 import model.kunder;
 import model.skrivKundeFil;
@@ -79,8 +81,11 @@ public class registerController implements Initializable {
             filepath = fil.toString();
             System.out.print(skrivKundeFil.leseValgtFil(filepath));
         }
-        //System.out.print(filepath);
-        
+        else
+        {
+            
+            JOptionPane.showMessageDialog(null,"Ingen fil ble valgt!","Advarsel",JOptionPane.WARNING_MESSAGE);
+        }
         
         
     }

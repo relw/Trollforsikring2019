@@ -29,7 +29,7 @@
       <Label layoutX="41.0" layoutY="251.0" text="Forsikringsnummer:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="202.0" text="Fakturaadresse:" textFill="WHITE" />
       <Button layoutX="310.0" layoutY="285.0" mnemonicParsing="false" onAction="#registrerKunde" text="Opprett forsikring" textFill="WHITE" />
-      <Button layoutX="56.0" layoutY="285.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
+      <Button layoutX="56.0" layoutY="285.0" mnemonicParsing="false" onAction="#avbryt" text="Tilbake" textFill="WHITE" />
       <Label id="feilmeldingOpprettetKundeforhold" fx:id="feilmeldingOpprettetKundeforhold" layoutX="513.0" layoutY="92.0" prefHeight="39.0" prefWidth="280.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingNavn" fx:id="feilmeldingNavn" layoutX="513.0" layoutY="134.0" prefHeight="39.0" prefWidth="280.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingFakturaadresse" fx:id="feilmeldingFakturaadresse" layoutX="513.0" layoutY="183.0" prefHeight="39.0" prefWidth="280.0" text="*" textFill="WHITE" />

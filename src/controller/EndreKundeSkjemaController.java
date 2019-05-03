@@ -48,10 +48,33 @@ public class EndreKundeSkjemaController implements Initializable {
        String navn=innNavn.getText();
        String forsikringsnummer=innForsikringsnummer.getText();
        String fakturaAdresse=innFakturaadresse.getText();
-       
-       
+        kundeLagring lagring = new kundeLagring();
+           kundeLagring obj = skrivKundeFil.hentObjekt();
+           ArrayList<kunder> array = obj.putKunderIListe();
         
-    }
+           kundeLagring objekt = skrivKundeFil.hentObjekt();
+                ArrayList<kunder> arrayKunder = objekt.putKunderIListe();
+                kunder endreDenneKunde=null;
+                for(kunder k : arrayKunder)
+                 {
+                     endreDenneKunde=k;
+                 }
+                 
+          
+                 endreDenneKunde.setNavn(navn);
+                 endreDenneKunde.setDato(opprettetKundeforhold);
+                 endreDenneKunde.setFakturaAdresse(fakturaAdresse);
+                 endreDenneKunde.setForsikringsnummer(forsikringsnummer);
+                
+                   
+                   lagring.pluss(endreDenneKunde); 
+                   skrivKundeFil.skriveEndreFil(lagring); 
+                
+            
+            
+}
+        
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
                  String navn=null;

@@ -18,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 import model.kundeLagring;
 import model.kunder;
 import model.skrivKundeFil;
@@ -52,7 +53,7 @@ public class EndreKundeSkjemaController implements Initializable {
         kundeLagring lagring = new kundeLagring();
     
         
-           kundeLagring endreDenneKunde = skrivKundeFil.leseEndreKunde();
+          kundeLagring endreDenneKunde = skrivKundeFil.leseEndreKunde();
           ArrayList<kunder> array = endreDenneKunde.putKunderIListe(); 
           
           kundeLagring gammel = skrivKundeFil.hentObjekt();
@@ -74,7 +75,7 @@ public class EndreKundeSkjemaController implements Initializable {
                  }
                
                    skrivKundeFil.skrive(lagring); 
-                   
+                   JOptionPane.showMessageDialog(null, "Kunden er endret!","Endret kunde",JOptionPane.INFORMATION_MESSAGE);
                     Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/register.fxml"));
                     Scene home_page_scene=new Scene(home_page_parent);
                     Stage app_stage= (Stage) ((Node) event.getSource()).getScene().getWindow();

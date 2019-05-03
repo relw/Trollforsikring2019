@@ -22,34 +22,8 @@ public class skrivKundeFil{
         try (
             FileOutputStream fos = new FileOutputStream(filepath);
             ObjectOutputStream out = new ObjectOutputStream(fos);
-        ) {
-//           kundeLagring kundeListe = new kundeLagring();
-//           skrivKundeFil skf = new skrivKundeFil(); 
-//           kundeLagring kl = new kundeLagring(); 
-//           
-//           kl = skf.hentObjekt(); // Henter gamle objekt
-//           if(kl != null){
-//                ArrayList<kunder> array = new ArrayList<>();
-//                ArrayList<kunder> arrayInn = new ArrayList<>();
-//                array = kl.putKunderIListe(); // Gamle array med kunder
-//                arrayInn = obj.putKunderIListe(); // Innarray med nye kunder
-//
-//                for(kunder k : arrayInn){
-//                    array.add(k); 
-//                }
-//                for(kunder k: array){
-//                    kundeListe.pluss(k); 
-//                }
-
-
-//                out.writeObject(kundeListe);
-//           }
-//           else{
-//               out.writeObject(obj);
-//           }
-           
-           out.writeObject(obj);
-            
+        ) { 
+           out.writeObject(obj); 
            out.close(); 
             
             return true; 
@@ -98,6 +72,20 @@ public class skrivKundeFil{
     public static kundeLagring hentObjekt(){
         kundeLagring loadedKunde = null; 
         try (FileInputStream fin = new FileInputStream("kunder.jobj");
+        ObjectInputStream oin = new ObjectInputStream(fin)) {
+            loadedKunde = (kundeLagring)oin.readObject();
+            
+            return loadedKunde; 
+        } catch(IOException e) {
+            System.err.println("Hent objekt: Could not read file. Cause: " + e.getCause());
+        } catch(ClassNotFoundException e) {
+            System.err.println("Could not convert Object");
+        }
+        return loadedKunde; 
+    }
+    public static kundeLagring hentValgtObjekt(String filbane){
+        kundeLagring loadedKunde = null; 
+        try (FileInputStream fin = new FileInputStream(filbane);
         ObjectInputStream oin = new ObjectInputStream(fin)) {
             loadedKunde = (kundeLagring)oin.readObject();
             

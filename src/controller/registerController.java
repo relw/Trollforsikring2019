@@ -49,9 +49,7 @@ public class registerController implements Initializable {
      
      int teller = 0; 
      @FXML
-     private void hentElementer(MouseEvent event){
-         
-         
+     private void hentElementer(MouseEvent event){    
          teller++; 
          if(teller <= 1)
          {
@@ -65,9 +63,6 @@ public class registerController implements Initializable {
                 velgKunde.getItems().add(navn);  
             } 
             
-            
-           
-
          }
      }
      
@@ -121,17 +116,39 @@ public class registerController implements Initializable {
     private void lastInnFil(ActionEvent event) throws IOException {
         FileChooser fc = new FileChooser(); 
         File fil = fc.showOpenDialog(null);
-        
-        FileChooser.ExtensionFilter fileExtensions = new FileChooser.ExtensionFilter("PNG","*.png"); 
-        fc.getExtensionFilters().add(fileExtensions);
-
-        
+          
         String filepath = null; 
         if(fil != null){
             filepath = fil.toString();
-        
             
-            System.out.print(skrivKundeFil.leseValgtFil(filepath));
+            kundeLagring obj = skrivKundeFil.hentObjekt();
+            ArrayList<kunder> array = obj.putKunderIListe(); // Gamle kunder
+            
+            kundeLagring nyObj = skrivKundeFil.hentValgtObjekt(filepath);
+            ArrayList<kunder> nyArray = nyObj.putKunderIListe(); // Kunder fra lest inn fil
+            
+            ArrayList<kunder> nytt = new ArrayList<>();
+            kundeLagring ferdig = new kundeLagring(); 
+            for(kunder k:array){
+                nytt.add(k);
+            }
+            for(kunder k2:nyArray){
+                nytt.add(k2);
+            }
+            for(kunder k3:nytt){
+                ferdig.pluss(k3);
+            }
+            skrivKundeFil.skrive(ferdig);
+            
+            kundeLagring obj4 = skrivKundeFil.hentObjekt();
+            ArrayList<kunder> array4 = obj4.putKunderIListe();
+            
+            
+            for(kunder k:array4)
+            {
+                String navn = k.getNavn();
+                velgKunde.getItems().add(navn);  
+            } 
         }
         else
         {

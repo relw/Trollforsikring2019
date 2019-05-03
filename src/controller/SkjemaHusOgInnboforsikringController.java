@@ -17,6 +17,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 import model.feilhåndteringHusOgInnboforsikringSkjema;
 import model.husoginnboforsikring;
 import model.kundeLagring;
@@ -275,6 +276,7 @@ public class SkjemaHusOgInnboforsikringController implements Initializable {
             nyListe.pluss(k); 
         }
         skrivKundeFil.skrive(nyListe); 
+        JOptionPane.showMessageDialog(null,"Hus- og Innboforsikring registrert","  Forsikring er registrert",JOptionPane.WARNING_MESSAGE);
     }
     @FXML
     private void avbryt(ActionEvent event) throws IOException {

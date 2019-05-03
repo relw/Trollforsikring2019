@@ -17,6 +17,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 import model.feilhåndteringReiseforsikringSkjema;
 import model.reiseforsikring;
 import model.kundeLagring;
@@ -167,6 +168,7 @@ public class SkjemaReiseforsikringController implements Initializable {
             nyListe.pluss(k); 
         }
         skrivKundeFil.skrive(nyListe); 
+        JOptionPane.showMessageDialog(null,"Reiseforsikring registrert","  Forsikring er registrert",JOptionPane.WARNING_MESSAGE);
     }
     //metode går tilbake til forsikringsnivå 1
     @FXML

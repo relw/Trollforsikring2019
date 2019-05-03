@@ -23,31 +23,6 @@ public class skrivKundeFil{
             FileOutputStream fos = new FileOutputStream(filepath);
             ObjectOutputStream out = new ObjectOutputStream(fos);
         ) {
-//           kundeLagring kundeListe = new kundeLagring();
-//           skrivKundeFil skf = new skrivKundeFil(); 
-//           kundeLagring kl = new kundeLagring(); 
-//           
-//           kl = skf.hentObjekt(); // Henter gamle objekt
-//           if(kl != null){
-//                ArrayList<kunder> array = new ArrayList<>();
-//                ArrayList<kunder> arrayInn = new ArrayList<>();
-//                array = kl.putKunderIListe(); // Gamle array med kunder
-//                arrayInn = obj.putKunderIListe(); // Innarray med nye kunder
-//
-//                for(kunder k : arrayInn){
-//                    array.add(k); 
-//                }
-//                for(kunder k: array){
-//                    kundeListe.pluss(k); 
-//                }
-
-
-//                out.writeObject(kundeListe);
-//           }
-//           else{
-//               out.writeObject(obj);
-//           }
-           
            out.writeObject(obj);
             
            out.close(); 
@@ -109,6 +84,45 @@ public class skrivKundeFil{
         }
         return loadedKunde; 
     }
+    public static boolean skriveEndreFil(kundeLagring obj){
+     
+        
+        String fp2 = "endreKunde.jobj";
+        String filepath = fp2;
+        
+        try (
+            FileOutputStream fos = new FileOutputStream(filepath);
+            ObjectOutputStream out = new ObjectOutputStream(fos);
+        ) {
+           out.writeObject(obj);
+            
+           out.close(); 
+            
+            return true; 
+        }
+        catch (IOException e) {
+            e.printStackTrace(); // This should not happen, so we print debug information here.
+            return false; 
+        } 
+    }
+    
+    public static String leseEndreKunde()
+    {
+        String res = ""; 
+        try (FileInputStream fin = new FileInputStream("endreKunde.jobj");
+        ObjectInputStream oin = new ObjectInputStream(fin)) {
+            Object loadedKunde = oin.readObject();
+            res = loadedKunde.toString();
+            
+        } catch(IOException e) {
+            System.err.println("Could not read file. Cause: " + e.getCause());
+        } catch(ClassNotFoundException e) {
+            System.err.println("Could not convert Object");
+        }
+        return res;
+        
+        
+   }
 
         
 }

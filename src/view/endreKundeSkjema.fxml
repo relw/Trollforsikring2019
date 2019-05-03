@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="624" prefWidth="936" style="-fx-background-color: #4D4D4D;" stylesheets="@stilark-skjemaer.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EndreKundeSkjemaController">
+   <children>
+      <ImageView fitHeight="168.0" fitWidth="964.0" layoutX="-20.0" layoutY="456.0">
+         <image>
+            <Image url="@../trollforsikring2019/Spooky-Smoke-copy.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="40.0" layoutY="43.0" text="Endre Kunde" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="41.0" layoutY="104.0" text="Dato for opprettet kundeforhold:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="153.0" text="Navn:" textFill="WHITE" />
+      <TextField id="innOpprettetKundeforhold" fx:id="innOpprettetKundeforhold" layoutX="293.0" layoutY="98.0" promptText="DD-MM-ÅÅÅÅ" />
+      <TextField id="innNavn" fx:id="innNavn" layoutX="293.0" layoutY="147.0" promptText="Fornavn Etternavn" />
+      <TextField id="innFakturaadresse" fx:id="innFakturaadresse" layoutX="293.0" layoutY="196.0" promptText="Eks: &quot;Osloveien 6&quot;" />
+      <TextField id="innForsikringsnummer" fx:id="innForsikringsnummer" layoutX="293.0" layoutY="245.0" promptText="8 siffer" />
+      <Label layoutX="41.0" layoutY="251.0" text="Forsikringsnummer:" textFill="WHITE" />
+      <Label layoutX="41.0" layoutY="202.0" text="Fakturaadresse:" textFill="WHITE" />
+      <Button layoutX="310.0" layoutY="285.0" mnemonicParsing="false" onAction="#registrerKunde" text="Rediger Kunde" textFill="WHITE" />
+      <Button layoutX="56.0" layoutY="285.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
+      <Label id="feilmeldingOpprettetKundeforhold" fx:id="feilmeldingOpprettetKundeforhold" layoutX="513.0" layoutY="92.0" prefHeight="39.0" prefWidth="280.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingNavn" fx:id="feilmeldingNavn" layoutX="513.0" layoutY="134.0" prefHeight="39.0" prefWidth="280.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingFakturaadresse" fx:id="feilmeldingFakturaadresse" layoutX="513.0" layoutY="183.0" prefHeight="39.0" prefWidth="280.0" text="*" textFill="WHITE" />
+      <Label id="feilmeldingForsikringsnummer" fx:id="feilmeldingForsikringsnummer" layoutX="513.0" layoutY="232.0" prefHeight="39.0" prefWidth="280.0" text="*" textFill="WHITE" />
+   </children>
+</AnchorPane>

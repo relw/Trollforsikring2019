@@ -104,6 +104,28 @@ public class registerController implements Initializable {
     }
     @FXML
     private void endre(ActionEvent event) throws IOException{
+         kundeLagring lagring = new kundeLagring();
+        String valgtNavn = (String)velgKunde.getValue();
+           kundeLagring obj = skrivKundeFil.hentObjekt();
+           ArrayList<kunder> array = obj.putKunderIListe();
+        
+            for(kunder k : array)
+            {
+                if(k.getNavn().equals(valgtNavn))
+                {
+                   kunder endreKunde=new kunder(k.getNavn(), k.getDato(), k.getFakturaAdresse(), k.getForsikringsNummer());
+                   lagring.pluss(endreKunde); 
+                   skrivKundeFil.skriveEndreFil(lagring); 
+                }
+            }
+            
+      
+        Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/endreKundeSkjema.fxml"));
+        Scene home_page_scene=new Scene(home_page_parent);
+        Stage app_stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
+        
         
     }
     @FXML

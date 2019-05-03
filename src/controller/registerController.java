@@ -125,7 +125,6 @@ public class registerController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
         velgKunde.getItems().remove(valgtNavn);
-        
     }
     @FXML
     private void tilbake(ActionEvent event) throws IOException {

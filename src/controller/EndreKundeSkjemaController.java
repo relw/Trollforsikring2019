@@ -56,6 +56,7 @@ public class EndreKundeSkjemaController implements Initializable {
           
           kundeLagring gammel = skrivKundeFil.hentObjekt();
           ArrayList<kunder> liste = gammel.putKunderIListe(); 
+                
                 for(kunder k:array)
                 {
                     k.setNavn(navn);
@@ -71,14 +72,8 @@ public class EndreKundeSkjemaController implements Initializable {
                          lagring.pluss(k); 
                      }
                  }
-                 
-                
                    
-                    
-                   skrivKundeFil.skrive(lagring); 
-                
-            System.out.print("test");
-            
+                skrivKundeFil.skrive(lagring);          
 }
         
     

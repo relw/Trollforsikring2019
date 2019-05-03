@@ -70,7 +70,7 @@ public class EndreKundeSkjemaController implements Initializable {
                    lagring.pluss(endreDenneKunde); 
                    skrivKundeFil.skriveEndreFil(lagring); 
                 
-            
+            System.out.print("test");
             
 }
         

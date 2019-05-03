@@ -6,6 +6,8 @@ import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -104,6 +106,7 @@ public class registerController implements Initializable {
     }
     @FXML
     private void endre(ActionEvent event) throws IOException{
+        
         if(velgKunde.getValue()!=null){
             kundeLagring lese = new kundeLagring();
          String valgtNavn = (String)velgKunde.getValue();
@@ -223,8 +226,7 @@ public class registerController implements Initializable {
  
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-        
+      
        
     }    
     

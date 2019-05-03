@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.io.File;
@@ -29,10 +24,6 @@ import model.kundeLagring;
 import model.kunder;
 import model.skrivKundeFil;
 
-/**
- *
- * @author Aleksander
- */
 public class registerController implements Initializable {
 
      @FXML
@@ -52,6 +43,9 @@ public class registerController implements Initializable {
       
      @FXML
      private Label slettetInfo;
+     
+     @FXML
+     private Label feilmelding;
      
      int teller = 0; 
      @FXML
@@ -100,7 +94,7 @@ public class registerController implements Initializable {
             }
        }
        catch(Exception e){
-           
+           feilmelding.setText("Feilmelding: "+e.getMessage());
        }
         
            
@@ -108,7 +102,7 @@ public class registerController implements Initializable {
     }
     @FXML
     private void slettForsikringOgSkademelding(ActionEvent event) throws IOException{
-       
+        
             
     }
     @FXML

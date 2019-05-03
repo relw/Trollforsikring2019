@@ -18,7 +18,7 @@ public class feilmeldingSkademeldingSkjema {
             int tall=Integer.parseInt(inntekst);
         }
         catch(Exception e){
-            throw new feilTallInnput("Du må skrive et tall");
+            throw new feilTallInnput("Du må skrive inn et tall");
         }
     }
     
@@ -49,7 +49,7 @@ public class feilmeldingSkademeldingSkjema {
             int tall=Integer.parseInt(inntekst);
         }
         catch(Exception e){
-            throw new feilTallInnput("Du må skrive et tall");
+            throw new feilTallInnput("Du må skrive inn et tall");
         }
     }
     
@@ -61,7 +61,7 @@ public class feilmeldingSkademeldingSkjema {
             int tall=Integer.parseInt(inntekst);
         }
         catch(Exception e){
-            throw new feilTallInnput("Du må skrive et tall");
+            throw new feilTallInnput("Du må inn skrive et tall");
         }
     }
     

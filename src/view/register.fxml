@@ -9,14 +9,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" onMouseEntered="#hentElementer" prefHeight="624" prefWidth="936" style="-fx-background-color: #4D4D4D;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.registerController">
+<AnchorPane id="AnchorPane" onMouseEntered="#hentElementer" prefHeight="624" prefWidth="936" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.registerController">
    <children>
-      <ImageView fitHeight="168.0" fitWidth="948.0" layoutX="-12.0" layoutY="457.0">
+      <ImageView fitHeight="257.0" fitWidth="936.0" layoutY="380.0">
+         <image>
+            <Image url="@../trollforsikring2019/mountain-png-23.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="168.0" fitWidth="948.0" layoutX="-12.0" layoutY="-2.0" rotate="180.0">
          <image>
             <Image url="@../trollforsikring2019/Spooky-Smoke-copy.png" />
          </image>
       </ImageView>
-      <Button fx:id="lastInn" layoutX="361.0" layoutY="541.0" mnemonicParsing="false" onAction="#lastInnFil" prefHeight="42.0" prefWidth="213.0" stylesheets="@../trollforsikring2019/stilark.css" text="Last inn elementer fra jobj-fil" textFill="WHITE">
+      <Button fx:id="lastInn" layoutX="540.0" layoutY="568.0" mnemonicParsing="false" onAction="#lastInnFil" prefHeight="42.0" prefWidth="213.0" stylesheets="@../trollforsikring2019/stilark.css" text="Last inn elementer fra jobj-fil" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>
@@ -25,33 +30,33 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Label layoutX="386.0" layoutY="19.0" text="Registrert informasjon:" textFill="WHITE">
+      <Label layoutX="386.0" layoutY="19.0" text="Registrert informasjon:">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <ScrollPane fx:id="scrollElem" layoutX="390.0" layoutY="54.0" prefHeight="440.0" prefWidth="514.0">
+      <ScrollPane fx:id="scrollElem" layoutX="390.0" layoutY="54.0" prefHeight="497.0" prefWidth="514.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
         </content>
       </ScrollPane>
-      <Label layoutX="133.0" layoutY="19.0" text="Velg kunde:" textFill="WHITE">
+      <Label layoutX="133.0" layoutY="74.0" text="Velg kunde:">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="velgKunde" layoutX="121.0" layoutY="62.0" prefWidth="150.0" />
-      <Button fx:id="btnEndre" layoutX="149.0" layoutY="243.0" mnemonicParsing="false" onAction="#endre" prefHeight="35.0" prefWidth="94.0" stylesheets="@../trollforsikring2019/stilark.css" text="Endre" textFill="WHITE">
+      <ChoiceBox fx:id="velgKunde" layoutX="121.0" layoutY="117.0" prefWidth="150.0" />
+      <Button fx:id="btnEndre" layoutX="149.0" layoutY="298.0" mnemonicParsing="false" onAction="#endre" prefHeight="35.0" prefWidth="94.0" stylesheets="@../trollforsikring2019/stilark.css" text="Endre" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="btnSlettKunde" layoutX="130.0" layoutY="293.0" mnemonicParsing="false" onAction="#slettKunde" prefHeight="38.0" prefWidth="132.0" stylesheets="@../trollforsikring2019/stilark.css" text="Slett kunde" textFill="WHITE">
+      <Button fx:id="btnSlettKunde" layoutX="130.0" layoutY="348.0" mnemonicParsing="false" onAction="#slettKunde" prefHeight="38.0" prefWidth="132.0" stylesheets="@../trollforsikring2019/stilark.css" text="Slett kunde" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="btnHent" layoutX="115.0" layoutY="115.0" mnemonicParsing="false" onAction="#lastInfo" prefHeight="38.0" prefWidth="162.0" stylesheets="@../trollforsikring2019/stilark.css" text="Hent informasjon" textFill="WHITE">
+      <Button fx:id="btnHent" layoutX="115.0" layoutY="170.0" mnemonicParsing="false" onAction="#lastInfo" prefHeight="38.0" prefWidth="162.0" stylesheets="@../trollforsikring2019/stilark.css" text="Hent informasjon" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>

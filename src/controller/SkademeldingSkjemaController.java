@@ -195,7 +195,7 @@ public class SkademeldingSkjemaController implements Initializable {
         String UtbetalteErstatninger=innUtbetalteErstatninger.getText();
         
        skademeldinger skademelding=new skademeldinger(DatoSkade, TypeSkade, BeskrivelseSkade, KontaktinfoVitner, Skadenummer
-    ,TakseringSkade, UtbetalteErstatninger);
+        ,TakseringSkade, UtbetalteErstatninger);
         
         for(kunder k : array)
         {

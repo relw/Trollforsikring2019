@@ -103,7 +103,8 @@ public class registerController implements Initializable {
     }
     @FXML
     private void endre(ActionEvent event) throws IOException{
-         kundeLagring lese = new kundeLagring();
+        if(velgKunde.getValue()!=null){
+            kundeLagring lese = new kundeLagring();
          String valgtNavn = (String)velgKunde.getValue();
            kundeLagring objekt2 = skrivKundeFil.hentObjekt();
            ArrayList<kunder> array2 = objekt2.putKunderIListe();
@@ -143,6 +144,8 @@ public class registerController implements Initializable {
         Stage app_stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        }
+         
         
     }
     @FXML

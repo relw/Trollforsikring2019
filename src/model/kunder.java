@@ -6,9 +6,7 @@ import javafx.scene.control.Button;
 
 public class kunder implements Serializable{
 
-    private String datoforhold, navn, fakturaadresse; 
-    private String forsikringsnummer;
-    
+    private String datoforhold, navn, fakturaadresse, forsikringsnummer; 
     
     public ArrayList<baatforsikring> kundeBaatforsikring = new ArrayList<>(); 
     public ArrayList<fritidsboligforsikring> kundeFritidsboligforsikring = new ArrayList<>(); 

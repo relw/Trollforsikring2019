@@ -1,12 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -45,6 +43,7 @@ public class EndreKundeSkjemaController implements Initializable {
     }
     @FXML
     private void registrerKunde(ActionEvent event) throws IOException {
+        
        String opprettetKundeforhold=innOpprettetKundeforhold.getText();
        String navn=innNavn.getText();
        String forsikringsnummer=innForsikringsnummer.getText();
@@ -76,7 +75,8 @@ public class EndreKundeSkjemaController implements Initializable {
                
                    skrivKundeFil.skrive(lagring); 
                    JOptionPane.showMessageDialog(null, "Kunden er endret!","Endret kunde",JOptionPane.INFORMATION_MESSAGE);
-                    Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/register.fxml"));
+                     
+                   Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/register.fxml"));
                     Scene home_page_scene=new Scene(home_page_parent);
                     Stage app_stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
                     app_stage.setScene(home_page_scene);

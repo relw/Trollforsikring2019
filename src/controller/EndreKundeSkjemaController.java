@@ -44,25 +44,25 @@ public class EndreKundeSkjemaController implements Initializable {
     }
     @FXML
     private void registrerKunde(ActionEvent event) throws IOException {
-       String opprettetKundeforhold=innOpprettetKundeforhold.getText();
-       String navn=innNavn.getText();
-       String forsikringsnummer=innForsikringsnummer.getText();
-       String fakturaAdresse=innFakturaadresse.getText();
-        kundeLagring lagring = new kundeLagring();
-    
-        
-           kunder endreDenneKunde = skrivKundeFil.leseEndreKunde();
-                
-                 endreDenneKunde.setNavn(navn);
-                 endreDenneKunde.setDato(opprettetKundeforhold);
-                 endreDenneKunde.setFakturaAdresse(fakturaAdresse);
-                 endreDenneKunde.setForsikringsnummer(forsikringsnummer);
-                
-                   
-                   lagring.pluss(endreDenneKunde); 
-                   skrivKundeFil.skriveEndreFil(lagring); 
-                
-            System.out.print("test");
+//       String opprettetKundeforhold=innOpprettetKundeforhold.getText();
+//       String navn=innNavn.getText();
+//       String forsikringsnummer=innForsikringsnummer.getText();
+//       String fakturaAdresse=innFakturaadresse.getText();
+//        kundeLagring lagring = new kundeLagring();
+//    
+//        
+//           kunder endreDenneKunde = skrivKundeFil.leseEndreKunde();
+//                
+//                 endreDenneKunde.setNavn(navn);
+//                 endreDenneKunde.setDato(opprettetKundeforhold);
+//                 endreDenneKunde.setFakturaAdresse(fakturaAdresse);
+//                 endreDenneKunde.setForsikringsnummer(forsikringsnummer);
+//                
+//                   
+//                   lagring.pluss(endreDenneKunde); 
+//                   skrivKundeFil.skriveEndreFil(lagring); 
+//                
+//            System.out.print("test");
             
 }
         

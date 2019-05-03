@@ -31,7 +31,7 @@
       <TextField id="innForsikringssum" fx:id="innForsikringssum" layoutX="244.0" layoutY="294.0" promptText="Eks: &quot;100000&quot;" />
       <Label layoutX="41.0" layoutY="300.0" text="Forsikringssum:" textFill="WHITE" />
       <Button fx:id="btnFortsett" layoutX="305.0" layoutY="333.0" mnemonicParsing="false" onAction="#registrerReiseforsikring" text="Fortsett" textFill="WHITE" />
-      <Button layoutX="41.0" layoutY="333.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
+      <Button layoutX="41.0" layoutY="333.0" mnemonicParsing="false" onAction="#avbryt" text="Tilbake" textFill="WHITE" />
       <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="476.0" layoutY="99.0" prefHeight="39.0" prefWidth="261.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingØnsketOppstart" fx:id="feilmeldingØnsketOppstart" layoutX="476.0" layoutY="147.0" prefHeight="39.0" prefWidth="261.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringsbeløp" fx:id="feilmeldingForsikringsbeløp" layoutX="476.0" layoutY="196.0" prefHeight="39.0" prefWidth="261.0" text="*" textFill="WHITE" />

@@ -33,7 +33,7 @@
       <Label layoutX="41.0" layoutY="202.0" text="Type skade:" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="300.0" text="Kontaktinformasjon vitner:" textFill="WHITE" />
       <Button fx:id="btnFortsett" layoutX="315.0" layoutY="434.0" mnemonicParsing="false" onAction="#registrerSkademelding" text="Fortsett" textFill="WHITE" />
-      <Button layoutX="60.0" layoutY="434.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
+      <Button layoutX="60.0" layoutY="434.0" mnemonicParsing="false" onAction="#avbryt" text="Tilbake" textFill="WHITE" />
       <Label id="feilmeldingDatoSkade" fx:id="feilmeldingDatoSkade" layoutX="482.0" layoutY="98.0" prefHeight="39.0" prefWidth="340.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingSkadenummer" fx:id="feilmeldingSkadenummer" layoutX="482.0" layoutY="147.0" prefHeight="39.0" prefWidth="340.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingTypeSkade" fx:id="feilmeldingTypeSkade" layoutX="482.0" layoutY="196.0" prefHeight="39.0" prefWidth="340.0" text="*" textFill="WHITE" />

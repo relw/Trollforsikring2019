@@ -39,7 +39,7 @@
       <TextField id="innÅrsmodell" fx:id="innÅrsmodell" layoutX="232.0" layoutY="441.0" promptText="Eks: &quot;1999&quot;" />
       <TextField id="innMotortypeogMotorstyrke" fx:id="innMotortypeogMotorstyrke" layoutX="232.0" layoutY="491.0" promptText="Eks: &quot;Yamaha 2,5&quot;" />
       <Button fx:id="btnFortsett" layoutX="304.0" layoutY="546.0" mnemonicParsing="false" onAction="#registrerBåtForsikring" text="Fortsett" textFill="WHITE" />
-      <Button layoutX="79.0" layoutY="546.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
+      <Button layoutX="79.0" layoutY="546.0" mnemonicParsing="false" onAction="#avbryt" text="Tilbake" textFill="WHITE" />
       <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="456.0" layoutY="99.0" prefHeight="39.0" prefWidth="270.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingØnsketOppstart" fx:id="feilmeldingØnsketOppstart" layoutX="456.0" layoutY="147.0" prefHeight="39.0" prefWidth="270.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringsbeløp" fx:id="feilmeldingForsikringsbeløp" layoutX="456.0" layoutY="197.0" prefHeight="39.0" prefWidth="270.0" text="*" textFill="WHITE" />
@@ -56,6 +56,6 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <Button fx:id="btnReg" layoutX="632.0" layoutY="314.0" mnemonicParsing="false" onAction="#fullfør" text="Registrer forsikring" textFill="WHITE" visible="false" />
+      <Button fx:id="btnReg" layoutX="648.0" layoutY="314.0" mnemonicParsing="false" onAction="#fullfør" text="Registrer forsikring" textFill="WHITE" visible="false" />
    </children>
 </AnchorPane>

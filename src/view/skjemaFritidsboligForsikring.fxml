@@ -41,7 +41,7 @@
       <Label layoutX="32.0" layoutY="258.0" text="Byggeår:" textFill="WHITE" />
       <Label layoutX="27.0" layoutY="455.0" text="Antall kvadratmeter:" textFill="WHITE" />
       <Button fx:id="btnFortsett" layoutX="290.0" layoutY="588.0" mnemonicParsing="false" onAction="#registrerFritidsboligForsikring" text="Fortsett" textFill="WHITE" />
-      <Button layoutX="14.0" layoutY="588.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" textFill="WHITE" />
+      <Button layoutX="14.0" layoutY="588.0" mnemonicParsing="false" onAction="#avbryt" text="Tilbake" textFill="WHITE" />
       <Label id="feilmeldingForsikringspremie" fx:id="feilmeldingForsikringspremie" layoutX="467.0" layoutY="57.0" prefHeight="39.0" prefWidth="260.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingØnsketOppstart" fx:id="feilmeldingØnsketOppstart" layoutX="467.0" layoutY="105.0" prefHeight="39.0" prefWidth="260.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringsbeløp" fx:id="feilmeldingForsikringsbeløp" layoutX="467.0" layoutY="154.0" prefHeight="39.0" prefWidth="260.0" text="*" textFill="WHITE" />

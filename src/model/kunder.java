@@ -4,11 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import javafx.scene.control.Button;
 
-/**
- *
- * @author Aleksander
- */
-
 public class kunder implements Serializable{
 
     private String datoforhold, navn, fakturaadresse; 

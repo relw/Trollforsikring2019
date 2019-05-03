@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
 import java.io.Serializable;
 
-/**
- *
- * @author Aleksander
- */
 public class husoginnboforsikring extends forsikringer implements Serializable{
    private String boligadresse, boligtype, standard, byggemateriale;
    private String byggeår, antallKvadratmeter, beløpForByggning, beløpForInnbo; 

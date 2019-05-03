@@ -118,13 +118,13 @@ public class registerController implements Initializable {
                 }
             }
             
-      
+        
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/endreKundeSkjema.fxml"));
         Scene home_page_scene=new Scene(home_page_parent);
         Stage app_stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(home_page_scene);
         app_stage.show();
-        velgKunde.getItems().remove(valgtNavn);
+        
     }
     @FXML
     private void tilbake(ActionEvent event) throws IOException {

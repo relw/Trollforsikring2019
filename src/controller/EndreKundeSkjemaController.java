@@ -76,16 +76,16 @@ public class EndreKundeSkjemaController implements Initializable {
                 }
             }
                
-                   skrivKundeFil.skrive(lagring); 
-                   JOptionPane.showMessageDialog(null, "Kunden er endret!","Endret kunde",JOptionPane.INFORMATION_MESSAGE);
+        skrivKundeFil.skrive(lagring); 
+        JOptionPane.showMessageDialog(null, "Kunden er endret!","Endret kunde",JOptionPane.INFORMATION_MESSAGE);
                      
-                    Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/register.fxml"));
-                    Scene home_page_scene=new Scene(home_page_parent);
-                    Stage app_stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    app_stage.setScene(home_page_scene);
-                    app_stage.show();
+        Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/register.fxml"));
+        Scene home_page_scene=new Scene(home_page_parent);
+        Stage app_stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
    
-}
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
                 String navn=null;

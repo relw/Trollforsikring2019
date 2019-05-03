@@ -106,12 +106,12 @@ public class skrivKundeFil{
         } 
     }
     
-    public static kunder leseEndreKunde()
+    public static kundeLagring leseEndreKunde()
     {
-        kunder loadedKunde = null; 
+        kundeLagring loadedKunde = null; 
         try (FileInputStream fin = new FileInputStream("endreKunde.jobj");
         ObjectInputStream oin = new ObjectInputStream(fin)) {
-            loadedKunde = (kunder)oin.readObject();
+            loadedKunde = (kundeLagring)oin.readObject();
             
             return loadedKunde; 
         } catch(IOException e) {

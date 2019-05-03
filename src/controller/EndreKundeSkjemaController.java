@@ -44,25 +44,40 @@ public class EndreKundeSkjemaController implements Initializable {
     }
     @FXML
     private void registrerKunde(ActionEvent event) throws IOException {
-//       String opprettetKundeforhold=innOpprettetKundeforhold.getText();
-//       String navn=innNavn.getText();
-//       String forsikringsnummer=innForsikringsnummer.getText();
-//       String fakturaAdresse=innFakturaadresse.getText();
-//        kundeLagring lagring = new kundeLagring();
-//    
-//        
-//           kunder endreDenneKunde = skrivKundeFil.leseEndreKunde();
-//                
-//                 endreDenneKunde.setNavn(navn);
-//                 endreDenneKunde.setDato(opprettetKundeforhold);
-//                 endreDenneKunde.setFakturaAdresse(fakturaAdresse);
-//                 endreDenneKunde.setForsikringsnummer(forsikringsnummer);
-//                
-//                   
-//                   lagring.pluss(endreDenneKunde); 
-//                   skrivKundeFil.skriveEndreFil(lagring); 
-//                
-//            System.out.print("test");
+       String opprettetKundeforhold=innOpprettetKundeforhold.getText();
+       String navn=innNavn.getText();
+       String forsikringsnummer=innForsikringsnummer.getText();
+       String fakturaAdresse=innFakturaadresse.getText();
+        kundeLagring lagring = new kundeLagring();
+    
+        
+           kundeLagring endreDenneKunde = skrivKundeFil.leseEndreKunde();
+          ArrayList<kunder> array = endreDenneKunde.putKunderIListe(); 
+          
+          kundeLagring gammel = skrivKundeFil.hentObjekt();
+          ArrayList<kunder> liste = gammel.putKunderIListe(); 
+                for(kunder k:array)
+                {
+                    k.setNavn(navn);
+                    k.setDato(opprettetKundeforhold);
+                    k.setFakturaAdresse(fakturaAdresse);
+                    k.setForsikringsnummer(forsikringsnummer);
+                    
+                    lagring.pluss(k);
+                }
+                 for(kunder k:liste)   // Fjerner endret kunde 
+                 {
+                     if(!k.getNavn().equals(navn)){
+                         lagring.pluss(k); 
+                     }
+                 }
+                 
+                
+                   
+                    
+                   skrivKundeFil.skrive(lagring); 
+                
+            System.out.print("test");
             
 }
         

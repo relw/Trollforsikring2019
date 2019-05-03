@@ -71,17 +71,16 @@ public class EndreKundeSkjemaController implements Initializable {
                          lagring.pluss(k); 
                      }
                  }
-                 
-                
-                   
-                    
+               
                    skrivKundeFil.skrive(lagring); 
-                
-            System.out.print("test");
-            
+                   
+                    Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/register.fxml"));
+                    Scene home_page_scene=new Scene(home_page_parent);
+                    Stage app_stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    app_stage.setScene(home_page_scene);
+                    app_stage.show();
+   
 }
-        
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
                  String navn=null;
@@ -99,13 +98,11 @@ public class EndreKundeSkjemaController implements Initializable {
                  fakturaadresse=k.getFakturaAdresse();
                
                 }
-                
-
-    
-        innNavn.setText(navn);
-        innForsikringsnummer.setText(forsikringsnummer);
-        innFakturaadresse.setText(fakturaadresse);
-        innOpprettetKundeforhold.setText(dato);
+     
+                innNavn.setText(navn);
+                innForsikringsnummer.setText(forsikringsnummer);
+                innFakturaadresse.setText(fakturaadresse);
+                innOpprettetKundeforhold.setText(dato);
         
     }    
     

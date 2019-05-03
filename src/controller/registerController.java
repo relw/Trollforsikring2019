@@ -97,17 +97,13 @@ public class registerController implements Initializable {
            
             
     }
-    @FXML
-    private void slettForsikringOgSkademelding(ActionEvent event) throws IOException{
-        
-            
-    }
+ 
     @FXML
     private void endre(ActionEvent event) throws IOException{
-         kundeLagring lese = new kundeLagring();
-         String valgtNavn = (String)velgKunde.getValue();
-           kundeLagring objekt2 = skrivKundeFil.hentObjekt();
-           ArrayList<kunder> array2 = objekt2.putKunderIListe();
+        kundeLagring lese = new kundeLagring();
+        String valgtNavn = (String)velgKunde.getValue();
+        kundeLagring objekt2 = skrivKundeFil.hentObjekt();
+        ArrayList<kunder> array2 = objekt2.putKunderIListe();
         
             for(kunder k : array2)
             {
@@ -120,25 +116,7 @@ public class registerController implements Initializable {
             }
            
             
-            
-         kundeLagring endreDenneKunde = skrivKundeFil.leseEndreKunde();
-   
-        kundeLagring lagring = new kundeLagring();
-       
-           kundeLagring obj = skrivKundeFil.hentObjekt();
-           ArrayList<kunder> array = obj.putKunderIListe();
-        
-            for(kunder k : array)
-            {
-                if(k.getNavn().equals(valgtNavn))
-                {
-                   kunder endreKunde=new kunder(k.getNavn(), k.getDato(), k.getFakturaAdresse(), k.getForsikringsNummer());
-                   lagring.pluss(endreKunde); 
-                   skrivKundeFil.skriveEndreFil(lagring); 
-                }
-            }
-            
-      velgKunde.getItems().remove(valgtNavn);
+        velgKunde.getItems().remove(valgtNavn);
         Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/endreKundeSkjema.fxml"));
         Scene home_page_scene=new Scene(home_page_parent);
         Stage app_stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -160,7 +138,7 @@ public class registerController implements Initializable {
         File fil = fc.showOpenDialog(null);
           
         String filepath = null;
-   
+        
         if(fil != null){
             filepath = fil.toString();
             

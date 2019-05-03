@@ -90,7 +90,7 @@ public class EndreKundeSkjemaController implements Initializable {
                  String forsikringsnummer=null;
                  String fakturaadresse=null;
     
-                kundeLagring obj = skrivKundeFil.hentObjekt();
+                kundeLagring obj = skrivKundeFil.leseEndreKunde();
                 ArrayList<kunder> array = obj.putKunderIListe();
                 for(kunder k : array)
                  {

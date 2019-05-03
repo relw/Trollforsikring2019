@@ -49,18 +49,10 @@ public class EndreKundeSkjemaController implements Initializable {
        String forsikringsnummer=innForsikringsnummer.getText();
        String fakturaAdresse=innFakturaadresse.getText();
         kundeLagring lagring = new kundeLagring();
-           kundeLagring obj = skrivKundeFil.hentObjekt();
-           ArrayList<kunder> array = obj.putKunderIListe();
+    
         
-           kundeLagring objekt = skrivKundeFil.hentObjekt();
-                ArrayList<kunder> arrayKunder = objekt.putKunderIListe();
-                kunder endreDenneKunde=null;
-                for(kunder k : arrayKunder)
-                 {
-                     endreDenneKunde=k;
-                 }
-                 
-          
+           kunder endreDenneKunde = skrivKundeFil.leseEndreKunde();
+                
                  endreDenneKunde.setNavn(navn);
                  endreDenneKunde.setDato(opprettetKundeforhold);
                  endreDenneKunde.setFakturaAdresse(fakturaAdresse);

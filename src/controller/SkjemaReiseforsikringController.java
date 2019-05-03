@@ -146,10 +146,10 @@ public class SkjemaReiseforsikringController implements Initializable {
         array = kundeListe.putKunderIListe(); // Har nå et array med kunder
         
         String forsikringspremie=innForsikringspremie.getText();
-         String ønsketOppstart=innØnsketOppstart.getText();
-         String forsikringsOmråde=innForsikringsområde.getText();
-         String forsikringsbeløp=innForsikringsbeløp.getText();
-         String forsikringssum=innForsikringssum.getText();
+        String ønsketOppstart=innØnsketOppstart.getText();
+        String forsikringsOmråde=innForsikringsområde.getText();
+        String forsikringsbeløp=innForsikringsbeløp.getText();
+        String forsikringssum=innForsikringssum.getText();
         
         reiseforsikring reiseforsikring=new reiseforsikring(forsikringspremie, ønsketOppstart, forsikringsbeløp, forsikringsOmråde, forsikringssum);
         
@@ -193,7 +193,7 @@ public class SkjemaReiseforsikringController implements Initializable {
     } catch (IOException e) {
       
     }
-     }
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

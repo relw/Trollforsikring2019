@@ -2,6 +2,7 @@ package controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -158,7 +159,8 @@ public class registerController implements Initializable {
         FileChooser fc = new FileChooser(); 
         File fil = fc.showOpenDialog(null);
           
-        String filepath = null; 
+        String filepath = null;
+   
         if(fil != null){
             filepath = fil.toString();
             
@@ -189,13 +191,13 @@ public class registerController implements Initializable {
             {
                 String navn = k.getNavn();
                 velgKunde.getItems().add(navn);  
+                 
             } 
         }
         else
         {
             JOptionPane.showMessageDialog(null,"Ingen fil ble valgt!","  Advarsel",JOptionPane.WARNING_MESSAGE);
         }
-        
      
     }
     @FXML

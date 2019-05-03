@@ -97,21 +97,9 @@ public class SkjemaKundeController implements Initializable {
         //om alle innputfeltene er godkjent fortsetter registreringen
         if(godkjentTeller==4){
             System.out.print("Godkjent");
-            int intForsikringsnummer = Integer.parseInt(forsikringsnummer);
-            
-            //Parent home_page_parent=FXMLLoader.load(getClass().getResource("/view/skjemaKunde.fxml"));
-            
-            
-            
-//            FileChooser fileChooser = new FileChooser();
-//            fileChooser.setTitle("Open Resource File");
-//            fileChooser.showOpenDialog(app_stage);
 
-        
-            
-            kunder nyKunde = new kunder(navn, opprettetKundeforhold, fakturaAdresse, intForsikringsnummer);
-            
-            
+            kunder nyKunde = new kunder(navn, opprettetKundeforhold, fakturaAdresse, forsikringsnummer);
+             
             lagring.pluss(nyKunde); 
             skrivKundeFil.skrive(lagring); 
             //skrive.lese(); 

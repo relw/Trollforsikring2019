@@ -75,20 +75,20 @@ public class feilhåndteringFritidsboligforsikringSkjema {
             super(msg);
         }
     }
-      public static class feilAdresseInnput extends Exception{
+    public static class feilAdresseInnput extends Exception{
         public feilAdresseInnput(String msg) 
         {
             super(msg);
         }
-      }
+    }
       
-        public static class tomtTekstfelt extends Exception{
+    public static class tomtTekstfelt extends Exception{
         public tomtTekstfelt(String msg) 
         {
             super(msg);
         }
     }
-        public static class feilByggeårInnput extends Exception{
+    public static class feilByggeårInnput extends Exception{
         public feilByggeårInnput(String msg) 
         {
             super(msg);

@@ -16,6 +16,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 import model.feilmeldingSkademeldingSkjema;
 import model.kundeLagring;
 import model.kunder;
@@ -211,6 +212,7 @@ public class SkademeldingSkjemaController implements Initializable {
             nyListe.pluss(k); 
         }
         skrivKundeFil.skrive(nyListe); 
+        JOptionPane.showMessageDialog(null,"Skademelding registrert","  Skademelding er registrert",JOptionPane.WARNING_MESSAGE);
     }
     
     //metoden som går tilbake til førstesiden

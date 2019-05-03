@@ -17,6 +17,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 import model.feilhåndteringReiseforsikringSkjema;
 import model.reiseforsikring;
 import model.kundeLagring;
@@ -146,10 +147,10 @@ public class SkjemaReiseforsikringController implements Initializable {
         array = kundeListe.putKunderIListe(); // Har nå et array med kunder
         
         String forsikringspremie=innForsikringspremie.getText();
-         String ønsketOppstart=innØnsketOppstart.getText();
-         String forsikringsOmråde=innForsikringsområde.getText();
-         String forsikringsbeløp=innForsikringsbeløp.getText();
-         String forsikringssum=innForsikringssum.getText();
+        String ønsketOppstart=innØnsketOppstart.getText();
+        String forsikringsOmråde=innForsikringsområde.getText();
+        String forsikringsbeløp=innForsikringsbeløp.getText();
+        String forsikringssum=innForsikringssum.getText();
         
         reiseforsikring reiseforsikring=new reiseforsikring(forsikringspremie, ønsketOppstart, forsikringsbeløp, forsikringsOmråde, forsikringssum);
         
@@ -167,6 +168,7 @@ public class SkjemaReiseforsikringController implements Initializable {
             nyListe.pluss(k); 
         }
         skrivKundeFil.skrive(nyListe); 
+        JOptionPane.showMessageDialog(null,"Reiseforsikring registrert","  Forsikring er registrert",JOptionPane.WARNING_MESSAGE);
     }
     //metode går tilbake til forsikringsnivå 1
     @FXML
@@ -193,7 +195,7 @@ public class SkjemaReiseforsikringController implements Initializable {
     } catch (IOException e) {
       
     }
-     }
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

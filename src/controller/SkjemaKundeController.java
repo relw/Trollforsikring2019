@@ -15,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 import model.feilhåndteringKundeSkjema;
 import model.kundeLagring;
 import model.kunder;
@@ -107,6 +108,7 @@ public class SkjemaKundeController implements Initializable {
             Label scrollContent = new Label();
             scrollContent.setText(skrivKundeFil.lese()); 
             scrollPane.setContent(scrollContent); 
+            JOptionPane.showMessageDialog(null,"Kunde registrert","  Kunde er registrert",JOptionPane.WARNING_MESSAGE);
             
         }
     }

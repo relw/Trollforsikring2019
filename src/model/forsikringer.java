@@ -30,9 +30,6 @@ public class forsikringer implements Serializable{
         
         return forsikringsBeloop;
     }
-    
-    
-    
 
     @Override
     public String toString() {

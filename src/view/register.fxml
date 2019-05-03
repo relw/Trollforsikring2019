@@ -80,5 +80,6 @@
             <Font size="17.0" />
          </font>
       </Button>
+      <Label fx:id="feilmelding" layoutX="24.0" layoutY="528.0" text="Feilmelding:" />
    </children>
 </AnchorPane>

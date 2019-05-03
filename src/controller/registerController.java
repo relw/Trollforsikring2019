@@ -53,6 +53,9 @@ public class registerController implements Initializable {
      @FXML
      private Label slettetInfo;
      
+     @FXML
+     private Label feilmelding;
+     
      int teller = 0; 
      @FXML
      private void hentElementer(MouseEvent event){
@@ -100,7 +103,7 @@ public class registerController implements Initializable {
             }
        }
        catch(Exception e){
-           
+           feilmelding.setText("Feilmelding: "+e.getMessage());
        }
         
            
@@ -108,7 +111,7 @@ public class registerController implements Initializable {
     }
     @FXML
     private void slettForsikringOgSkademelding(ActionEvent event) throws IOException{
-       
+        
             
     }
     @FXML

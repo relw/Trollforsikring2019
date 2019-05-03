@@ -52,7 +52,7 @@ public class EndreKundeSkjemaController implements Initializable {
         kundeLagring lagring = new kundeLagring();
     
         
-           kundeLagring endreDenneKunde = skrivKundeFil.leseEndreKunde();
+          kundeLagring endreDenneKunde = skrivKundeFil.leseEndreKunde();
           ArrayList<kunder> array = endreDenneKunde.putKunderIListe(); 
           
           kundeLagring gammel = skrivKundeFil.hentObjekt();

@@ -106,22 +106,20 @@ public class skrivKundeFil{
         } 
     }
     
-    public static String leseEndreKunde()
+    public static kunder leseEndreKunde()
     {
-        String res = ""; 
+        kunder loadedKunde = null; 
         try (FileInputStream fin = new FileInputStream("endreKunde.jobj");
         ObjectInputStream oin = new ObjectInputStream(fin)) {
-            Object loadedKunde = oin.readObject();
-            res = loadedKunde.toString();
+            loadedKunde = (kunder)oin.readObject();
             
+            return loadedKunde; 
         } catch(IOException e) {
-            System.err.println("Could not read file. Cause: " + e.getCause());
+            System.err.println("Hent objekt: Could not read file. Cause: " + e.getCause());
         } catch(ClassNotFoundException e) {
             System.err.println("Could not convert Object");
         }
-        return res;
-        
-        
+        return loadedKunde; 
    }
 
         

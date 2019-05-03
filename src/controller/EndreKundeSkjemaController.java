@@ -7,6 +7,7 @@ package controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,6 +19,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.kundeLagring;
+import model.kunder;
 import model.skrivKundeFil;
 
 public class EndreKundeSkjemaController implements Initializable {
@@ -50,12 +52,28 @@ public class EndreKundeSkjemaController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+                 String navn=null;
+                 String dato=null;
+                 String forsikringsnummer=null;
+                 String fakturaadresse=null;
     
-        
-        innNavn.setText("test");
-        innForsikringsnummer.setText("");
-        innFakturaadresse.setText("");
-        innOpprettetKundeforhold.setText("");
+                kundeLagring obj = skrivKundeFil.hentObjekt();
+                ArrayList<kunder> array = obj.putKunderIListe();
+                for(kunder k : array)
+                 {
+                 navn=k.getNavn();
+                 dato=k.getDato();
+                 forsikringsnummer=k.getForsikringsNummer();
+                 fakturaadresse=k.getFakturaAdresse();
+               
+                }
+                
+
+    
+        innNavn.setText(navn);
+        innForsikringsnummer.setText(forsikringsnummer);
+        innFakturaadresse.setText(fakturaadresse);
+        innOpprettetKundeforhold.setText(dato);
         
     }    
     

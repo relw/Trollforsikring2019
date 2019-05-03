@@ -35,6 +35,8 @@
       <TextField id="innByggemateriale" fx:id="innByggemateriale" layoutX="235.0" layoutY="350.0" promptText="Eks: &quot;Murhus&quot;" />
       <TextField id="innStandard" fx:id="innStandard" layoutX="235.0" layoutY="399.0" promptText="Eks: &quot;Oppussingsobjekt&quot;" />
       <TextField id="innKvm" fx:id="innKvm" layoutX="235.0" layoutY="449.0" promptText="Eks: &quot;47&quot;" />
+      <TextField id="innForsikringsbeløpBygning" fx:id="innForsikringsbeløpBygning" layoutX="235.0" layoutY="497.0" promptText="Eks: &quot;100000&quot;" />
+      <TextField id="innForsikringsbeløpInnbo" fx:id="innForsikringsbeløpInnbo" layoutX="235.0" layoutY="546.0" promptText="Eks: &quot;100000&quot;" />
       <Label layoutX="32.0" layoutY="307.0" text="Boligtype:" textFill="WHITE" />
       <Label layoutX="32.0" layoutY="258.0" text="Byggeår:" textFill="WHITE" />
       <Label layoutX="27.0" layoutY="455.0" text="Antall kvadratmeter:" textFill="WHITE" />
@@ -51,8 +53,6 @@
       <Label id="feilmeldingKvm" fx:id="feilmeldingKvm" layoutX="467.0" layoutY="449.0" prefHeight="39.0" prefWidth="260.0" text="*" textFill="WHITE" />
       <Label layoutX="27.0" layoutY="497.0" text="Forsikringsbeløp bygning:" textFill="WHITE" />
       <Label layoutX="25.0" layoutY="546.0" text="Forsikringsbeløp innbo:" textFill="WHITE" />
-      <TextField id="innForsikringsbeløpBygning" fx:id="innForsikringsbeløpBygning" layoutX="235.0" layoutY="497.0" promptText="Eks: &quot;100000&quot;" />
-      <TextField id="innForsikringsbeløpInnbo" fx:id="innForsikringsbeløpInnbo" layoutX="235.0" layoutY="546.0" promptText="Eks: &quot;100000&quot;" />
       <Label id="feilmeldingForsikringsbeløpBygning" fx:id="feilmeldingForsikringsbeløpBygning" layoutX="467.0" layoutY="497.0" prefHeight="17.0" prefWidth="260.0" text="*" textFill="WHITE" />
       <Label id="feilmeldingForsikringsbeløpInnbo" fx:id="feilmeldingForsikringsbeløpInnbo" layoutX="467.0" layoutY="546.0" prefHeight="17.0" prefWidth="267.0" text="*" textFill="WHITE" />
       <Button layoutX="794.0" layoutY="588.0" mnemonicParsing="false" onAction="#visVilkår" text="Vis betingelser" textFill="WHITE" />

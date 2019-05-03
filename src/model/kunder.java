@@ -24,7 +24,18 @@ public class kunder implements Serializable{
         
     }
     
-   
+   public void setNavn(String navn){
+       this.navn=navn;
+   }
+   public void setDato(String dato){
+       this.datoforhold=dato;
+   }
+   public void setFakturaAdresse(String fakturaadresse){
+       this.fakturaadresse = fakturaadresse;
+   }
+   public void setForsikringsnummer(String forsikringsnummer){
+        this.forsikringsnummer = forsikringsnummer;
+   }
     public void setBaatforsikring(baatforsikring f)
     {
         kundeBaatforsikring.add(f); 

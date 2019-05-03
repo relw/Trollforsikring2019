@@ -48,6 +48,8 @@ public class EndreKundeSkjemaController implements Initializable {
        String navn=innNavn.getText();
        String forsikringsnummer=innForsikringsnummer.getText();
        String fakturaAdresse=innFakturaadresse.getText();
+       
+       
         
     }
     @Override

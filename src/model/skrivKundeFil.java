@@ -121,6 +121,20 @@ public class skrivKundeFil{
         }
         return loadedKunde; 
    }
+    public static kundeLagring hentValgtObjekt(String filbane){
+        kundeLagring loadedKunde = null; 
+        try (FileInputStream fin = new FileInputStream(filbane);
+        ObjectInputStream oin = new ObjectInputStream(fin)) {
+            loadedKunde = (kundeLagring)oin.readObject();
+            
+            return loadedKunde; 
+        } catch(IOException e) {
+            System.err.println("Hent objekt: Could not read file. Cause: " + e.getCause());
+        } catch(ClassNotFoundException e) {
+            System.err.println("Could not convert Object");
+        }
+        return loadedKunde; 
+    }
 
         
 }
